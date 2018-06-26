@@ -1,5 +1,5 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
+using System.Reflection;
 
 namespace Azurlane
 {
@@ -7,10 +7,10 @@ namespace Azurlane
     {
         internal static string Environment(string path = null)
         {
-            if (path != null && !Directory.Exists(path))
+            if (path != null && !File.Exists(path) && !Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
-            return path == null ? System.Environment.CurrentDirectory : Path.Combine(System.Environment.CurrentDirectory, path);
+            return path == null ? Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) : Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), path);
         }
 
         internal static string Thirdparty(string path = null) => path != null ? Path.Combine(Environment("Thirdparty"), path) : Environment("Thirdparty");
