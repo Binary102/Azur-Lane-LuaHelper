@@ -17,13 +17,11 @@ namespace Azurlane
 
     internal static class Program
     {
+        internal static bool isInvalid = true;
         private static readonly Dictionary<string, List<string>> Parameters = new Dictionary<string, List<string>>();
         private static string CurrentOption;
         private static List<string> ListOfAssetBundle;
         private static List<string> ListOfLua;
-
-        internal static bool isInvalid = true;
-
         private static void HelpMessage(OptionSet options)
         {
             Console.WriteLine("Usage: Azurlane.exe <option> <path-to-file(s) or path-to-directory(s)>");
