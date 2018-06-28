@@ -6,8 +6,7 @@ namespace Azurlane
 {
     internal static class AssetBundle
     {
-        private static readonly byte[] Decrypted;
-        private static readonly byte[] Encrypted;
+        private static readonly byte[] Decrypted, Encrypted;
         private static readonly object Instance;
 
         static AssetBundle()

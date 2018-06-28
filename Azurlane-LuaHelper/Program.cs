@@ -18,10 +18,10 @@ namespace Azurlane
     internal static class Program
     {
         internal static bool isInvalid = true;
+
+        private static readonly List<string> ListOfAssetBundle = new List<string>(), ListOfLua = new List<string>();
         private static readonly Dictionary<string, List<string>> Parameters = new Dictionary<string, List<string>>();
         private static string CurrentOption;
-        private static List<string> ListOfAssetBundle;
-        private static List<string> ListOfLua;
 
         private static void HelpMessage(OptionSet options)
         {
@@ -74,48 +74,39 @@ namespace Azurlane
                 HelpMessage(options);
                 return;
             }
-            else options.Parse(args);
+            else
+            {
+                try
+                {
+                    options.Parse(args);
+                }
+                catch (OptionException)
+                {
+                    // Empty
+                }
+            }
 
             foreach (var parameter in Parameters)
             {
-                if (parameter.Key.Contains("lua."))
+                foreach (var value in parameter.Value)
                 {
-                    if (ListOfLua == null)
-                        ListOfLua = new List<string>();
-
-                    foreach (var value in parameter.Value)
+                    if (!File.Exists(value) && !Directory.Exists(value))
                     {
-                        if ((!File.Exists(value) && !Directory.Exists(value)))
-                        {
-                            Console.WriteLine(string.Format("A file or directory named {0} does not exists or not a valid lua file.", File.Exists(value) ? Path.GetFileName(value) : value));
-                        }
-                        else if (File.Exists(value))
-                        {
-                            ListOfLua.Add(Path.GetFullPath(value));
-                        }
-                        else if (Directory.Exists(value))
+                        Console.WriteLine(string.Format("A file or directory named {0} does not exists.", value));
+                    }
+                    else if (File.Exists(value))
+                    {
+                        if (parameter.Key.Contains("lua.")) ListOfLua.Add(Path.GetFullPath(value));
+                        else ListOfAssetBundle.Add(Path.GetFullPath(value));
+                    }
+                    else if (Directory.Exists(value))
+                    {
+                        if (parameter.Key.Contains("lua."))
                         {
                             foreach (var file in Directory.GetFiles(value, "*.lua*", SearchOption.AllDirectories))
                                 ListOfLua.Add(Path.GetFullPath(file));
                         }
-                    }
-                }
-                else if (parameter.Key.Contains("assetbundle."))
-                {
-                    if (ListOfAssetBundle == null)
-                        ListOfAssetBundle = new List<string>();
-
-                    foreach (var value in parameter.Value)
-                    {
-                        if (!File.Exists(value) && !Directory.Exists(value))
-                        {
-                            Console.WriteLine($"A file or directory named \"{value}\" does not exists.");
-                        }
-                        else if (File.Exists(value))
-                        {
-                            ListOfAssetBundle.Add(Path.GetFullPath(value));
-                        }
-                        else if (Directory.Exists(value))
+                        else
                         {
                             foreach (var file in Directory.GetFiles(value, "*", SearchOption.AllDirectories))
                                 ListOfAssetBundle.Add(Path.GetFullPath(file));
@@ -135,18 +126,16 @@ namespace Azurlane
                     AssetBundle.Run(assetbundle, CurrentOption.Contains(".decrypt") ? Tasks.Decrypt : (CurrentOption.Contains(".encrypt") ? Tasks.Encrypt : (CurrentOption.Contains(".unpack") ? Tasks.Unpack : Tasks.Repack)));
             }
 
-
-            if (!CurrentOption.Contains(".repack") && !CurrentOption.Contains(".unpack") && !CurrentOption.Contains(".decrypt") && !CurrentOption.Contains(".encrypt"))
+            if (!isInvalid && !CurrentOption.Contains(".repack") && !CurrentOption.Contains(".decrypt") && !CurrentOption.Contains(".encrypt"))
             {
                 Console.WriteLine();
-                Console.WriteLine(string.Format("Success: {0} - Failed: {1}", Lua.SuccessCount, Lua.FailedCount));
-                Console.WriteLine();
+                Console.WriteLine(string.Format("[!!] {0} {1}is done", CurrentOption.Contains(".unlock") || CurrentOption.Contains(".decrypt") ? "Decrypt" : CurrentOption.Contains(".lock") || CurrentOption.Contains(".encrypt") ? "Encrypt" : CurrentOption.Contains(".decompile") ? "Decompile" : CurrentOption.Contains(".recompile") ? "Recompile" : CurrentOption.Contains(".unpack") ? "Unpacking" : "Repacking", CurrentOption.Contains("lua.") ? "" : "assetbundle "));
+                if (!CurrentOption.Contains(".unpack"))
+                {
+                    Console.WriteLine(string.Format("[!] Success: {0} - Failed: {1}", Lua.SuccessCount, Lua.FailedCount));
+                }
+                Console.WriteLine(string.Format("[!] Output: {0}", PathMgr.Environment(CurrentOption.Contains(".unlock") ? "Decrypted_lua" : CurrentOption.Contains(".lock") ? "Encrypted_lua" : CurrentOption.Contains(".decompile") ? "Decompiled_lua" : CurrentOption.Contains(".recompile") ? "Recompiled_lua" : PathMgr.Environment("Unity_Assets_Files"))));
             }
-
-            if (!isInvalid && !CurrentOption.Contains(".repack") && !CurrentOption.Contains(".decrypt") && !CurrentOption.Contains(".encrypt"))
-                Console.WriteLine($">!{(CurrentOption.Contains(".unlock") || CurrentOption.Contains(".decrypt") ? "Decrypt" : CurrentOption.Contains(".lock") || CurrentOption.Contains(".encrypt") ? "Encrypt" : CurrentOption.Contains(".decompile") ? "Decompile" : CurrentOption.Contains(".recompile") ? "Recompile" : CurrentOption.Contains(".unpack") ? "Unpacking" : "Repacking")} {(CurrentOption.Contains("lua.") ? "" : "assetbundle ")}is done, output: {PathMgr.Environment(CurrentOption.Contains(".unlock") ? "Decrypted_lua" : CurrentOption.Contains(".lock") ? "Encrypted_lua" : CurrentOption.Contains(".decompile") ? "Decompiled_lua" : CurrentOption.Contains(".recompile") ? "Recompiled_lua" : PathMgr.Environment("Unity_Assets_Files"))}");
-
-            
         }
     }
 }

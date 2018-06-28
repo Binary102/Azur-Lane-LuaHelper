@@ -6,9 +6,7 @@ namespace Azurlane
 {
     internal static class Lua
     {
-
-        internal static int FailedCount;
-        internal static int SuccessCount;
+        internal static int SuccessCount, FailedCount;
 
         internal static uint ReadUleb128(this BinaryReader reader)
         {
