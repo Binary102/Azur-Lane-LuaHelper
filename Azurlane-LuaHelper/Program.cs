@@ -22,6 +22,7 @@ namespace Azurlane
         private static string CurrentOption;
         private static List<string> ListOfAssetBundle;
         private static List<string> ListOfLua;
+
         private static void HelpMessage(OptionSet options)
         {
             Console.WriteLine("Usage: Azurlane.exe <option> <path-to-file(s) or path-to-directory(s)>");
@@ -133,8 +134,19 @@ namespace Azurlane
                 foreach (var assetbundle in ListOfAssetBundle)
                     AssetBundle.Run(assetbundle, CurrentOption.Contains(".decrypt") ? Tasks.Decrypt : (CurrentOption.Contains(".encrypt") ? Tasks.Encrypt : (CurrentOption.Contains(".unpack") ? Tasks.Unpack : Tasks.Repack)));
             }
+
+
+            if (!CurrentOption.Contains(".repack") && !CurrentOption.Contains(".unpack") && !CurrentOption.Contains(".decrypt") && !CurrentOption.Contains(".encrypt"))
+            {
+                Console.WriteLine();
+                Console.WriteLine(string.Format("Success: {0} - Failed: {1}", Lua.SuccessCount, Lua.FailedCount));
+                Console.WriteLine();
+            }
+
             if (!isInvalid && !CurrentOption.Contains(".repack") && !CurrentOption.Contains(".decrypt") && !CurrentOption.Contains(".encrypt"))
                 Console.WriteLine($">!{(CurrentOption.Contains(".unlock") || CurrentOption.Contains(".decrypt") ? "Decrypt" : CurrentOption.Contains(".lock") || CurrentOption.Contains(".encrypt") ? "Encrypt" : CurrentOption.Contains(".decompile") ? "Decompile" : CurrentOption.Contains(".recompile") ? "Recompile" : CurrentOption.Contains(".unpack") ? "Unpacking" : "Repacking")} {(CurrentOption.Contains("lua.") ? "" : "assetbundle ")}is done, output: {PathMgr.Environment(CurrentOption.Contains(".unlock") ? "Decrypted_lua" : CurrentOption.Contains(".lock") ? "Encrypted_lua" : CurrentOption.Contains(".decompile") ? "Decompiled_lua" : CurrentOption.Contains(".recompile") ? "Recompiled_lua" : PathMgr.Environment("Unity_Assets_Files"))}");
+
+            
         }
     }
 }

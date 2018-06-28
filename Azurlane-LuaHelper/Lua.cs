@@ -6,6 +6,10 @@ namespace Azurlane
 {
     internal static class Lua
     {
+
+        internal static int FailedCount;
+        internal static int SuccessCount;
+
         internal static uint ReadUleb128(this BinaryReader reader)
         {
             uint value = reader.ReadByte();
@@ -67,6 +71,9 @@ namespace Azurlane
             Console.Write($"[+] {(task == Tasks.Decrypt ? "Decrypting" : task == Tasks.Encrypt ? "Encrypting" : task == Tasks.Decompile ? "Decompiling" : "Recompiling")} {Path.GetFileName(path)}...");
             var luaPath = Path.Combine(PathMgr.Environment(task == Tasks.Decrypt ? "Decrypted_lua" : task == Tasks.Encrypt ? "Encrypted_lua" : task == Tasks.Decompile ? "Decompiled_lua" : "Recompiled_lua"), Path.GetFileName(path));
 
+            if (File.Exists(luaPath))
+                File.Delete(luaPath);
+
             try
             {
                 if (task == Tasks.Decrypt || task == Tasks.Encrypt)
@@ -116,19 +123,30 @@ namespace Azurlane
                             reader.BaseStream.Position = next;
                         }
                     }
-                    if (File.Exists(luaPath)) File.Delete(luaPath);
                     File.WriteAllBytes(luaPath, bytes);
                 }
                 else if (task == Tasks.Decompile || task == Tasks.Recompile)
                 {
                     Utils.Command(task == Tasks.Decompile ? $"python main.py -f \"{path}\" -o \"{luaPath}\"" : $"luajit.exe -b \"{path}\" \"{luaPath}\"");
                 }
-                Console.Write("<done>\n");
                 Program.isInvalid = false;
             }
             catch (Exception e)
             {
                 Utils.ExceptionLogger($"Exception detected during {(task == Tasks.Decrypt ? "decrypting" : task == Tasks.Encrypt ? "encrypting" : task == Tasks.Decompile ? "decompiling" : "recompiling")} {Path.GetFileName(path)}", e);
+            }
+            finally
+            {
+                if (File.Exists(luaPath))
+                {
+                    SuccessCount++;
+                    Console.Write("<done>\n");
+                }
+                else
+                {
+                    Console.Write("<failed>\n");
+                    FailedCount++;
+                }
             }
         }
 
