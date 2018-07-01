@@ -1,5 +1,5 @@
 # Azurlane-LuaHelper
-A helper tool to encrypt and decrypt, decompile and recompile Azurlane's lua files
+A helper tool to encrypt and decrypt, decompile and recompile Azur Lane's lua files
 
 ## Download
 You can grab the binary from the [releases page](https://github.com/k0np4ku/Azurlane-LuaHelper/releases).
