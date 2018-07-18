@@ -5,7 +5,7 @@ namespace Azurlane
 {
     internal static class PathMgr
     {
-        internal static string Environment(string path = null)
+        internal static string Local(string path = null)
         {
             if (path != null && !File.Exists(path) && !Directory.Exists(path))
                 Directory.CreateDirectory(path);
@@ -13,6 +13,6 @@ namespace Azurlane
             return path == null ? Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) : Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), path);
         }
 
-        internal static string Thirdparty(string path = null) => path != null ? Path.Combine(Environment("Thirdparty"), path) : Environment("Thirdparty");
+        internal static string Thirdparty(string path = null) => path != null ? Path.Combine(Local("3rdparty"), path) : Local("3rdparty");
     }
 }

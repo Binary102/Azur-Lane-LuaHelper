@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Azurlane-LuaHelper")]
-[assembly: AssemblyDescription("https://github.com/k0np4ku")]
+[assembly: AssemblyTitle("Azur-Lane-LuaHelper")]
+[assembly: AssemblyDescription("https://github.com/k0np4ku/Azur-Lane-LuaHelper")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Azurlane-LuaHelper")]
+[assembly: AssemblyProduct("Azur-Lane-LuaHelper")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ae989ef6-f6f4-4023-ae31-ed50b03f79f5")]
+[assembly: Guid("cc198ce0-e4df-4abb-a7fa-487af39ca35b")]
 
 // Version information for an assembly consists of the following four values:
 //

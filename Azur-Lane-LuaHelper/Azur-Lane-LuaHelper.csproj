@@ -4,12 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE989EF6-F6F4-4023-AE31-ED50B03F79F5}</ProjectGuid>
+    <ProjectGuid>{CC198CE0-E4DF-4ABB-A7FA-487AF39CA35B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Azurlane</RootNamespace>
     <AssemblyName>Azurlane</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,17 +31,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Azurlane.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssetBundle.cs" />
-    <Compile Include="Lua.cs" />
+    <Compile Include="AssetBundleMgr.cs" />
+    <Compile Include="LuaMgr.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="PathMgr.cs" />
     <Compile Include="Program.cs" />
@@ -53,15 +59,15 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Lock" />
+    <None Include="Resources\Salt" />
+    <None Include="Resources\Unlock" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Lock" />
-    <None Include="Resources\Salt" />
-    <None Include="Resources\Unlock" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
