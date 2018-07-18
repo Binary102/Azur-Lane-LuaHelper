@@ -1,7 +1,9 @@
 # Azur-Lane-LuaHelper
 A helper tool to decrypt and encrypt, decompile and recompile Azur Lane's lua.
 
-##
+## System Requirements
+1. NET Framework 4.5.1 or newer
+2. Python 3.0 or newer
 
 ## Commands and Usage Example
 ```
