@@ -4,7 +4,7 @@ A helper tool to decrypt and encrypt, decompile and recompile Azur Lane's lua.
 ## System Requirements
 1. NET Framework 4.5.1 or newer https://www.microsoft.com/en-us/download/details.aspx?id=40779
 2. Python 3.7.0 https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe
-3. Added Python's directory into System Variables named **Path** https://docs.python.org/3/using/windows.html#configuring-python
+3. Added Python's directory into System Environment Variables named **Path** https://docs.python.org/3/using/windows.html#configuring-python
 
 ## Commands and Usage Example
 ```
