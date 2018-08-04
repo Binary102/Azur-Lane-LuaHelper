@@ -1,0 +1,470 @@
+slot0 = class("Commander", import(".BaseVO"))
+slot1 = pg.commander_level
+slot2 = pg.commander_breakout
+slot3 = pg.gameset
+
+slot0.Ctor = function (slot0, slot1)
+	slot0.id = slot1.id
+	slot0.configId = slot1.template_id or slot1.configId
+	slot0.level = slot1.level
+	slot0.exp = slot1.exp
+	slot0.strengthList = {}
+	slot2 = ipairs
+	slot3 = slot1.strength_list or {}
+
+	for slot5, slot6 in slot2(slot3) do
+		slot0.strengthList[ShipModAttr.ID_TO_ATTR[slot6.id]] = slot6.exp
+	end
+
+	slot0.skills = {}
+	slot2 = ipairs
+	slot3 = slot1.skill_id_list or {}
+
+	for slot5, slot6 in slot2(slot3) do
+		slot0:updateSkill(CommanderSkill.New(slot6))
+	end
+
+	slot0.attrAdditions = {}
+	slot2 = ipairs
+	slot3 = slot1.attr_additions or {}
+
+	for slot5, slot6 in slot2(slot3) do
+		slot0.attrAdditions[CommanderConst.index2AttrName(slot5)] = slot6
+	end
+
+	if slot1.skin_id == 0 then
+		slot0.skinId = slot0:getConfig("skin_id")
+	else
+		slot0.skinId = slot1.skin_id
+	end
+
+	slot0.shipId = slot1.shipId or 0
+end
+
+slot0.canBreakout = function (slot0)
+	if slot0:hasNextCommander() then
+		return true
+	end
+
+	return false
+end
+
+slot0.getNextId = function (slot0)
+	return slot0[slot0.configId].next_id
+end
+
+slot0.getBreakoutConsume = function (slot0)
+	if slot0:hasNextCommander() then
+		return {
+			slot0[slot0.configId].use_char,
+			slot0[slot0.configId].use_char_num
+		}, slot0[slot0.configId].use_gold
+	else
+		return {}, 0
+	end
+end
+
+slot0.hasNextCommander = function (slot0)
+	return slot0:getNextId() and slot1 ~= 0
+end
+
+slot0.getActiveSkills = function (slot0)
+	slot1 = {}
+
+	for slot5, slot6 in pairs(slot0.skills) do
+		if not slot6:isLock() then
+			table.insert(slot1, slot6)
+		end
+	end
+
+	return slot1
+end
+
+slot0.getSkillPoint = function (slot0)
+	return slot0[slot0.level].skill_point
+end
+
+slot0.getRestSkillPoint = function (slot0)
+	slot1 = slot0:getSkillPoint()
+	slot2 = 0
+
+	for slot6, slot7 in pairs(slot0.skills) do
+		if not slot7:isLock() then
+			slot2 = slot2 + slot7:getSkillPoints()
+		end
+	end
+
+	return slot1 - slot2
+end
+
+slot0.addExp = function (slot0, slot1)
+	if slot0.level == slot0:getMaxLevel() then
+		slot1 = 0
+	end
+
+	slot0.exp = slot0.exp + slot1
+
+	while slot0:canUpgrade() do
+		if slot0.level == slot2 then
+			slot0.exp = 0
+		else
+			slot0.exp = slot0.exp - slot0:getNeedExp()
+		end
+
+		slot0.level = math.min(slot0.level + 1, slot2)
+
+		slot0:unLockSkills()
+	end
+end
+
+slot0.canUpgrade = function (slot0)
+	if slot0.level == slot0:getMaxLevel() then
+		slot0.exp = 0
+
+		return false
+	end
+
+	if slot0:getNeedExp() <= slot0.exp then
+		return true
+	end
+
+	return false
+end
+
+slot0.deductExp = function (slot0, slot1)
+	if (slot0.level == 1 and slot0.exp == 0) or slot1 <= 0 then
+		return
+	end
+
+	slot0.exp = slot0.exp - slot1
+
+	while slot0.exp < 0 do
+		slot0.exp = slot0:getPrevLevelNeedExp() + slot0.exp
+		slot0.level = math.max(slot0.level - 1, 1)
+
+		if slot0.level == 1 and slot0.exp < 0 then
+			slot0.exp = 0
+		end
+
+		slot0:lockSkills()
+	end
+end
+
+slot0.getNeedExp = function (slot0)
+	return slot0[slot0.level].exp
+end
+
+slot0.getPrevLevelNeedExp = function (slot0)
+	return slot0[math.max(slot0.level - 1, 1)].exp
+end
+
+slot0.getResetSkillConsume = function (slot0)
+	return 500
+end
+
+slot0.resetSkills = function (slot0)
+	slot0.skills = {}
+end
+
+slot0.getAdvancedSkillCount = function (slot0)
+	_.each(_.flatten(slot1), function (slot0)
+		if CommanderSkill.New({
+			id = slot0
+		}):isAdvanceSkill() then
+			if slot0.skills[slot0] then
+				slot1 = slot1 + 1
+			end
+
+			slot2 = slot2 + 1
+		end
+	end)
+
+	return 0, 0
+end
+
+slot0.hasLockSkills = function (slot0)
+	return _.any(_.values(slot0.skills), function (slot0)
+		return slot0:isLock()
+	end)
+end
+
+slot0.unLockSkills = function (slot0)
+	if slot0:hasLockSkills() then
+		slot4 = slot0:getSkillPoint() - _.reduce(slot1, 0, function (slot0, slot1)
+			if not slot1:isLock() then
+				return slot0 + slot1:getSkillPoints()
+			end
+		end)
+
+		_.each(_.sort(_.select(slot1, function (slot0)
+			return slot0:isLock()
+		end), function (slot0, slot1)
+			return slot0.id < slot1.id
+		end), function (slot0)
+			if slot0:getSkillPoints() < slot0 then
+				slot1:updateSkillLock(slot0 - slot1.id, false)
+			end
+		end)
+	end
+end
+
+slot0.lockSkills = function (slot0)
+	if slot0:getSkillPoint() < _.reduce(slot1, 0, function (slot0, slot1)
+		return slot0 + slot1:getSkillPoints()
+	end) then
+		slot4 = slot3 - slot2
+
+		_.each(_.sort(slot1, function (slot0, slot1)
+			return slot1.id < slot0.id
+		end), function (slot0)
+			if slot0 < 0 then
+				slot0 + slot0:getSkillPoints():updateSkillLock(slot0 + slot0.getSkillPoints().id, true)
+			end
+		end)
+	end
+end
+
+slot0.updateSkillLock = function (slot0, slot1, slot2)
+	slot0.skills[slot1]:setLock(slot2)
+end
+
+slot0.updateSkill = function (slot0, slot1)
+	slot0.skills[slot1.id] = slot1
+end
+
+slot0.getDisplaySkills = function (slot0)
+	return slot0:getConfig("skill_list")
+end
+
+slot0.getBaseProperties = function (slot0)
+	slot1 = {}
+
+	for slot5, slot6 in ipairs(CommanderConst.ATTRS) do
+		slot1[slot6] = slot0:getConfig(slot6) + (slot0.attrAdditions[slot6] or 0)
+	end
+
+	return slot1
+end
+
+slot0.getBasePropertieByAttr = function (slot0, slot1)
+	return slot0:getBaseProperties()[slot1]
+end
+
+slot0.getProperties = function (slot0)
+	slot1 = slot0:getBaseProperties()
+
+	for slot5, slot6 in pairs(slot0.skills) do
+		for slot11, slot12 in pairs(slot7) do
+			slot1[slot11] = slot1[slot11] + slot12
+		end
+	end
+
+	return slot1
+end
+
+slot0.getAdditionAttr = function (slot0, slot1)
+	return slot0.attrAdditions[slot1] or 0
+end
+
+slot0.addAdditionAttr = function (slot0, slot1, slot2)
+	slot0.attrAdditions[slot1] = slot0:getAdditionAttr(slot1) + slot2
+end
+
+slot0.replaceAdditionAttr = function (slot0, slot1, slot2)
+	slot0.attrAdditions[slot1] = slot2
+end
+
+slot0.getAdditionAttrs = function (slot0)
+	slot1 = {}
+
+	for slot5, slot6 in ipairs(CommanderConst.ATTRS) do
+		slot1[slot6] = slot0:getAdditionAttr(slot6)
+	end
+
+	return slot1
+end
+
+slot0.getLevelExpConfig = function (slot0)
+	return getConfigFromLevel1(pg.commander_level, slot0.level)
+end
+
+slot0.getEnglishName = function (slot0)
+	return ""
+end
+
+slot0.inShip = function (slot0)
+	return slot0.shipId and slot0.shipId ~= 0
+end
+
+slot0.setShipId = function (slot0, slot1)
+	slot0.shipId = slot1
+end
+
+slot0.getShip = function (slot0)
+	return slot0.shipId
+end
+
+slot0.getShipType = function (slot0)
+	return slot0:getConfig("type")
+end
+
+slot0.getStar = function (slot0)
+	return slot0:getConfig("star")
+end
+
+slot0.getMaxStar = function (slot0)
+	return slot0:getConfig("star_max")
+end
+
+slot0.getNation = function (slot0)
+	return slot0:getConfig("nationality")
+end
+
+slot0.getName = function (slot0)
+	return slot0:getConfig("name")
+end
+
+slot0.rarity2bgPrint = function (slot0)
+	return ShipRarity.Rarity2Print(slot0:getRarity())
+end
+
+slot0.getBgPrint = function (slot0)
+	return (pg.commander_skin_template[slot0.skinId].bg and #slot1.bg > 0 and slot1.bg) or slot0:rarity2bgPrint()
+end
+
+slot0.getMaxLevel = function (slot0)
+	return slot0:getConfig("max_level") or pg.commander_level.all[#pg.commander_level.all]
+end
+
+slot0.bindConfigTable = function (slot0)
+	return pg.commander_data_template
+end
+
+slot0.getRarity = function (slot0)
+	return slot0:getConfig("rarity")
+end
+
+slot0.getPainting = function (slot0)
+	return slot0:getConfig("icon")
+end
+
+slot0.getDockSortValue = function (slot0)
+	return 0
+end
+
+slot0.hasResourceToUpgradeSkill = function (slot0, slot1)
+	slot2, slot3 = slot1:getConsume()
+
+	if slot0:getRestSkillPoint() < slot2 then
+		return false, i18n("commander_skill_point_onengough")
+	end
+
+	for slot8, slot9 in ipairs(slot3) do
+		slot11 = slot9[2]
+		slot12 = slot9[3]
+
+		if slot9[1] == DROP_TYPE_RESOURCE then
+			if getProxy(PlayerProxy):getData():getResById(slot11) < slot12 then
+				return false, i18n("common_no_resource")
+			end
+		elseif slot10 == DROP_TYPE_ITEM and (not getProxy(BagProxy):getItemById(slot11) or slot13.count < slot12) then
+			return false, i18n("common_no_item_1")
+		end
+	end
+
+	return true
+end
+
+slot0.canUpgradeSkill = function (slot0, slot1)
+	if not slot0.skills[slot1] then
+		return false, i18n("commander_skill_unfound")
+	end
+
+	if slot0.level < slot2:getLevelLimit() then
+		return false, i18n("commander_level_limit_tip")
+	end
+
+	if slot2:isMaxLevel() then
+		return false, i18n("commander_max_level")
+	end
+
+	return slot0:hasResourceToUpgradeSkill(slot2)
+end
+
+slot0.canGetSkill = function (slot0, slot1)
+	if CommanderSkill.New({
+		level = 1,
+		id = slot1
+	}):isAdvanceSkill() and slot0:getAdvancedSkillCount() > 0 then
+		return false, i18n("commander_only_advanced_skill")
+	end
+
+	if slot0.level < slot2:getLevelLimit() then
+		return false, i18n("commander_level_no_enough")
+	end
+
+	if not _.all(slot2:getPrevSkills(), function (slot0)
+		return slot0.skills[slot0[1]] and slot0[2] <= slot1.level
+	end) then
+		return false, i18n("commander_prevskil_unlock")
+	end
+
+	return slot0:hasResourceToUpgradeSkill(slot2)
+end
+
+slot0.getDestroyExp = function (slot0)
+	slot1 = slot0:getConfig("exp")
+	slot2 = 0
+
+	for slot6 = 1, slot0.level - 1, 1 do
+		slot2 = slot0[slot6].exp + slot2
+	end
+
+	return slot1 + slot2 * slot1.commander_exp_retio.key_value / 100
+end
+
+slot0.isSameGroup = function (slot0, slot1)
+	return slot0:getConfig("group_type") == slot1:getConfig("group_type")
+end
+
+slot0.getExchangeGold = function (slot0)
+	return CommanderConst.EXCHANGE_GOLD
+end
+
+slot0.sort_rarity = function (slot0)
+	return slot0:getRarity()
+end
+
+slot0.sort_lv = function (slot0)
+	return slot0.level
+end
+
+slot0.sort_synthesize_power = function (slot0)
+	return 0
+end
+
+slot0.sort_achieved_item = function (slot0)
+	return 0
+end
+
+slot0.sort_attr_durability = function (slot0)
+	return slot0:getProperties()[AttributeType.Durability]
+end
+
+slot0.sort_attr_cannon = function (slot0)
+	return slot0:getProperties()[AttributeType.Cannon]
+end
+
+slot0.sort_attr_torpedo = function (slot0)
+	return slot0:getProperties()[AttributeType.Torpedo]
+end
+
+slot0.sort_attr_air = function (slot0)
+	return slot0:getProperties()[AttributeType.Air]
+end
+
+slot0.sort_attr_antiaircraft = function (slot0)
+	return slot0:getProperties()[AttributeType.AntiAircraft]
+end
+
+return slot0

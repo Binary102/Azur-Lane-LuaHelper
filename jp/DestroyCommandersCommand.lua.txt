@@ -1,0 +1,32 @@
+class("DestroyCommandersCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot4 = slot1:getBody().commanderId
+
+	if not slot1.getBody().materials or #slot3 == 0 then
+		return
+	end
+
+	if not getProxy(CommanderProxy):getCommanderById(slot4) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_command_is_nil"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25009, {
+		commanderid = slot4,
+		commanderids = slot3
+	}, 25010, function (slot0)
+		if slot0.result == 0 then
+			for slot4, slot5 in ipairs(slot0) do
+				slot1:removeCommanderById(slot5)
+			end
+
+			slot2:addExp(slot0.exp)
+			slot2.addExp:updateCommander(slot2.addExp)
+			slot3:sendNotification(GAME.COMMANDER_ON_DESTROY_DONE, slot2:clone())
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("DestroyCommandersCommand", pm.SimpleCommand)

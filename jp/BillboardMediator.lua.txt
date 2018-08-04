@@ -1,0 +1,176 @@
+slot0 = class("BillboardMediator", import("..base.ContextMediator"))
+slot0.REFRESH_BILLBOARD = "BillboardMediator:REFRESH_BILLBOARD"
+slot0.OPEN_RIVAL_INFO = "BillboardMediator:OPEN_RIVAL_INFO"
+slot0.GET_POWERRANK = "BillboardMediator:GET_POWERRANK"
+
+slot0.register = function (slot0)
+	slot0:bind(slot0.REFRESH_BILLBOARD, function (slot0)
+		slot0:sendNotification(GAME.REFRESH_BILLBOARD)
+	end)
+	slot0:bind(slot0.GET_POWERRANK, function (slot0, slot1, slot2)
+		slot0:sendNotification(GAME.GET_POWERRANK, {
+			type = slot1 or 1,
+			page = slot2 or 1
+		})
+	end)
+	slot0.viewComponent:setPlayer(slot2)
+	slot0.viewComponent:setPlayerCollectCount(getProxy(CollectionProxy):getCollectionCount())
+
+	slot3 = getProxy(BayProxy)
+
+	slot0.viewComponent:setPlayerPowerPoint(slot3:getBayPower())
+	slot0.viewComponent:setPlayerShip(slot4)
+
+	function slot5()
+		slot0:sendNotification(GAME.REFRESH_BILLBOARD)
+
+		BillboardMediator.time = pg.TimeMgr.GetInstance():GetServerTime() + REFRESH_BILLBOARD_TIME
+	end
+
+	slot6 = getProxy(MilitaryExerciseProxy)
+
+	if BillboardMediator.time then
+		if BillboardMediator.time - pg.TimeMgr.GetInstance():GetServerTime() <= 0 then
+			slot5()
+		else
+			slot0.viewComponent:setBillboard(slot6:getArenaRankList())
+		end
+	else
+		slot5()
+	end
+
+	slot0.viewComponent:setSeasonInfo(slot7)
+	slot0:bind(slot0.OPEN_RIVAL_INFO, function (slot0, slot1)
+		slot0:sendNotification(GAME.GET_RIVAL_INFO, slot1)
+	end)
+	slot0:sendNotification(GAME.GET_POWERRANK, {
+		page = 1
+	})
+	slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+		type = 1
+	})
+	slot0:sendNotification(GAME.GET_POWERRANK, {
+		type = 2,
+		page = 1
+	})
+	slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+		type = 2
+	})
+	slot0:sendNotification(GAME.GET_POWERRANK, {
+		type = 4,
+		page = 1
+	})
+	slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+		type = 4
+	})
+
+	if getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_PT_RANK) and not slot8:isEnd() then
+		slot0.viewComponent:setPTActivity(slot8)
+		slot0:sendNotification(GAME.GET_POWERRANK, {
+			type = 3,
+			page = 1
+		})
+		slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+			type = 3
+		})
+	end
+
+	if getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_CHALLENGE_RANK) and not slot9:isEnd() then
+		slot0:sendNotification(GAME.GET_POWERRANK, {
+			type = 5,
+			page = 1
+		})
+		slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+			type = 5
+		})
+	end
+
+	if getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_EXTRA_CHAPTER_RANK) and not slot10:isEnd() then
+		slot0:sendNotification(GAME.GET_POWERRANK, {
+			type = 6,
+			page = 1
+		})
+		slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+			type = 6
+		})
+	end
+
+	if getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_BOSS_BATTLE) and not slot11:isEnd() then
+		slot0:sendNotification(GAME.GET_POWERRANK, {
+			type = 7,
+			page = 1
+		})
+		slot0:sendNotification(GAME.GET_PLAYERPOWERRANK, {
+			type = 7
+		})
+	end
+end
+
+slot0.listNotificationInterests = function (slot0)
+	return {
+		MilitaryExerciseProxy.ARENARANK_UPDATED,
+		GAME.GET_RIVAL_INFO_DONE,
+		MilitaryExerciseProxy.POWERRANK_UPDATED,
+		MilitaryExerciseProxy.MYPOWERRANK_UPDATED
+	}
+end
+
+slot0.handleNotification = function (slot0, slot1)
+	slot3 = slot1:getBody()
+
+	if slot1:getName() == MilitaryExerciseProxy.ARENARANK_UPDATED then
+		slot0.viewComponent:setBillboard(slot3)
+	elseif slot2 == MilitaryExerciseProxy.POWERRANK_UPDATED then
+		if slot3.type == MilitaryExerciseProxy.RANK_TYPE_POWER then
+			slot0.viewComponent:setPowerRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_COLLECT then
+			slot0.viewComponent:setCollectRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_PLEDGE then
+			slot0.viewComponent:setPledgeRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_PT then
+			slot0.viewComponent:setPtRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_CHALLENGE then
+			slot0.viewComponent:setChallengeRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_EXTRA_CHAPTER then
+			slot0.viewComponent:setExtraChapterRank(slot3.list, slot3.nextTime, slot3.page)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_ACT_BOSS_BATTLE then
+			slot0.viewComponent:setActBossBattleRank(slot3.list, slot3.nextTime, slot3.page)
+		end
+	elseif slot2 == MilitaryExerciseProxy.MYPOWERRANK_UPDATED then
+		if slot3.type == MilitaryExerciseProxy.RANK_TYPE_POWER then
+			slot0.viewComponent:setPlayerPowerRank(slot3.point, slot3.rank)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_COLLECT then
+			slot0.viewComponent:setPlayerCollectRank(slot3.point, slot3.rank)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_PLEDGE then
+			slot0.viewComponent:setPlayerPledgeRank(slot3.point, slot3.rank)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_PT then
+			slot0.viewComponent:setPlayerPtRank(slot3.point, slot3.rank)
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_CHALLENGE then
+			slot4 = getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_CHALLENGE_RANK)
+			slot5 = slot3.point or 0
+
+			if slot4 and not slot4:isEnd() then
+				slot0.viewComponent:setPlayerChallengeRank(slot4:getData1() or 0, slot3.rank)
+			end
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_EXTRA_CHAPTER then
+			slot5 = slot3.point
+
+			if getProxy(ActivityProxy):getActivityByType(ActivityConst.ACTIVITY_TYPE_EXTRA_CHAPTER_RANK) and not slot4:isEnd() then
+				slot0.viewComponent:setPlayerExtraChapterRank(math.floor(slot4:getData1() or 0), slot3.rank)
+			end
+		elseif slot3.type == MilitaryExerciseProxy.RANK_TYPE_ACT_BOSS_BATTLE then
+			slot0.viewComponent:setPlayerActBossBattle(slot3.point, slot3.rank)
+		end
+	elseif slot2 == GAME.GET_RIVAL_INFO_DONE then
+		slot0:addSubLayers(Context.New({
+			viewComponent = RivalInfoLayer,
+			mediator = RivalInfoMediator,
+			data = {
+				rival = slot3.rival,
+				type = RivalInfoLayer.TYPE_DISPLAY
+			}
+		}))
+	end
+end
+
+return slot0

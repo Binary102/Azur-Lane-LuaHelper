@@ -1,0 +1,151 @@
+slot0 = class("CommanderExchangePanel", import("..base.BasePanel"))
+
+slot0.init = function (slot0)
+	slot0.attrTFs = {}
+	slot0.nameTF = slot0:findTF("detail/name")
+	slot0.characterTF = slot0:findTF("detail/character")
+	slot0.attrsTF = slot0:findTF("detail/attrs")
+	slot0.attrContainerTF = slot0:findTF("icons/content", slot0.attrsTF)
+	slot0.attrTpl = slot0:getTpl("item", slot0.attrContainerTF)
+	slot0.levelTF = slot0:findTF("level", slot0.attrsTF)
+	slot0.expTF = slot0:findTF("exp_info", slot0.attrsTF)
+	slot0.starTpl = slot0:findTF("star_tpl", slot0.nameTF)
+	slot0.paintingTF = slot0:findTF("painting", slot0.characterTF)
+	slot0.exchangeBtn = slot0:findTF("detail/exchange_btn")
+end
+
+slot0.enter = function (slot0, slot1, slot2)
+	slot0:update(slot1, slot2)
+	slot0:updateParentView(false)
+end
+
+slot0.updateParentView = function (slot0, slot1)
+	if not slot0.parent.attrTFs or table.getCount(slot2) == 0 then
+		return
+	end
+
+	for slot6, slot7 in pairs(slot2) do
+		setActive(slot0:findTF("bg/value/add", slot7), slot1)
+	end
+end
+
+slot0.update = function (slot0, slot1, slot2)
+	slot0.commanderVO = slot1
+	slot0.commanderVOs = slot2
+	slot4 = nil
+
+	if slot0.parent.contextData.exchangeId then
+		slot4 = slot0.commanderVOs[slot3]
+	end
+
+	slot0:updateCommanderInfo(slot4)
+end
+
+slot0.updateCommanderInfo = function (slot0, slot1)
+	setActive(slot0.nameTF, slot1)
+	setActive(slot0.exchangeBtn, slot1)
+
+	if slot1 then
+		GetSpriteFromAtlasAsync("bg/star_level_bg_" .. slot1:getBgPrint(), "", function (slot0)
+			if not slot0.exited then
+				setImageSprite(slot0.background, slot0)
+			end
+		end)
+		slot0:loadPaint(slot1:getPainting())
+		setText(slot0.levelTF, "LEVEL:" .. slot1.level)
+
+		slot2 = slot1:getLevelExpConfig()
+
+		if slot1.level ~= slot1:getMaxLevel() then
+			setSlider(findTF(slot0.attrsTF, "exp"), 0, slot2.exp, slot1.exp)
+			setText(findTF(slot0.attrsTF, "exp_info"), slot1.exp .. "/" .. slot2.exp)
+		else
+			setSlider(findTF(slot0.attrsTF, "exp"), 0, 1, 1)
+			setText(findTF(slot0.attrsTF, "exp_info"), slot1.exp .. "/Max")
+		end
+
+		setText(slot0:findTF("Text", slot0.nameTF), slot1:getName())
+		setText(slot0:findTF("english_name", slot0.nameTF), slot1:getEnglishName())
+		removeAllChildren(slot3)
+
+		slot4 = slot1:getStar()
+
+		for slot9 = 1, slot1:getMaxStar(), 1 do
+			cloneTplTo(slot0.starTpl, slot3, "star_" .. slot9)
+		end
+
+		for slot10 = 1, slot5 - slot4, 1 do
+			slot11 = slot3:GetChild(slot10 - 1)
+
+			setActive(slot11:Find("star_tpl"), false)
+			setActive(slot11:Find("empty_star_tpl"), true)
+		end
+
+		setImageSprite(slot0:findTF("ship_type/type", slot0.nameTF), slot7, true)
+		onButton(slot0, slot0.exchangeBtn, function ()
+			slot0:emit(CommanderInfoMediator.ON_EXCHANGE)
+		end, SFX_PANEL)
+	else
+		slot0:loadPaint("unknown")
+		setText(slot0.levelTF, "LEVEL:0")
+		setImageSprite(slot0.background, nil)
+		setSlider(findTF(slot0.attrsTF, "exp"), 0, 1, 0)
+		setText(findTF(slot0.attrsTF, "exp_info"), "0/0")
+		onButton(slot0, slot0.paintingTF, function ()
+			slot0:emit(CommanderInfoMediator.ON_SELECT_MATERIAL_SHIPS, CommanderConst.SELECT_TYPE_EXCHANGE)
+		end, SFX_PANEL)
+	end
+
+	slot0:updateAttrs(slot1)
+end
+
+slot0.loadPaint = function (slot0, slot1)
+	if slot0.paintingName ~= slot1 then
+		if slot0.paintingName then
+			retPaintingPrefab(slot0.paintingTF, slot0.paintingName)
+		end
+
+		setPaintingPrefabAsync(slot0.paintingTF, slot1, "chuanwu")
+
+		slot0.paintingName = slot1
+	end
+end
+
+slot0.updateAttrs = function (slot0, slot1)
+	function slot2(slot0, slot1, slot2)
+		setText(slot0:findTF("bg/name", slot0), slot3)
+		setText(slot0:findTF("bg/value/value", slot0), slot2)
+		setText(slot0:findTF("bg/value/add", slot0), "")
+		setImageSprite(slot0:findTF("icon"), GetSpriteFromAtlas("AttrIcon", slot1))
+	end
+
+	if slot1 then
+		for slot7, slot8 in pairs(slot3) do
+			if not slot0.attrTFs[slot7] then
+				slot0.attrTFs[slot7] = cloneTplTo(slot0.attrTpl, slot0.attrContainerTF)
+			end
+
+			slot2(slot0.attrTFs[slot7], slot7, slot1:getBasePropertieByAttr(slot7))
+		end
+	else
+		for slot7, slot8 in pairs(slot3) do
+			if not slot0.attrTFs[slot7] then
+				slot0.attrTFs[slot7] = cloneTplTo(slot0.attrTpl, slot0.attrContainerTF)
+			end
+
+			slot2(slot0.attrTFs[slot7], slot7, "??")
+		end
+	end
+end
+
+slot0.exit = function (slot0)
+	slot0:updateParentView(true)
+end
+
+slot0.clear = function (slot0)
+	if slot0.paintingName then
+		retPaintingPrefab(slot0.paintingTF, slot0.paintingName)
+	end
+end
+
+return slot0

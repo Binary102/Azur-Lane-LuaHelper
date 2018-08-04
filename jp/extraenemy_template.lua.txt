@@ -1,0 +1,116 @@
+pg = pg or {}
+pg.extraenemy_template = {
+	{
+		reward = 4,
+		name = "长门陆奥第一阶段",
+		refresh_type = 1,
+		hp = 10000,
+		mail_title = "extraenemy_mail_title1",
+		background = "",
+		mail_content = "extraenemy_mail_content1",
+		id = 1,
+		reward_display = {
+			{
+				4,
+				204021,
+				1
+			},
+			{
+				2,
+				20001,
+				1
+			},
+			{
+				1,
+				1,
+				300
+			},
+			{
+				1,
+				2,
+				50
+			}
+		},
+		refresh_config = {
+			{
+				{
+					2018,
+					5,
+					10
+				},
+				{
+					0,
+					0,
+					0
+				}
+			}
+		}
+	},
+	{
+		reward = 5,
+		name = "长门陆奥第二阶段",
+		refresh_type = 2,
+		hp = 20000,
+		mail_title = "extraenemy_mail_title2",
+		background = "",
+		mail_content = "extraenemy_mail_content2",
+		id = 2,
+		reward_display = {
+			{
+				2,
+				20001,
+				1
+			},
+			{
+				1,
+				1,
+				300
+			},
+			{
+				1,
+				2,
+				50
+			}
+		},
+		refresh_config = {
+			1
+		}
+	},
+	{
+		reward = 6,
+		name = "长门陆奥第三阶段",
+		refresh_type = 2,
+		hp = 30000,
+		mail_title = "extraenemy_mail_title3",
+		background = "",
+		mail_content = "extraenemy_mail_content3",
+		id = 3,
+		reward_display = {
+			{
+				2,
+				20001,
+				1
+			},
+			{
+				1,
+				1,
+				300
+			},
+			{
+				1,
+				2,
+				50
+			}
+		},
+		refresh_config = {
+			2
+		}
+	},
+	all = {
+		1,
+		2,
+		3
+	}
+}
+
+return

@@ -1,0 +1,111 @@
+class("ChangePlayerNameCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	if not slot1:getBody().name or slot3 == "" then
+		return
+	end
+
+	if slot3 == getProxy(PlayerProxy).getData(slot4).name then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("same_player_name_tip"))
+
+		return
+	end
+
+	if wordVer(slot3) > 0 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("playerinfo_mask_word"))
+
+		return
+	end
+
+	slot11, slot8 = filterSpecChars(slot3)
+
+	if string.len(slot3) ~= string.len(slot7) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("login_newPlayerScene_name_existOtherChar"))
+
+		return
+	elseif string.len(slot3) - slot8 < 4 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("login_newPlayerScene_name_tooShort"))
+
+		return
+	elseif slot9 > 14 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("login_newPlayerScene_name_tooLong"))
+
+		return
+	end
+
+	if not slot5 then
+		return
+	end
+
+	slot9, slot10 = slot5:canModifyName()
+
+	if not slot9 then
+		pg.TipsMgr:GetInstance():ShowTips(slot10)
+
+		return
+	end
+
+	slot12 = getProxy(BagProxy)
+	slot13 = nil
+
+	if slot5:getModifyNameComsume()[1] == DROP_TYPE_RESOURCE then
+		if slot5:getResById(slot11[2]) < slot11[3] then
+			pg.TipsMgr:GetInstance():ShowTips(i18n("common_no_resource"))
+
+			return
+		end
+
+		slot13 = Item.New({
+			type = DROP_TYPE_ITEM,
+			id = id2ItemId(slot11[2]),
+			count = slot11[3]
+		})
+	elseif slot11[1] == DROP_TYPE_ITEM then
+		if not slot12:getItemById(slot11[2]) or slot14.count < slot11[3] then
+			pg.TipsMgr:GetInstance():ShowTips(i18n("common_no_item_1"))
+
+			return
+		end
+
+		slot13 = Item.New({
+			type = DROP_TYPE_ITEM,
+			id = slot11[2],
+			count = slot11[3]
+		})
+	else
+		return
+	end
+
+	slot14 = pg.gameset.player_name_cold_time.key_value
+
+	function slot15()
+		pg.ConnectionMgr.GetInstance():Send(11007, {
+			name = slot0
+		}, 11008, function (slot0)
+			if slot0.result == 0 then
+				slot0.name = slot0
+
+				slot0:updateModifyNameColdTime(slot1)
+				slot0:updatePlayer(slot0)
+				slot4:sendNotification(GAME.CONSUME_ITEM, Item.New({
+					type = slot5[1],
+					id = slot5[2],
+					count = slot5[3]
+				}))
+				slot4:sendNotification(GAME.CHANGE_PLAYER_NAME_DONE)
+				pg.TipsMgr:GetInstance():ShowTips(i18n("player_changePlayerName_ok"))
+			else
+				pg.TipsMgr:GetInstance():ShowTips(errorTip("player_changePlayerName", slot0.result))
+
+				return
+			end
+		end)
+	end
+
+	pg.MsgboxMgr:GetInstance():ShowMsgBox({
+		content = i18n("player_name_change_warning", slot13.count, slot13:getConfig("name"), slot3),
+		onYes = function ()
+			slot0()
+		end
+	})
+end
+
+return class("ChangePlayerNameCommand", pm.SimpleCommand)

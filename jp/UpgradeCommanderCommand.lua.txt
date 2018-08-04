@@ -1,0 +1,68 @@
+class("UpgradeCommanderCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot3 = slot1:getBody().commanderIds
+
+	if not slot1.getBody().commanderId or not slot3 then
+		return
+	end
+
+	if #slot3 == 0 then
+		return
+	end
+
+	if not getProxy(CommanderProxy):getCommanderById(slot4) then
+		return
+	end
+
+	if not slot6:canBreakout() then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_break_out_erro"))
+
+		return
+	end
+
+	for slot10, slot11 in ipairs(slot3) do
+		if not slot5:getCommanderById(slot11) or not slot12:isSameGroup(slot6) then
+			pg.TipsMgr:GetInstance():ShowTips(i18n("commander_not_same_group"))
+
+			return
+		end
+	end
+
+	slot7, slot8 = slot6:getBreakoutConsume()
+
+	if #slot3 ~= slot7[2] then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_material_noenough"))
+
+		return
+	end
+
+	if getProxy(PlayerProxy).getData(slot9).gold < slot8 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("common_no_resource"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25011, {
+		commanderid = slot4,
+		commanderids = slot3
+	}, 25012, function (slot0)
+		if slot0.result == 0 then
+			slot0.configId = slot0:getNextId()
+
+			slot1:updateCommander(slot0)
+
+			for slot5, slot6 in ipairs(ipairs) do
+				slot1:removeCommanderById(slot6)
+			end
+
+			slot3:consume({
+				gold = 
+			})
+			slot5:updatePlayer(slot5)
+			slot6:sendNotification(GAME.COMMANDER_ON_UPGRADE_DONE)
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("UpgradeCommanderCommand", pm.SimpleCommand)

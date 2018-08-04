@@ -1,0 +1,157 @@
+slot0 = class("CommanderInfoMediator", import("..base.ContextMediator"))
+slot0.ON_RELIEVE = "CommanderInfoMediator:ON_RELIEVE"
+slot0.ON_SKILL_INFO = "CommanderInfoMediator:ON_SKILL_INFO"
+slot0.ON_RESET_SKILL = "CommanderInfoMediator:ON_RESET_SKILL"
+slot0.ON_SELECT_MATERIAL_SHIPS = "CommanderInfoMediator:ON_SELECT_MATERIAL_SHIPS"
+slot0.ON_DESTROY = "CommanderInfoMediator:ON_DESTROY"
+slot0.ON_UPGRADE = "CommanderInfoMediator:ON_UPGRADE"
+slot0.ON_EXCHANGE = "CommanderInfoMediator:ON_EXCHANGE"
+
+slot0.register = function (slot0)
+	slot0:bind(slot0.ON_RELIEVE, function (slot0, slot1)
+		slot0:sendNotification(GAME.COMMANDER_EQUIP_TO_SHIP, {
+			commanderId = 0,
+			shipId = slot1
+		})
+	end)
+	slot0:bind(slot0.ON_RESET_SKILL, function (slot0, slot1)
+		slot0:sendNotification(GAME.COMANDER_RESET_SKILLS, {
+			commanderId = slot1
+		})
+	end)
+	slot0:bind(slot0.ON_SKILL_INFO, function (slot0, slot1, slot2)
+		slot0:addSubLayers(Context.New({
+			viewComponent = CommanderSkillInfoLayer,
+			mediator = CommanderSkillInfoMediator,
+			data = {
+				skillId = slot1,
+				commanderId = slot2
+			}
+		}))
+	end)
+	slot0:bind(slot0.ON_SELECT_MATERIAL_SHIPS, function (slot0, slot1, slot2)
+		slot0:GoCommanderPost(slot1, slot2)
+	end)
+	slot0:bind(slot0.ON_DESTROY, function (slot0)
+		slot0:sendNotification(GAME.COMMANDER_ON_DESTROY, {
+			materials = slot0.contextData.materialIds,
+			commanderId = slot0.contextData.commanderId
+		})
+	end)
+	slot0:bind(slot0.ON_UPGRADE, function (slot0, slot1)
+		slot0:sendNotification(GAME.COMMANDER_ON_UPGRADE, {
+			commanderIds = slot0.contextData.upgradeMaterialIds,
+			commanderId = slot1
+		})
+	end)
+	slot0:bind(slot0.ON_EXCHANGE, function (slot0)
+		slot0:sendNotification(GAME.COMMANDER_ON_EXCHANGE, {
+			materialId = slot0.contextData.exchangeId,
+			commanderId = slot0.contextData.commanderId
+		})
+	end)
+
+	slot1 = getProxy(CommanderProxy)
+
+	slot0.viewComponent:setCommander(slot2)
+	slot0.viewComponent:setCommanders(slot1:getData())
+end
+
+slot0.listNotificationInterests = function (slot0)
+	return {
+		CommanderProxy.COMMANDER_UPDATED,
+		GAME.COMMANDER_ON_DESTROY_DONE,
+		GAME.COMMANDER_ON_UPGRADE_DONE,
+		GAME.COMMANDER_ON_EXCHANGE_DONE
+	}
+end
+
+slot0.handleNotification = function (slot0, slot1)
+	slot3 = slot1:getBody()
+
+	if slot1:getName() == CommanderProxy.COMMANDER_UPDATED then
+		slot0.viewComponent:setCommander(slot3)
+		slot0.viewComponent:updateCommanderInfo()
+		slot0.viewComponent:updatePage()
+	elseif slot2 == GAME.COMMANDER_ON_DESTROY_DONE then
+		slot0.contextData.materialIds = nil
+
+		slot0.viewComponent:updatePage()
+	elseif slot2 == GAME.COMMANDER_ON_UPGRADE_DONE then
+		slot0.contextData.upgradeMaterialIds = nil
+
+		slot0.viewComponent:updatePage()
+	elseif slot2 == GAME.COMMANDER_ON_EXCHANGE_DONE then
+		slot0.contextData.exchangeId = nil
+
+		slot0.viewComponent:updatePage()
+	end
+end
+
+slot0.GoCommanderPost = function (slot0, slot1, slot2)
+	function slot3()
+		slot3 = Commander.New({
+			configId = getProxy(CommanderProxy):getData()[slot0.contextData.commanderId].configId
+		})
+
+		for slot7, slot8 in pairs(slot1) do
+			if not slot3:isSameGroup(slot8) then
+				table.insert(slot0, slot8.id)
+			end
+		end
+
+		return slot0
+	end
+
+	slot4 = {}
+	slot5 = 0
+	slot6 = {}
+
+	if CommanderConst.SELECT_TYPE_DESTORY == slot1 then
+		slot4 = slot0.contextData.materialIds or {}
+		slot5 = CommanderConst.SELECT_MATIRIAL_MAX_COUNT
+		slot6 = {
+			slot0.contextData.commanderId
+		}
+	elseif CommanderConst.SELECT_TYPE_UPGRADE == slot1 then
+		slot4 = slot0.contextData.upgradeMaterialIds or {}
+		slot5 = slot2
+
+		table.insert(slot3(), slot0.contextData.commanderId)
+	elseif CommanderConst.SELECT_TYPE_EXCHANGE == slot1 then
+		slot5 = 1
+		slot4 = (slot0.contextData.exchangeId and {
+			slot0.contextData.exchangeId
+		}) or {}
+
+		table.insert(slot3(), slot0.contextData.commanderId)
+	end
+
+	slot0:sendNotification(GAME.GO_SCENE, SCENE.COMMANDPOST, {
+		selectedMin = 1,
+		mode = CommandPostScene.MODE_SELECT,
+		ignoredIds = slot6,
+		selectedIds = slot4,
+		onShip = function (slot0)
+			if slot0:inShip() then
+				return false, i18n("commander_already_equip")
+			end
+
+			return true
+		end,
+		onSelected = function (slot0)
+			if CommanderConst.SELECT_TYPE_DESTORY == slot0 then
+				slot1.contextData.materialIds = slot0
+			elseif CommanderConst.SELECT_TYPE_UPGRADE == slot0 then
+				slot1.contextData.upgradeMaterialIds = slot0
+			elseif CommanderConst.SELECT_TYPE_EXCHANGE == slot0 then
+				slot1.contextData.exchangeId = slot0[1]
+
+				print(slot1.contextData.exchangeId)
+			end
+		end,
+		selectedMax = slot5
+	})
+end
+
+return slot0

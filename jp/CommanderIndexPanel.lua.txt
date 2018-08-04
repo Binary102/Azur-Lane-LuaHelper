@@ -1,0 +1,438 @@
+slot0 = class("CommanderIndexPanel", import("..base.BasePanel"))
+slot1 = 1
+slot2 = 2
+slot3 = {
+	"sort_rarity",
+	"sort_lv",
+	"sort_synthesize_power",
+	"sort_achieved_item",
+	"sort_attr_durability",
+	"sort_attr_cannon",
+	"sort_attr_torpedo",
+	"sort_attr_air",
+	"sort_attr_antiaircraft"
+}
+slot4 = {
+	"index_all",
+	"index_shipType_quZhu",
+	"index_shipType_qinXun",
+	"index_shipType_zhongXun",
+	"index_shipType_zhanLie",
+	"index_shipType_hangMu",
+	"index_shipType_weiXiu",
+	"index_shipType_qianTing",
+	"index_other"
+}
+slot5 = {
+	1,
+	2,
+	3,
+	4,
+	4,
+	5,
+	5,
+	7,
+	8,
+	8,
+	8,
+	6,
+	8
+}
+slot6 = {
+	"index_all",
+	"index_shipNation_baiYing",
+	"index_shipNation_huangJia",
+	"index_shipNation_chongYing",
+	"index_shipNation_tieXue",
+	"index_shipNation_dongHuang",
+	"index_shipNation_beiLian",
+	"index_other"
+}
+slot7 = {
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	6
+}
+slot8 = {
+	"index_all",
+	"index_rare2",
+	"index_rare3",
+	"index_rare4",
+	"index_rare5"
+}
+slot9 = {
+	1,
+	2,
+	3,
+	4,
+	5
+}
+
+slot0.init = function (slot0)
+	slot0.layoutTF = slot0:findTF("index_panel/layout")
+	slot0.sortContainer = slot0:findTF("sort/panel", slot0.layoutTF)
+	slot0.indexContainer = slot0:findTF("index/panel", slot0.layoutTF)
+	slot0.campContainer = slot0:findTF("camp/panel", slot0.layoutTF)
+	slot0.rarityContainer = slot0:findTF("rarity/panel", slot0.layoutTF)
+	slot0.okBtn = slot0:findTF("index_panel/ok")
+	slot0.cancelBtn = slot0:findTF("index_panel/cancel")
+	slot0.btnYellowSprite = ResourceMgr.Inst:LoadAssetSync(slot1, "BTN2", typeof(Sprite), false, false)
+	slot0.btnBlueSprite = ResourceMgr.Inst:LoadAssetSync(slot1, "BTN3", typeof(Sprite), false, false)
+	slot0.btBlackSprite = ResourceMgr.Inst:LoadAssetSync(pg.UIMgr.GetInstance()._common_ui_bundle, "BTN1", typeof(Sprite), false, false)
+	slot0.asc = true
+	slot0.onConfirm = nil
+end
+
+slot0.updateAsc = function (slot0, slot1)
+	slot0.commanderVOs = slot1
+	slot0.asc = not slot0.asc
+
+	triggerButton(slot0.okBtn)
+end
+
+slot0.attach = function (slot0, slot1)
+	slot0.super.attach(slot0, slot1)
+	slot0:initIndexs()
+	setActive(slot0._tf, false)
+end
+
+slot0.open = function (slot0, slot1)
+	slot0.commanderVOs = slot1
+
+	setActive(slot0._tf, true)
+	pg.UIMgr.GetInstance():BlurPanel(slot0._tf)
+	slot0:circleRotate(true)
+end
+
+slot0.hide = function (slot0)
+	setActive(slot0._tf, false)
+	slot0:circleRotate(false)
+	pg.UIMgr.GetInstance():UnblurPanel(slot0._tf, slot0.parent)
+end
+
+slot0.initIndexs = function (slot0)
+	slot0:initSort()
+	slot0:initIndex()
+	slot0:initCamp()
+	slot0:initRarity()
+	onButton(slot0, slot0.cancelBtn, function ()
+		slot0:hide()
+	end, SFX_PANEL)
+	onButton(slot0, slot0.okBtn, function ()
+		slot0:doFilter()
+		slot0.doFilter.parent:updateShipCount()
+		slot0.doFilter.parent.updateShipCount:hide()
+
+		if slot0.doFilter.parent.updateShipCount.hide.onConfirm then
+			slot0.onConfirm()
+		end
+	end, SFX_PANEL)
+end
+
+slot0.doFilter = function (slot0)
+	slot0:filter(slot2, slot0.campFlags, slot0.rarityFlags)
+	slot0:sort(slot0.sortIndex)
+
+	slot0.parent.contextData.sortIndex = slot0.sortIndex
+	slot0.parent.contextData.indexFlags = slot0.indexFlags
+	slot0.parent.contextData.campFlags = slot0.campFlags
+	slot0.parent.contextData.rarityFlags = slot0.rarityFlags
+end
+
+slot0.filter = function (slot0, slot1, slot2, slot3)
+	for slot8 = #slot0.commanderVOs, 1, -1 do
+		if slot4[slot8] and (not slot0:isValidIndexFlag(slot9, slot1) or not slot0:isValidCampFlag(slot9, slot2) or not slot0:isValidRarity(slot9, slot3)) then
+			table.remove(slot0.commanderVOs, slot8)
+		end
+	end
+end
+
+slot0.isValidIndexFlag = function (slot0, slot1, slot2)
+	if not slot2.index_all then
+		if slot0[slot1:getShipType()] then
+			return slot2[slot1[slot4 + 1]]
+		else
+			return slot2.index_other
+		end
+	else
+		return true
+	end
+end
+
+slot0.isValidCampFlag = function (slot0, slot1, slot2)
+	if not slot2.index_all then
+		if slot0[slot1:getNation()] then
+			return slot2[slot1[slot4 + 1]]
+		else
+			return slot2.index_other
+		end
+	else
+		return true
+	end
+end
+
+slot0.isValidRarity = function (slot0, slot1, slot2)
+	if not slot2.index_all then
+		if slot0[slot1:getRarity()] and slot2[slot1[slot4]] then
+			return true
+		else
+			return false
+		end
+	else
+		return true
+	end
+end
+
+slot0.sort = function (slot0, slot1)
+	slot2 = slot0.commanderVOs
+	slot3 = false
+
+	for slot7 = #slot0.commanderVOs, 1, -1 do
+		if not slot0.commanderVOs[slot7] then
+			table.remove(slot0.commanderVOs, slot7)
+
+			slot3 = true
+
+			break
+		end
+	end
+
+	table.sort(slot2, function (slot0, slot1)
+		if slot0[slot0](slot0) == slot1[slot0](slot1) then
+			if slot1.asc then
+				slot4 = {
+					slot0.id < slot1.id
+				}
+
+				if not slot4 then
+					slot4 = {
+						slot1.id < slot0.id
+					}
+				end
+			end
+
+			return slot4[1]
+		else
+			if slot1.asc then
+				slot4 = {
+					slot2 < slot3
+				}
+
+				if not slot4 then
+					slot4 = {
+						slot3 < slot2
+					}
+				end
+			end
+
+			return slot4[1]
+		end
+	end)
+
+	if slot3 then
+		table.insert(slot2, 1, false)
+	end
+end
+
+slot0.createTpl = function (slot0, slot1, slot2)
+	slot3 = {}
+	slot4 = slot0:getTpl("tpl", slot2)
+
+	for slot8, slot9 in ipairs(slot1) do
+		slot3[slot9] = cloneTplTo(slot4, slot2, slot9)
+
+		setImageSprite(findTF(slot3[slot9], "Image"), GetSpriteFromAtlas("indextext", slot1[slot8]))
+	end
+
+	return slot3
+end
+
+slot0.markSelected = function (slot0, slot1, slot2, slot3)
+	if slot3 then
+		if slot2 == slot0 then
+			slot1:GetComponent(typeof(Image)).sprite = slot0.btnYellowSprite
+		elseif slot2 == slot1 then
+			slot1:GetComponent(typeof(Image)).sprite = slot0.btnBlueSprite
+		end
+	else
+		slot1:GetComponent(typeof(Image)).sprite = slot0.btBlackSprite
+	end
+end
+
+slot0.initSort = function (slot0)
+	slot0.sortTFs = slot0:createTpl(slot0, slot0.sortContainer)
+	slot0.sortIndex = nil
+
+	for slot4, slot5 in pairs(slot0.sortTFs) do
+		onButton(slot0, slot5, function ()
+			if slot0.sortIndex == slot1 then
+				return
+			end
+
+			if slot0.sortIndex then
+				slot0:markSelected(slot0.sortTFs[slot0.sortIndex], , false)
+			end
+
+			slot0:markSelected(slot3, , true)
+
+			slot0.markSelected.sortIndex = slot0
+		end, SFX_PANEL)
+	end
+
+	triggerButton(slot0.sortTFs[slot0.parent.contextData.sortIndex or slot0[1]])
+end
+
+slot0.initIndex = function (slot0)
+	slot0.indexTFs = slot0:createTpl(slot0, slot0.indexContainer)
+	slot0.indexFlags = {}
+
+	for slot4, slot5 in pairs(slot0.indexTFs) do
+		slot0.indexFlags[slot4] = false
+
+		onButton(slot0, slot5, function ()
+			slot0:OnFilterBtnCilick("index", slot0, )
+		end, SFX_PANEL)
+	end
+
+	slot0.indexFlags = slot0.parent.contextData.indexFlags or slot0.indexFlags
+
+	slot0:initSelectedIndexs("index")
+end
+
+slot0.initCamp = function (slot0)
+	slot0.campTFs = slot0:createTpl(slot0, slot0.campContainer)
+	slot0.campFlags = {}
+
+	for slot4, slot5 in pairs(slot0.campTFs) do
+		slot0.campFlags[slot4] = false
+
+		onButton(slot0, slot5, function ()
+			slot0:OnFilterBtnCilick("camp", slot0, )
+		end, SFX_PANEL)
+	end
+
+	slot0.campFlags = slot0.parent.contextData.campFlags or slot0.campFlags
+
+	slot0:initSelectedIndexs("camp")
+end
+
+slot0.initRarity = function (slot0)
+	slot0.rarityTFs = slot0:createTpl(slot0, slot0.rarityContainer)
+	slot0.rarityFlags = {}
+
+	for slot4, slot5 in pairs(slot0.rarityTFs) do
+		slot0.rarityFlags[slot4] = false
+
+		onButton(slot0, slot5, function ()
+			slot0:OnFilterBtnCilick("rarity", slot0, )
+		end, SFX_PANEL)
+	end
+
+	slot0.rarityFlags = slot0.parent.contextData.rarityFlags or slot0.rarityFlags
+
+	slot0:initSelectedIndexs("rarity")
+end
+
+slot0.OnFilterBtnCilick = function (slot0, slot1, slot2, slot3)
+	if slot2 == "index_all" then
+		slot0:clearListSelected(slot1, slot3)
+	else
+		slot0:clearAllBtn(slot1, slot3)
+	end
+
+	slot0[slot1 .. "Flags"][slot2] = not slot0[slot1 .. "Flags"][slot2]
+
+	slot0:markSelected(slot0[slot1 .. "TFs"][slot2], slot3, slot0[slot1 .. "Flags"][slot2])
+
+	if slot0:isSelectedAll(slot0[slot1 .. "Flags"], true) or (slot2 ~= "index_all" and slot0:isSelectedNon(slot4)) then
+		triggerButton(slot5.index_all)
+	end
+end
+
+slot0.clearListSelected = function (slot0, slot1, slot2)
+	slot4 = slot0[slot1 .. "TFs"]
+
+	for slot8, slot9 in pairs(slot3) do
+		if slot9 == true then
+			slot0:markSelected(slot4[slot8], slot2, false)
+
+			slot3[slot8] = false
+		end
+	end
+end
+
+slot0.clearAllBtn = function (slot0, slot1, slot2)
+	slot0:markSelected(slot0[slot1 .. "TFs"].index_all, slot2, false)
+
+	slot0[slot1 .. "Flags"].index_all = false
+end
+
+slot0.isSelectedAll = function (slot0, slot1, slot2)
+	if slot2 then
+		for slot6, slot7 in pairs(slot1) do
+			if slot6 ~= "index_all" and slot7 == false then
+				return false
+			end
+		end
+
+		return true
+	else
+		return _.all(_.values(slot1), function (slot0)
+			return slot0 == true
+		end)
+	end
+end
+
+slot0.isSelectedNon = function (slot0, slot1)
+	return _.all(_.values(slot1), function (slot0)
+		return slot0 == false
+	end)
+end
+
+slot0.initSelectedIndexs = function (slot0, slot1)
+	slot3 = slot0[slot1 .. "TFs"]
+
+	if _.all(slot0[slot1 .. "Flags"], function (slot0)
+		return slot0 == false
+	end) then
+		triggerButton(slot3.index_all)
+
+		return
+	else
+		for slot7, slot8 in pairs(slot2) do
+			if slot8 then
+				triggerButton(slot3[slot7])
+			end
+		end
+	end
+end
+
+slot0.detach = function (slot0)
+	slot0:hide()
+	slot0.super.detach(slot0)
+end
+
+slot0.circleRotate = function (slot0, slot1)
+	slot2 = findTF(slot0._tf, "index_panel/circle1")
+	slot3 = findTF(slot0._tf, "index_panel/circle2")
+
+	if slot1 then
+		LeanTween.rotate(rtf(slot2), 360, 5):setLoopClamp()
+		LeanTween.rotate(rtf(slot3), -360, 5):setLoopClamp()
+	else
+		LeanTween.cancel(go(slot2))
+		LeanTween.cancel(go(slot3))
+	end
+end
+
+slot0.clear = function (slot0)
+	slot0.btnYellowSprite = nil
+	slot0.btnBlueSprite = nil
+	slot0.btBlackSprite = nil
+end
+
+return slot0

@@ -1,0 +1,117 @@
+pg = pg or {}
+pg.escort_template = {
+	{
+		pos_x = "0.38328125",
+		id = 1,
+		pic = "BC",
+		pos_y = "0.5209375",
+		chapter_id_list = {
+			20001
+		}
+	},
+	{
+		pos_x = "0.513046875",
+		id = 2,
+		pic = "BD",
+		pos_y = "0.5209375",
+		chapter_id_list = {
+			20002
+		}
+	},
+	{
+		pos_x = "0.641484375",
+		id = 3,
+		pic = "BE",
+		pos_y = "0.5209375",
+		chapter_id_list = {
+			20003
+		}
+	},
+	{
+		pos_x = "0.4260390625",
+		id = 4,
+		pic = "CC",
+		pos_y = "0.4065625",
+		chapter_id_list = {
+			20004
+		}
+	},
+	{
+		pos_x = "0.4262109375",
+		id = 5,
+		pic = "CD",
+		pos_y = "0.4065625",
+		chapter_id_list = {
+			20005
+		}
+	},
+	{
+		pos_x = "0.5348984375",
+		id = 6,
+		pic = "CE",
+		pos_y = "0.4065625",
+		chapter_id_list = {
+			20006
+		}
+	},
+	{
+		pos_x = "0.6376171875",
+		id = 7,
+		pic = "CF",
+		pos_y = "0.4065625",
+		chapter_id_list = {
+			20007
+		}
+	},
+	{
+		pos_x = "0.20609375",
+		id = 8,
+		pic = "DD",
+		pos_y = "0.295625",
+		chapter_id_list = {
+			20008
+		}
+	},
+	{
+		pos_x = "0.319375",
+		id = 9,
+		pic = "DE",
+		pos_y = "0.295625",
+		chapter_id_list = {
+			20009
+		}
+	},
+	{
+		pos_x = "0.4365390625",
+		id = 10,
+		pic = "DF",
+		pos_y = "0.295625",
+		chapter_id_list = {
+			20010
+		}
+	},
+	{
+		pos_x = "0.5533828125",
+		id = 11,
+		pic = "DG",
+		pos_y = "0.295625",
+		chapter_id_list = {
+			20011
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11
+	}
+}
+
+return
