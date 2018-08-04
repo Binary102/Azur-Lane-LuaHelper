@@ -1,0 +1,227 @@
+return {
+	{
+		desc = "空袭时有20.0%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"20.0%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 2000,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有22.2%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"22.2%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 2220,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有24.4%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"24.4%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 2440,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有26.6%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"26.6%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 2660,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有28.8%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"28.8%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 2880,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有31.0%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"31.0%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 3100,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有33.2%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"33.2%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 3320,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有35.4%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"35.4%(+2.2%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 3540,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有37.6%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"37.6%(+2.4%)"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 3760,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	{
+		desc = "空袭时有40.0%概率触发，使用B#25进行额外一轮航空弹幕攻击",
+		addition = {
+			"40.0%"
+		},
+		effect_list = {
+			{
+				type = "BattleBuffCastSkill",
+				trigger = {
+					"onAllInStrike"
+				},
+				arg_list = {
+					rant = 4000,
+					skill_id = 10210,
+					target = "TargetSelf",
+					time = 5
+				}
+			}
+		}
+	},
+	desc_get = "空袭时有20.0%(满级40.0%)概率触发，使用B#25进行额外一轮航空弹幕攻击",
+	name = "杜立特空袭",
+	init_effect = "",
+	id = 10210,
+	time = 0,
+	picture = "",
+	desc = "空袭时有$1概率触发，使用B#25进行额外一轮航空弹幕攻击",
+	stack = 1,
+	color = "red",
+	icon = 10210,
+	last_effect = "",
+	effect_list = {
+		{
+			type = "BattleBuffCastSkill",
+			trigger = {
+				"onAllInStrike"
+			},
+			arg_list = {
+				rant = 2000,
+				skill_id = 10210,
+				target = "TargetSelf",
+				time = 5
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+return {
+	uiEffect = "",
+	name = "第八驱逐队",
+	cd = 0,
+	picture = "0",
+	desc = "第八驱逐队",
+	painting = 1,
+	id = 11350,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillAddBuff",
+			target_choise = "TargetAllHelp",
+			arg_list = {
+				buff_id = 11351,
+				effectFilter = {
+					{
+						"TargetID",
+						"=",
+						301631
+					},
+					{
+						"TargetID",
+						"=",
+						301632
+					},
+					{
+						"TargetID",
+						"=",
+						301633
+					},
+					{
+						"TargetID",
+						"=",
+						301634
+					},
+					{
+						"TargetID",
+						"=",
+						301641
+					},
+					{
+						"TargetID",
+						"=",
+						301642
+					},
+					{
+						"TargetID",
+						"=",
+						301643
+					},
+					{
+						"TargetID",
+						"=",
+						301644
+					},
+					{
+						"TargetID",
+						"=",
+						301651
+					},
+					{
+						"TargetID",
+						"=",
+						301652
+					},
+					{
+						"TargetID",
+						"=",
+						301653
+					},
+					{
+						"TargetID",
+						"=",
+						301654
+					}
+				}
+			}
+		}
+	}
+}

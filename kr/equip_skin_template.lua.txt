@@ -1,0 +1,1027 @@
+pg = pg or {}
+pg.equip_skin_template = {
+	{
+		rarity = 4,
+		bullet_name = "Bullet_haibao",
+		name = "바다표범 포탄",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "예쁜 얼굴을 한 바다표범. 가끔 물 밖으로 나와 일광욕을 즐긴다고 한다.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1,
+		icon = "90010",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	{
+		rarity = 4,
+		bullet_name = "Torpedo_haibao",
+		name = "바다표범 어뢰",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "예쁜 얼굴을 한 바다표범. 가끔 물 밖으로 나와 일광욕을 즐긴다고 한다.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 2,
+		icon = "90020",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	{
+		rarity = 4,
+		bullet_name = "Bullet_xianyu",
+		name = "어시장 포탄",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "(그래도 한때는 꿈이 있었던) 포탄 자반.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 3,
+		icon = "90110",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	{
+		rarity = 4,
+		bullet_name = "Torpedo_xianyu",
+		name = "어시장 어뢰",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "(그래도 한때는 꿈이 있었던) 어뢰 자반.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 4,
+		icon = "90120",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[11] = {
+		rarity = 4,
+		bullet_name = "haibao_hongzha",
+		name = "바다표범 폭격기",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "풍선 주제에 왜 이렇게 빠른 거야…!",
+		derivate_bullet = "",
+		derivate_boom = "Bullet_haibao",
+		id = 11,
+		icon = "90030",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[12] = {
+		rarity = 4,
+		bullet_name = "haibao_yulei",
+		name = "바다표범 뇌격기",
+		type = 8,
+		derivate_torpedo = "Torpedo_haibao",
+		ship_config_id = 100011,
+		desc = "풍선 주제에 왜 이렇게 빠른 거야…!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 12,
+		icon = "90040",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[13] = {
+		rarity = 4,
+		bullet_name = "xianyu_hongzha",
+		name = "어시장 폭격기",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "(그래도 한때는 꿈이 있었던) 폭격기 자반.",
+		derivate_bullet = "",
+		derivate_boom = "Bullet_xianyu",
+		id = 13,
+		icon = "90130",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[14] = {
+		rarity = 4,
+		bullet_name = "xianyu_yulei",
+		name = "어시장 뇌격기",
+		type = 8,
+		derivate_torpedo = "Torpedo_xianyu",
+		ship_config_id = 100011,
+		desc = "(그래도 한때는 꿈이 있었던) 뇌격기 자반.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 14,
+		icon = "90140",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[22] = {
+		rarity = 4,
+		bullet_name = "Bullet_mantou",
+		name = "해봄이 포탄",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "날아라! 해봄이!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 22,
+		icon = "90810",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[23] = {
+		rarity = 4,
+		bullet_name = "Torpedo_mantou",
+		name = "해봄이 어뢰",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "당연히 유령이 아니기에, 일단 숨은 쉬고 있다.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 23,
+		icon = "90820",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[24] = {
+		rarity = 4,
+		bullet_name = "mantou_feiji",
+		name = "성·해보미우스 (뇌격기)",
+		type = 8,
+		derivate_torpedo = "Torpedo_mantou",
+		ship_config_id = 100011,
+		desc = "가는 길에 저승을 경유하겠지만, 아직 입주 확정은 안 났다고 한다.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 24,
+		icon = "90830",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[25] = {
+		rarity = 4,
+		bullet_name = "mantou_feiji",
+		name = "성·해보미우스 (전투기)",
+		type = 7,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "가는 길에 저승을 경유하겠지만, 아직 입주 확정은 안 났다고 한다.",
+		derivate_bullet = "",
+		derivate_boom = "Bullet_mantou",
+		id = 25,
+		icon = "90830",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[26] = {
+		rarity = 4,
+		bullet_name = "mantou_feiji",
+		name = "성·해보미우스 (폭격기)",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "가는 길에 저승을 경유하겠지만, 아직 입주 확정은 안 났다고 한다.",
+		derivate_bullet = "",
+		derivate_boom = "Bullet_mantou",
+		id = 26,
+		icon = "90830",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[50] = {
+		rarity = 4,
+		bullet_name = "Torpedo_shudi",
+		name = "리코더 어뢰",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "불지 않아도 폭발한다.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 50,
+		icon = "91021",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[51] = {
+		rarity = 4,
+		bullet_name = "Torpedo_xiangpi",
+		name = "지우개 어뢰",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "그 때의 흑역사를 지우고 싶어.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 51,
+		icon = "91022",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[52] = {
+		rarity = 4,
+		bullet_name = "Torpedo_pencil",
+		name = "연필 어뢰",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「필살! 연필 굴리기! …이 문제의 답은 3번이다!」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 52,
+		icon = "91023",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[53] = {
+		rarity = 4,
+		bullet_name = "school_bullet_fenbi",
+		name = "분필탄",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「누가 수업시간에 딴청부리랬죠!」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 53,
+		icon = "91014",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[54] = {
+		rarity = 4,
+		bullet_name = "school_bullet_huaban",
+		name = "꽃잎탄",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「그거 알아? 벚꽃잎이 떨어지는 속도는...」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 54,
+		icon = "91015",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[55] = {
+		rarity = 4,
+		bullet_name = "school_liangjiaoqipaodan",
+		name = "각도기 포탄",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "45도 각도로, 발사~!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 55,
+		icon = "91016",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[56] = {
+		rarity = 4,
+		bullet_name = "school_heibancapaodan",
+		name = "칠판 지우개 포탄",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "자유낙하 드롭 어택 함정 설치도 가능.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 56,
+		icon = "91017",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[57] = {
+		rarity = 4,
+		bullet_name = "school_biandangpaodan",
+		name = "도시락 폭탄",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "맛있는 도시락 속의 숨겨진 맛",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 57,
+		icon = "91018",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[58] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "종이비행기 (어뢰)",
+		type = 10,
+		derivate_torpedo = "Torpedo_pencil",
+		ship_config_id = 100011,
+		desc = "바닷물에만 닿지 않으면 별문제는 없겠지만…",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 58,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[59] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "종이비행기 (전투)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "바닷물에만 닿지 않으면 별문제는 없겠지만…",
+		derivate_bullet = "",
+		derivate_boom = "school_heibancapaodan",
+		id = 59,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[60] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "종이비행기 (폭격)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "바닷물에만 닿지 않으면 별문제는 없겠지만…",
+		derivate_bullet = "",
+		derivate_boom = "school_heibancapaodan",
+		id = 60,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[61] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "분홍 비행기 (어뢰)",
+		type = 10,
+		derivate_torpedo = "Torpedo_shudi",
+		ship_config_id = 100011,
+		desc = "분홍색의 종이비행기.",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 61,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[62] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "분홍 비행기 (전투)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "분홍색의 종이비행기.",
+		derivate_bullet = "",
+		derivate_boom = "school_biandangpaodan",
+		id = 62,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[63] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "분홍 비행기 (폭격)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "분홍색의 종이비행기.",
+		derivate_bullet = "",
+		derivate_boom = "school_biandangpaodan",
+		id = 63,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[64] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "비행 교과서 (어뢰)",
+		type = 10,
+		derivate_torpedo = "Torpedo_xiangpi",
+		ship_config_id = 100011,
+		desc = "범생이 생활에 작별인사를!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 64,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[65] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "비행 교과서 (전투)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "범생이 생활에 작별인사를!",
+		derivate_bullet = "",
+		derivate_boom = "school_liangjiaoqipaodan",
+		id = 65,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[66] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "비행 교과서 (폭격)",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "범생이 생활에 작별인사를!",
+		derivate_bullet = "",
+		derivate_boom = "school_liangjiaoqipaodan",
+		id = 66,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1001] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_shizi",
+		name = "십자키 포탄(보라)",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "넵푸넵푸 하게 해줄게!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1001,
+		icon = "90640",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1002] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_xianggu",
+		name = "표고버섯 포탄",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "표고버섯이 아닙니다!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1002,
+		icon = "90641",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1003] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_anniu",
+		name = "버튼 포탄",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "커맨드 입력! 필살기나 먹어랏!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1003,
+		icon = "90642",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1004] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_guangpan",
+		name = "디스크 포탄",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "침착하자…「소수」를 생각하면서 마음을 가다듬자...",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1004,
+		icon = "90643",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1005] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_shilaimu",
+		name = "슬라이누 포탄",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "RPG에서 자주 보이는 몬스터… 멍?",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1005,
+		icon = "90610",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[1006] = {
+		rarity = 4,
+		bullet_name = "Nep_torpedo_dianchi",
+		name = "배터리 어뢰",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "최근엔 다들 충전식 쓰더라…",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1006,
+		icon = "90620",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[1007] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "폭격기(GH) ",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "그 여신을 모티브로 설계한 함재기",
+		derivate_bullet = "",
+		derivate_boom = "Nep_bullet_green2",
+		id = 1007,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1008] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "전투기(GH) ",
+		type = 7,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "그 여신을 모티브로 설계한 함재기",
+		derivate_bullet = "",
+		derivate_boom = "Nep_bullet_green2",
+		id = 1008,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[1009] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "뇌격기(GH) ",
+		type = 8,
+		derivate_torpedo = "Nep_torpedo_dianchi",
+		ship_config_id = 100011,
+		desc = "그 여신을 모티브로 설계한 함재기",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1009,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[1010] = {
+		rarity = 4,
+		bullet_name = "pixel_bullet_small",
+		name = "도트 포탄 (소)",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "함포 사격!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1010,
+		icon = "90740",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1011] = {
+		rarity = 4,
+		bullet_name = "pixel_bullet_large",
+		name = "도트 포탄 (대)",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "효과가 굉장했다!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1011,
+		icon = "90710",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[1012] = {
+		rarity = 4,
+		bullet_name = "Torpedo_pixel",
+		name = "도트 어뢰",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "회심의 일격!",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1012,
+		icon = "90720",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[1013] = {
+		rarity = 4,
+		bullet_name = "pixel_hongzhaji",
+		name = "도트 폭격기",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "어떤 장르에선 후방기총이 엄청 강조되는 녀석",
+		derivate_bullet = "",
+		derivate_boom = "pixel_bomb",
+		id = 1013,
+		icon = "90730",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1014] = {
+		rarity = 4,
+		bullet_name = "pixel_zhandouji",
+		name = "도트 전투기",
+		type = 7,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "어떤 장르에선 화면을 가로지르는 녀석",
+		derivate_bullet = "",
+		derivate_boom = "pixel_bomb",
+		id = 1014,
+		icon = "90730",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[1015] = {
+		rarity = 4,
+		bullet_name = "pixel_yuleiji",
+		name = "도트 뇌격기",
+		type = 8,
+		derivate_torpedo = "Torpedo_pixel",
+		ship_config_id = 100011,
+		desc = "어떤 장르에선 존재감이 거의 없는 녀석",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1015,
+		icon = "90731",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		11,
+		12,
+		13,
+		14,
+		22,
+		23,
+		24,
+		25,
+		26,
+		50,
+		51,
+		52,
+		53,
+		54,
+		55,
+		56,
+		57,
+		58,
+		59,
+		60,
+		61,
+		62,
+		63,
+		64,
+		65,
+		66,
+		1001,
+		1002,
+		1003,
+		1004,
+		1005,
+		1006,
+		1007,
+		1008,
+		1009,
+		1010,
+		1011,
+		1012,
+		1013,
+		1014,
+		1015
+	}
+}
+
+return

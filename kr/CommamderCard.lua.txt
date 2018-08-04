@@ -1,0 +1,213 @@
+slot0 = class("CommamderCard")
+slot0.DetailType0 = 0
+slot0.DetailType1 = 1
+slot0.DetailType2 = 2
+slot0.DetailType3 = 3
+slot0.SKILL_COLOR = {
+	"#D95656FF",
+	"#4ABBE1FF",
+	"#B5B748FF"
+}
+slot1 = 0.5
+
+slot0.Ctor = function (slot0, slot1, slot2)
+	slot0.go = slot1
+	slot0.showTagNoBlock = slot2 or false
+	slot0.tr = slot1.transform
+	slot0.btn = slot1:GetComponent("Button")
+	slot0.content = findTF(slot0.tr, "content").gameObject
+	slot0.quit = findTF(slot0.tr, "quit_button").gameObject
+	slot0.detail = findTF(slot0.tr, "detail").gameObject
+	slot0.detailLayoutTr = findTF(slot0.detail, "layout")
+	slot0.imageQuit = slot0.quit:GetComponent("Image")
+	slot0.imageBg = findTF(slot0.tr, "content/bg"):GetComponent("Image")
+	slot0.imageFrame = findTF(slot0.tr, "content/frame/bg"):GetComponent("Image")
+	slot0.iconType = findTF(slot0.tr, "content/frame/info/type"):GetComponent("Image")
+	slot0.imageLvLb = findTF(slot0.tr, "content/frame/info/lv/lv_label"):GetComponent("Image")
+	slot0.labelLevel = findTF(slot0.tr, "content/frame/info/lv/Text"):GetComponent("Text")
+	slot0.labelName = ScrollTxt.New(findTF(slot0.tr, "content/frame/info/name_mask"), findTF(slot0.tr, "content/frame/info/name_mask/name"))
+	slot0.iconShip = findTF(slot0.tr, "content/ship_icon"):GetComponent("Image")
+	slot0.stars = findTF(slot0.tr, "content/frame/info/stars")
+	slot0.star = findTF(slot0.tr, "content/frame/info/stars/star_tpl")
+	slot0.maskStatus = findTF(slot0.tr, "content/frame/status_mask")
+	slot0.selectedGo = findTF(slot0.tr, "selected").gameObject
+
+	slot0.selectedGo:SetActive(false)
+
+	slot0.duang = findTF(slot0.tr, "content/duang")
+
+	if findTF(slot0.tr, "content/frame/info/slv") then
+		slot0.slv = slot3.gameObject
+		slot0.labelSlv = findTF(slot0.tr, "content/frame/info/slv/Text"):GetComponent("Text")
+	end
+
+	slot0.detailType = slot0.DetailType0
+end
+
+slot0.update = function (slot0, slot1)
+	if slot1 then
+		slot0.go.name = slot1.configId
+	end
+
+	if slot0.commanderVO ~= slot1 then
+		slot0.commanderVO = slot1
+
+		slot0:flush()
+		slot0:flushDetail()
+	end
+end
+
+slot0.updateDetail = function (slot0, slot1)
+	slot0.detailType = slot1
+
+	slot0:flushDetail()
+end
+
+slot0.updateSelected = function (slot0, slot1)
+	slot0.selected = slot1
+
+	slot0.selectedGo:SetActive(slot0.selected)
+
+	if slot0.selected then
+		if not slot0.selectedTwId then
+			slot0.selectedTwId = LeanTween.alpha(slot0.selectedGo.transform, 1, slot0):setFrom(0):setEase(LeanTweenType.easeInOutSine):setLoopPingPong().uniqueId
+		end
+	elseif slot0.selectedTwId then
+		LeanTween.cancel(slot0.selectedTwId)
+
+		slot0.selectedTwId = nil
+	end
+end
+
+slot0.flush = function (slot0)
+	if tobool(slot0.commanderVO) then
+		if not slot1:getConfigTable() then
+			return
+		end
+
+		if slot0.maskStatus then
+			slot0.maskStatus.gameObject:SetActive(false)
+		end
+
+		if not GetSpriteFromAtlas("shiptype", shipType2print(slot1:getShipType())) then
+			warning("找不到船形, shipConfigId: " .. slot1.configId)
+		end
+
+		slot0.iconType.sprite = slot4
+		slot0.labelLevel.text = tostring(slot1.level)
+
+		slot0.labelName:setText(slot1:getName())
+
+		if slot0.slv then
+			slot0.slv:SetActive(false)
+		end
+
+		GetSpriteFromAtlasAsync("shipframe", (slot1.propose and "prop") or slot1:rarity2bgPrint(), function (slot0)
+			if slot0.commanderVO ==  then
+				slot0.imageFrame.sprite = slot0
+
+				slot0.imageFrame:SetNativeSize()
+			end
+		end)
+
+		slot0.imageBg.sprite = GetSpriteFromAtlas("bg/star_level_card_" .. GetSpriteFromAtlasAsync, "")
+		slot0.iconShip.sprite = GetSpriteFromAtlas("shipYardIcon/unknown", "")
+
+		if slot0.bufferTimer then
+			slot0.bufferTimer:Stop()
+		end
+
+		slot0.bufferTimer = Timer.New(function ()
+			LoadSpriteAsync("shipYardIcon/" .. slot0:getPainting(), function (slot0)
+				if slot0.commanderVO ==  then
+					slot0.iconShip.sprite = slot0
+
+					slot0.iconShip:SetNativeSize()
+				end
+			end)
+		end, 0.1, 1)
+
+		slot0.bufferTimer:Start()
+
+		slot8 = slot1:getStar()
+
+		for slot13 = slot0.stars.childCount, slot1:getMaxStar() - 1, 1 do
+			cloneTplTo(slot0.star, slot0.stars)
+		end
+
+		slot10 = slot9 - slot8
+
+		for slot14 = 0, slot0.stars.childCount - 1, 1 do
+			slot0.stars:GetChild(slot14).gameObject:SetActive(slot14 < slot9)
+			SetActive(slot15:Find("star_tpl"), slot10 <= slot14)
+			SetActive(slot15:Find("star_empty_tpl"), slot14 < slot10)
+		end
+	end
+
+	slot0.content:SetActive(slot2)
+	slot0.quit:SetActive(not slot2)
+
+	slot0.btn.targetGraphic = (slot2 and slot0.imageFrame) or slot0.imageQuit
+end
+
+slot0.flushDetail = function (slot0)
+	if tobool(slot0.commanderVO) and slot0.DetailType0 < slot0.detailType then
+		slot3 = slot1:getProperties()
+		slot4 = {
+			AttributeType.Durability,
+			AttributeType.Cannon,
+			AttributeType.Torpedo,
+			AttributeType.Air,
+			AttributeType.AntiAircraft,
+			AttributeType.ArmorType,
+			AttributeType.Reload,
+			AttributeType.Dodge
+		}
+
+		for slot8 = 1, 5, 1 do
+			slot9 = slot0.detailLayoutTr:GetChild(slot8 - 1)
+
+			setActive(slot9, true)
+
+			slot10 = slot9:GetChild(0):GetComponent("Text")
+			slot11 = slot9:GetChild(1):GetComponent("Text")
+
+			if slot0.detailType == slot0.DetailType1 then
+				if slot8 == 1 then
+					slot10.alignment = TextAnchor.MiddleLeft
+				end
+
+				slot10.text = AttributeType.Type2Name(slot12)
+				slot11.text = setColorStr(tostring(math.floor(slot3[slot4[slot8]])), COLOR_WHITE)
+			elseif slot0.detailType == slot0.DetailType2 then
+				slot10.text = AttributeType.Type2Name(slot12)
+				slot11.text = tostring(math.floor(slot3[slot4[slot8]]))
+			end
+		end
+	end
+
+	slot0.detail:SetActive(slot2 and slot0.DetailType0 < slot0.detailType)
+end
+
+slot0.clear = function (slot0)
+	if slot0.selectedTwId then
+		LeanTween.cancel(slot0.selectedTwId)
+
+		slot0.selectedTwId = nil
+	end
+
+	if slot0.bufferTimer then
+		slot0.bufferTimer:Stop()
+
+		slot0.bufferTimer = nil
+	end
+
+	slot0.iconType.sprite = nil
+	slot0.imageFrame.sprite = nil
+	slot0.iconShip.sprite = nil
+	slot0.commanderVO = nil
+
+	slot0.labelName:clear()
+end
+
+return slot0

@@ -1,0 +1,91 @@
+return {
+	uiEffect = "",
+	name = "Nasty Asty",
+	cd = 0,
+	picture = "0",
+	desc = "Nasty Asty",
+	painting = 1,
+	id = 11470,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillAddBuff",
+			target_choise = "TargetAllHelp",
+			arg_list = {
+				buff_id = 11471,
+				effectFilter = {
+					{
+						"TargetID",
+						"=",
+						103081
+					},
+					{
+						"TargetID",
+						"=",
+						103082
+					},
+					{
+						"TargetID",
+						"=",
+						103083
+					},
+					{
+						"TargetID",
+						"=",
+						103084
+					},
+					{
+						"TargetID",
+						"=",
+						103091
+					},
+					{
+						"TargetID",
+						"=",
+						103092
+					},
+					{
+						"TargetID",
+						"=",
+						103093
+					},
+					{
+						"TargetID",
+						"=",
+						103094
+					},
+					{
+						"TargetID",
+						"=",
+						103101
+					},
+					{
+						"TargetID",
+						"=",
+						103102
+					},
+					{
+						"TargetID",
+						"=",
+						103103
+					},
+					{
+						"TargetID",
+						"=",
+						103104
+					}
+				}
+			}
+		}
+	}
+}

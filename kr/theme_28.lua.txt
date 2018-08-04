@@ -1,0 +1,120 @@
+return {
+	id = 28,
+	furnitures_1 = {
+		{
+			dir = 1,
+			parent = 0,
+			y = 22,
+			id = 28101,
+			x = 20,
+			child = {}
+		},
+		{
+			dir = 2,
+			parent = 0,
+			y = 17,
+			id = 28120,
+			x = 18,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 0,
+			id = 28001,
+			x = 0,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 22,
+			id = 28104,
+			x = 16,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 12,
+			id = 28106,
+			x = 14,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 12,
+			id = 28124,
+			x = 17,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 0,
+			id = 28002,
+			x = 0,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 17,
+			id = 28114,
+			x = 21,
+			child = {}
+		},
+		{
+			dir = 2,
+			parent = 0,
+			y = 12,
+			id = 28123,
+			x = 20,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 14,
+			id = 28117,
+			x = 12,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 22,
+			id = 28102,
+			x = 12,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 22,
+			id = 28118,
+			x = 22,
+			child = {}
+		},
+		{
+			dir = 2,
+			parent = 0,
+			y = 21,
+			id = 28116,
+			x = 13,
+			child = {}
+		},
+		{
+			dir = 1,
+			parent = 0,
+			y = 22,
+			id = 28105,
+			x = 14,
+			child = {}
+		}
+	},
+	furnitures_2 = {},
+	furnitures_3 = {},
+	furnitures_4 = {}
+}

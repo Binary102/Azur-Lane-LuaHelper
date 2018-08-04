@@ -1,0 +1,51 @@
+class("EquipCommanderToShipCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot4 = slot1:getBody().commanderId
+
+	if not getProxy(BayProxy):getShipById(slot1.getBody().shipId) then
+		return
+	end
+
+	slot7 = getProxy(CommanderProxy)
+	slot8 = nil
+
+	if slot4 ~= 0 then
+		if not slot7:getCommanderById(slot4) then
+			pg.TipsMgr:GetInstance():ShowTips(i18n("commander_command_is_nil"))
+
+			return
+		end
+	elseif not slot6:hasCommander() and slot4 == 0 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_command_is_nil"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25003, {
+		shipid = slot3,
+		commanderid = slot4
+	}, 25004, function (slot0)
+		if slot0.result == 0 then
+			if slot0:hasCommander() then
+				slot2 = slot1:getCommanderById(slot1)
+
+				slot2:setShipId(0)
+				slot2:deductExp(slot0.deduction_exp or 0)
+				slot1:updateCommander(slot2)
+			end
+
+			if slot2 ~= 0 then
+				slot3:setShipId(slot4)
+				slot3.setShipId:updateCommander(slot4)
+			end
+
+			slot0:setCommander(slot0)
+			slot5:updateShip(slot0)
+			slot6:sendNotification(GAME.COMMANDER_EQUIP_TO_SHIP_DONE, slot0:clone())
+			pg.TipsMgr:GetInstance():ShowTips(i18n("commander_change_commander_successed"))
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("EquipCommanderToShipCommand", pm.SimpleCommand)

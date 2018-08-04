@@ -1,0 +1,445 @@
+return {
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.15
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.161
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.172
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61007,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.183
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.194
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.205
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61008,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.216
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.227
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.238
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillHeal",
+				target_choise = "TargetSelf",
+				arg_list = {
+					maxHPRatio = 0.25
+				}
+			},
+			{
+				targetAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetHarmRandom",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				},
+				casterAniEffect = {
+					time = 1,
+					effect = "feijiyingzi",
+					posFun = function (slot0, slot1, slot2)
+						return Vector3(-100, 0, 60) - slot0
+					end
+				}
+			},
+			{
+				targetAniEffect = "",
+				casterAniEffect = "",
+				type = "BattleSkillFire",
+				target_choise = "TargetAllHarm",
+				arg_list = {
+					weapon_id = 61009,
+					delay = 2
+				}
+			}
+		}
+	},
+	uiEffect = "",
+	name = "复仇打击",
+	cd = 0,
+	picture = "1",
+	desc = "轰炸",
+	painting = 1,
+	id = 10190,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillHeal",
+			target_choise = "TargetSelf",
+			arg_list = {
+				maxHPRatio = 0.15
+			}
+		},
+		{
+			targetAniEffect = "",
+			type = "BattleSkillFire",
+			target_choise = "TargetHarmRandom",
+			arg_list = {
+				weapon_id = 61007,
+				delay = 2
+			},
+			casterAniEffect = {
+				time = 1,
+				effect = "feijiyingzi",
+				posFun = function (slot0, slot1, slot2)
+					return Vector3(-100, 0, 60) - slot0
+				end
+			}
+		},
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillFire",
+			target_choise = "TargetAllHarm",
+			arg_list = {
+				weapon_id = 61007,
+				delay = 2
+			}
+		}
+	}
+}

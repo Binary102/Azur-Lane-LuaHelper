@@ -1,0 +1,77 @@
+class("GetShipCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot3 = slot1:getBody().type or 1
+	slot5 = slot2.callBack
+	slot6 = slot2.isBatch
+	slot7 = slot2.canSkipBatch
+	slot8 = slot2.isSkip
+
+	if not getProxy(BuildShipProxy):getBuildShip(slot2.pos) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("ship_getShip_error_noShip"))
+
+		if slot5 then
+			slot5()
+		end
+
+		return
+	end
+
+	if not slot10:isFinish() then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("ship_getShip_error_notFinish"))
+
+		if slot5 then
+			slot5()
+		end
+
+		return
+	end
+
+	slot11 = getProxy(BayProxy)
+
+	if not slot6 and getProxy(PlayerProxy).getData(slot13).ship_bag_max <= #slot11:getShips() then
+		NoPosMsgBox(i18n("switch_to_shop_tip_noDockyard"), openDockyardClear, gotoChargeScene)
+
+		if slot5 then
+			slot5()
+		end
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(12025, {
+		type = slot3,
+		pos = slot4
+	}, 12026, function (slot0)
+		if slot0.result == 0 then
+			slot0:removeBuildShipByIndex(slot0.removeBuildShipByIndex)
+
+			slot1 = Ship.New(slot0.ship)
+
+			slot0.ship:addShip(slot1)
+			slot0:setBuildShipState()
+
+			slot3 = getProxy(PlayerProxy).getData(slot2)
+
+			if slot1:getRarity() >= 4 and not slot3:GetCommonFlag(GAME_RESTOREVIEW_ALREADY) then
+				pg.SDKMgr:GetInstance():storeReview()
+				slot3:sendNotification(GAME.COMMON_FLAG, {
+					flagID = GAME_RESTOREVIEW_ALREADY
+				})
+			end
+
+			if slot4 and not slot1.virgin and slot1:getRarity() < 4 then
+				slot3:sendNotification(GAME.SKIP_SHIP_DONE)
+				slot3(slot1)
+			else
+				slot3:sendNotification(GAME.GET_SHIP_DONE, {
+					ship = slot1,
+					quitCallBack = slot5,
+					canSkipBatch = GAME.GET_SHIP_DONE
+				})
+			end
+		else
+			pg.TipsMgr:GetInstance():ShowTips(errorTip("ship_getShip", slot0.result))
+		end
+	end)
+end
+
+return class("GetShipCommand", pm.SimpleCommand)

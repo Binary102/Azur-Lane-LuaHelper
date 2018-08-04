@@ -1,0 +1,44 @@
+class("ExchangeCommanderCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot4 = slot1:getBody().materialId
+
+	if not slot1.getBody().commanderId or not slot4 then
+		return
+	end
+
+	if not getProxy(CommanderProxy):getCommanderById(slot3) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_command_is_nil"))
+
+		return
+	end
+
+	if not slot5:getCommanderById(slot4) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_command_is_nil"))
+
+		return
+	end
+
+	if getProxy(PlayerProxy):getData().gold < slot6:getExchangeGold() then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("common_no_resource"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25013, {
+		commanderid = slot3,
+		exchangeid = slot4
+	}, 25014, function (slot0)
+		if slot0.result == 0 then
+			for slot5, slot6 in pairs(slot1) do
+				slot1:replaceAdditionAttr(slot5, slot6)
+			end
+
+			slot2:updateCommander(slot1)
+			slot2.updateCommander:removeCommanderById(slot2.updateCommander)
+			slot4:sendNotification(GAME.COMMANDER_ON_EXCHANGE_DONE)
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("ExchangeCommanderCommand", pm.SimpleCommand)

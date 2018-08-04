@@ -1,0 +1,79 @@
+slot0 = class("GetCommanderLayer", import("..base.BaseUI"))
+
+slot0.getUIName = function (slot0)
+	return "GetCommanderUI"
+end
+
+slot0.setRefreshTime = function (slot0, slot1)
+	slot0.time = slot1
+end
+
+slot0.init = function (slot0)
+	slot0.backBtn = slot0:findTF("bg/back_btn")
+	slot0.postBtn = slot0:findTF("bg/post_btn")
+	slot0.timerBarTF = slot0:findTF("bg/time_bar/bar")
+	slot0.timerBarImg = slot0.timerBarTF:GetComponent(typeof(Image))
+	slot0.timerTxt = slot0:findTF("Text", slot0.timerBarTF.parent):GetComponent(typeof(Text))
+	slot0.boxBtn = slot0:findTF("bg/box_btn")
+end
+
+slot0.didEnter = function (slot0)
+	onButton(slot0, slot0.backBtn, function ()
+		slot0:emit(slot1.ON_CLOSE)
+	end, SFX_CANCEL)
+	onButton(slot0, slot0.postBtn, function ()
+		slot0:emit(GetCommanderMediator.ON_POST)
+	end, SFX_PANEL)
+	onButton(slot0, slot0.boxBtn, function ()
+		slot0:emit(GetCommanderMediator.ON_OPEN_BOX)
+	end, SFX_PANEL)
+	slot0:addTimer()
+end
+
+slot0.addTimer = function (slot0)
+	if not slot0.time then
+		return
+	end
+
+	function slot1()
+		slot0:removeTimer()
+		setButtonEnabled(slot0.boxBtn, true)
+
+		setButtonEnabled.timerBarImg.fillAmount = 1
+		setButtonEnabled.timerBarImg.timerTxt.text = "00:00:00"
+	end
+
+	slot0:removeTimer()
+
+	if slot0.time - pg.TimeMgr.GetInstance():GetServerTime() <= 0 then
+		slot1()
+	else
+		setButtonEnabled(slot0.boxBtn, false)
+
+		slot0.boxTimer = Timer.New(function ()
+			if slot0.time - pg.TimeMgr.GetInstance():GetServerTime() <= 0 then
+				slot1()
+			else
+				slot0.timerTxt.text = pg.TimeMgr.GetInstance():DescCDTime(slot1)
+				slot0.timerBarImg.fillAmount = slot1 / CommanderConst.BUILD_COMMANDER_TIME
+			end
+		end, 1, -1)
+
+		slot0.boxTimer:Start()
+		slot0.boxTimer.func()
+	end
+end
+
+slot0.removeTimer = function (slot0)
+	if slot0.boxTimer then
+		slot0.boxTimer:Stop()
+
+		slot0.boxTimer = nil
+	end
+end
+
+slot0.willExit = function (slot0)
+	slot0:removeTimer()
+end
+
+return slot0
