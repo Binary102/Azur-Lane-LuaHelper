@@ -1,0 +1,79 @@
+class("UpgradeCommanderSkillCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot4 = slot1:getBody().skillId
+
+	if not slot1.getBody().commanderId or not slot4 then
+		return
+	end
+
+	if not getProxy(CommanderProxy):getCommanderById(slot3) then
+		return
+	end
+
+	if not slot6:inShip() then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_should_equip_to_ship"))
+
+		return
+	end
+
+	if not slot6.skills[slot4] then
+		slot8, slot9 = slot6:canGetSkill(slot4)
+
+		if not slot8 then
+			pg.TipsMgr:GetInstance():ShowTips(slot9)
+
+			return
+		end
+	else
+		slot8, slot9 = slot6:canUpgradeSkill(slot4)
+
+		if not slot8 then
+			pg.TipsMgr:GetInstance():ShowTips(slot9)
+
+			return
+		end
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25005, {
+		skillId = slot4,
+		commanderid = slot3
+	}, 25006, function (slot0)
+		if slot0.result == 0 then
+			slot1 = 0
+			slot2 = {}
+
+			if not slot0 then
+				slot3 = CommanderSkill.New({
+					level = 1,
+					id = slot1
+				})
+				slot1, slot2 = slot3:getConsume()
+
+				slot2:updateSkill(slot3)
+				pg.TipsMgr:GetInstance():ShowTips(i18n("commander_get_skill_successed"))
+			else
+				slot1, slot2 = slot0:getConsume()
+
+				slot0:upgrade()
+				slot2:updateSkill(slot0)
+				pg.TipsMgr:GetInstance():ShowTips(i18n("commander_upgrade_skill_successed"))
+			end
+
+			slot3 = {}
+
+			for slot7, slot8 in ipairs(slot2) do
+				slot3:sendNotification(GAME.CONSUME_ITEM, {
+					type = slot8[1],
+					id = slot8[2],
+					count = slot8[3]
+				})
+			end
+
+			slot4:updateCommander(slot2)
+			slot3:sendNotification(GAME.COMANDER_UPGRADE_SKILL_DONE)
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("UpgradeCommanderSkillCommand", pm.SimpleCommand)

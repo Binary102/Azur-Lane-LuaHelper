@@ -1,0 +1,104 @@
+slot0 = class("CommanderDetailPanel", import("..base.BasePanel"))
+slot1 = pg.commander_skill_template
+
+slot0.init = function (slot0)
+	slot0.skillTFs = {}
+	slot0.normalSkillTF = slot0:findTF("skill_1")
+	slot0.advancedSkillTF = slot0:findTF("skill_2")
+	slot0.normalSkillContainer = slot0:findTF("srcollrect/content", slot0.normalSkillTF)
+	slot0.levelTpl = slot0:getTpl("level_tpl", slot0.normalSkillContainer)
+	slot0.normalTpl = slot0:getTpl("bg/skills/skill", slot0.levelTpl)
+	slot0.advanceContainer = slot0:findTF("content", slot0.advancedSkillTF)
+	slot0.advanceTpl = slot0:getTpl("skill", slot0.advanceContainer)
+	slot0.resetBtn = slot0:findTF("skill_point/reset_btn", slot0.normalSkillTF)
+	slot0.resetBtnTxt = slot0:findTF("gold/Text", slot0.resetBtn)
+	slot0.skillPoint = slot0:findTF("skill_point/Text", slot0.normalSkillTF)
+end
+
+slot0.enter = function (slot0, slot1)
+	slot0.commanderVO = slot1
+	slot0.commanderSkills = slot1.skills
+
+	if not slot0.isInit then
+		slot0.isInit = true
+
+		for slot7, slot8 in ipairs(slot3) do
+			if slot7 == #slot3 then
+				slot0:updateAdvancedSkills(slot8)
+			else
+				slot9 = cloneTplTo(slot0.levelTpl, slot0.normalSkillContainer)
+
+				slot0:updateNormalSkills(slot9, slot8)
+				setText(slot0:findTF("bg/label/stage", slot9), i18n("commander_stage", slot7))
+				setText(slot0:findTF("bg/label/level_limit", slot9), i18n("commander_level_limit", slot0[slot8[1]].lv_limit))
+			end
+		end
+
+		slot0:update(slot2)
+	else
+		slot0:update(slot1)
+	end
+
+	onButton(slot0, slot0.resetBtn, function ()
+		slot0:emit(CommanderInfoMediator.ON_RESET_SKILL, slot0.commanderVO.id)
+	end, SFX_PANEL)
+end
+
+slot0.update = function (slot0, slot1)
+	slot0.commanderVO = slot1
+	slot0.commanderSkills = slot1.skills
+
+	setText(slot0.skillPoint, i18n("commander_left_skill_point", slot1:getRestSkillPoint()))
+	setText(slot0.resetBtnTxt, slot0.commanderVO:getResetSkillConsume())
+	_.each(_.flatten(slot2), function (slot0)
+		if CommanderSkill.New({
+			id = slot0
+		}):isAdvanceSkill() then
+			slot0:updateAdvanceSkill(slot0)
+		else
+			slot0:updateSkill(slot0)
+		end
+	end)
+end
+
+slot0.updateAdvancedSkills = function (slot0, slot1)
+	_.each(slot1, function (slot0)
+		slot0.skillTFs[slot0] = cloneTplTo(slot0.advanceTpl, slot0.advanceContainer)
+	end)
+end
+
+slot0.updateNormalSkills = function (slot0, slot1, slot2)
+	slot3 = slot0:findTF("bg/skills", slot1)
+
+	_.each(slot2, function (slot0)
+		slot0.skillTFs[slot0] = cloneTplTo(slot0.normalTpl, slot0.skillTFs)
+	end)
+end
+
+slot0.updateSkill = function (slot0, slot1)
+	setImageSprite(slot0.skillTFs[slot1], LoadSprite("SkillIcon/" .. slot0[slot1].icon), true)
+	setText(slot2:Find("level"), "Lv." .. ((slot0.commanderSkills[slot1] and slot3.level) or 0))
+	onButton(slot0, slot2, function ()
+		slot0:emit(CommanderInfoMediator.ON_SKILL_INFO, slot0, slot0.commanderVO.id)
+	end, SFX_PANEL)
+end
+
+slot0.updateAdvanceSkill = function (slot0, slot1)
+	setImageSprite(slot0.skillTFs[slot1].Find(slot2, "icon"), LoadSprite("SkillIcon/" .. slot0[slot1].icon), false)
+	setText(slot0:findTF("name", slot2), slot0[slot1].name)
+	setText(slot0:findTF("level_limit", slot2), i18n("commander_level_limit", slot0[slot1].lv_limit))
+	setText(slot2:Find("icon/Text"), "Lv." .. ((slot0.commanderSkills[slot1] and slot4.level) or 0))
+	onButton(slot0, slot2, function ()
+		slot0:emit(CommanderInfoMediator.ON_SKILL_INFO, slot0, slot0.commanderVO.id)
+	end, SFX_PANEL)
+
+	slot12, slot13 = slot0.commanderVO:getAdvancedSkillCount()
+
+	setText(slot0.advancedSkillTF:Find("Text"), i18n("commander_advanced_skill_count", slot6, slot7))
+end
+
+slot0.exit = function (slot0)
+	return
+end
+
+return slot0

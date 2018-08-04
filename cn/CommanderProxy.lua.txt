@@ -1,0 +1,63 @@
+slot0 = class("CommanderProxy", import(".NetProxy"))
+slot0.COMMANDER_UPDATED = "CommanderProxy:COMMANDER_UPDATED"
+slot0.COMMANDER_ADDED = "CommanderProxy:COMMANDER_ADDED"
+slot0.COMMANDER_DELETED = "CommanderProxy:COMMANDER_DELETED"
+slot0.COMMANDER_BOX_TIME_UPDATED = "CommanderProxy:COMMANDER_BOX_TIME_UPDATED"
+
+slot0.register = function (slot0)
+	slot0.data = {}
+	slot0.refreshTime = nil
+
+	slot0:on(25001, function (slot0)
+		for slot4, slot5 in ipairs(slot0.commanders) do
+			slot0:addCommander(Commander.New(slot5))
+		end
+
+		slot0:updateRefreshTime(slot0.refresh_time)
+	end)
+	slot0:on(25002, function (slot0)
+		slot0:addCommander(Commander.New(slot0.commander))
+	end)
+end
+
+slot0.updateRefreshTime = function (slot0, slot1)
+	slot0.refreshTime = slot1
+
+	slot0:sendNotification(slot0.COMMANDER_BOX_TIME_UPDATED, slot1)
+end
+
+slot0.getRefreshTime = function (slot0)
+	return slot0.refreshTime
+end
+
+slot0.getCommanderById = function (slot0, slot1)
+	return slot0.data[slot1]
+end
+
+slot0.addCommander = function (slot0, slot1)
+	slot0.data[slot1.id] = slot1
+
+	slot0:sendNotification(slot0.COMMANDER_ADDED, slot1:clone())
+end
+
+slot0.updateCommander = function (slot0, slot1)
+	slot0.data[slot1.id] = slot1
+
+	slot0:sendNotification(slot0.COMMANDER_UPDATED, slot1:clone())
+end
+
+slot0.removeCommanderById = function (slot0, slot1)
+	if slot0.data[slot1]:inShip() then
+		slot3 = getProxy(BayProxy)
+		slot4 = slot3:getShipById(slot2.shipId)
+
+		slot4:setCommander(0)
+		slot3:updateShip(slot4)
+	end
+
+	slot0.data[slot1] = nil
+
+	slot0:sendNotification(slot0.COMMANDER_DELETED, slot1)
+end
+
+return slot0

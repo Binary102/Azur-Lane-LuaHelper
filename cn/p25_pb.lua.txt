@@ -1,0 +1,652 @@
+slot0 = require("protobuf")
+
+module("p25_pb")
+
+SC_25001 = slot0.Descriptor()
+slot1 = slot0.FieldDescriptor()
+slot2 = slot0.FieldDescriptor()
+SC_25002 = slot0.Descriptor()
+slot3 = slot0.FieldDescriptor()
+CS_25003 = slot0.Descriptor()
+slot4 = slot0.FieldDescriptor()
+slot5 = slot0.FieldDescriptor()
+SC_25004 = slot0.Descriptor()
+slot6 = slot0.FieldDescriptor()
+slot7 = slot0.FieldDescriptor()
+CS_25005 = slot0.Descriptor()
+slot8 = slot0.FieldDescriptor()
+slot9 = slot0.FieldDescriptor()
+SC_25006 = slot0.Descriptor()
+slot10 = slot0.FieldDescriptor()
+CS_25007 = slot0.Descriptor()
+slot11 = slot0.FieldDescriptor()
+SC_25008 = slot0.Descriptor()
+slot12 = slot0.FieldDescriptor()
+CS_25009 = slot0.Descriptor()
+slot13 = slot0.FieldDescriptor()
+slot14 = slot0.FieldDescriptor()
+SC_25010 = slot0.Descriptor()
+slot15 = slot0.FieldDescriptor()
+slot16 = slot0.FieldDescriptor()
+CS_25011 = slot0.Descriptor()
+slot17 = slot0.FieldDescriptor()
+slot18 = slot0.FieldDescriptor()
+SC_25012 = slot0.Descriptor()
+slot19 = slot0.FieldDescriptor()
+slot20 = slot0.FieldDescriptor()
+CS_25013 = slot0.Descriptor()
+slot21 = slot0.FieldDescriptor()
+slot22 = slot0.FieldDescriptor()
+SC_25014 = slot0.Descriptor()
+slot23 = slot0.FieldDescriptor()
+CS_25015 = slot0.Descriptor()
+slot24 = slot0.FieldDescriptor()
+SC_25016 = slot0.Descriptor()
+slot25 = slot0.FieldDescriptor()
+slot26 = slot0.FieldDescriptor()
+slot27 = slot0.FieldDescriptor()
+COMMANDERINFO = slot0.Descriptor()
+slot28 = slot0.FieldDescriptor()
+slot29 = slot0.FieldDescriptor()
+slot30 = slot0.FieldDescriptor()
+slot31 = slot0.FieldDescriptor()
+slot32 = slot0.FieldDescriptor()
+slot33 = slot0.FieldDescriptor()
+slot34 = slot0.FieldDescriptor()
+slot35 = slot0.FieldDescriptor()
+slot36 = slot0.FieldDescriptor()
+SHIPSKILL = slot0.Descriptor()
+slot37 = slot0.FieldDescriptor()
+slot38 = slot0.FieldDescriptor()
+slot39 = slot0.FieldDescriptor()
+STRENGTH_INFO = slot0.Descriptor()
+slot40 = slot0.FieldDescriptor()
+slot41 = slot0.FieldDescriptor()
+slot1.name = "commanders"
+slot1.full_name = ".p25.sc_25001.commanders"
+slot1.number = 1
+slot1.index = 0
+slot1.label = 3
+slot1.has_default_value = false
+slot1.default_value = {}
+slot1.message_type = COMMANDERINFO
+slot1.type = 11
+slot1.cpp_type = 10
+slot2.name = "refresh_time"
+slot2.full_name = ".p25.sc_25001.refresh_time"
+slot2.number = 2
+slot2.index = 1
+slot2.label = 2
+slot2.has_default_value = false
+slot2.default_value = 0
+slot2.type = 13
+slot2.cpp_type = 3
+SC_25001.name = "sc_25001"
+SC_25001.full_name = ".p25.sc_25001"
+SC_25001.nested_types = {}
+SC_25001.enum_types = {}
+SC_25001.fields = {
+	slot1,
+	slot2
+}
+SC_25001.is_extendable = false
+SC_25001.extensions = {}
+slot3.name = "commander"
+slot3.full_name = ".p25.sc_25002.commander"
+slot3.number = 1
+slot3.index = 0
+slot3.label = 2
+slot3.has_default_value = false
+slot3.default_value = nil
+slot3.message_type = COMMANDERINFO
+slot3.type = 11
+slot3.cpp_type = 10
+SC_25002.name = "sc_25002"
+SC_25002.full_name = ".p25.sc_25002"
+SC_25002.nested_types = {}
+SC_25002.enum_types = {}
+SC_25002.fields = {
+	slot3
+}
+SC_25002.is_extendable = false
+SC_25002.extensions = {}
+slot4.name = "shipid"
+slot4.full_name = ".p25.cs_25003.shipid"
+slot4.number = 1
+slot4.index = 0
+slot4.label = 2
+slot4.has_default_value = false
+slot4.default_value = 0
+slot4.type = 13
+slot4.cpp_type = 3
+slot5.name = "commanderid"
+slot5.full_name = ".p25.cs_25003.commanderid"
+slot5.number = 2
+slot5.index = 1
+slot5.label = 2
+slot5.has_default_value = false
+slot5.default_value = 0
+slot5.type = 13
+slot5.cpp_type = 3
+CS_25003.name = "cs_25003"
+CS_25003.full_name = ".p25.cs_25003"
+CS_25003.nested_types = {}
+CS_25003.enum_types = {}
+CS_25003.fields = {
+	slot4,
+	slot5
+}
+CS_25003.is_extendable = false
+CS_25003.extensions = {}
+slot6.name = "result"
+slot6.full_name = ".p25.sc_25004.result"
+slot6.number = 1
+slot6.index = 0
+slot6.label = 2
+slot6.has_default_value = false
+slot6.default_value = 0
+slot6.type = 13
+slot6.cpp_type = 3
+slot7.name = "deduction_exp"
+slot7.full_name = ".p25.sc_25004.deduction_exp"
+slot7.number = 2
+slot7.index = 1
+slot7.label = 1
+slot7.has_default_value = false
+slot7.default_value = 0
+slot7.type = 13
+slot7.cpp_type = 3
+SC_25004.name = "sc_25004"
+SC_25004.full_name = ".p25.sc_25004"
+SC_25004.nested_types = {}
+SC_25004.enum_types = {}
+SC_25004.fields = {
+	slot6,
+	slot7
+}
+SC_25004.is_extendable = false
+SC_25004.extensions = {}
+slot8.name = "skillId"
+slot8.full_name = ".p25.cs_25005.skillId"
+slot8.number = 1
+slot8.index = 0
+slot8.label = 2
+slot8.has_default_value = false
+slot8.default_value = 0
+slot8.type = 13
+slot8.cpp_type = 3
+slot9.name = "commanderid"
+slot9.full_name = ".p25.cs_25005.commanderid"
+slot9.number = 2
+slot9.index = 1
+slot9.label = 2
+slot9.has_default_value = false
+slot9.default_value = 0
+slot9.type = 13
+slot9.cpp_type = 3
+CS_25005.name = "cs_25005"
+CS_25005.full_name = ".p25.cs_25005"
+CS_25005.nested_types = {}
+CS_25005.enum_types = {}
+CS_25005.fields = {
+	slot8,
+	slot9
+}
+CS_25005.is_extendable = false
+CS_25005.extensions = {}
+slot10.name = "result"
+slot10.full_name = ".p25.sc_25006.result"
+slot10.number = 1
+slot10.index = 0
+slot10.label = 2
+slot10.has_default_value = false
+slot10.default_value = 0
+slot10.type = 13
+slot10.cpp_type = 3
+SC_25006.name = "sc_25006"
+SC_25006.full_name = ".p25.sc_25006"
+SC_25006.nested_types = {}
+SC_25006.enum_types = {}
+SC_25006.fields = {
+	slot10
+}
+SC_25006.is_extendable = false
+SC_25006.extensions = {}
+slot11.name = "commanderid"
+slot11.full_name = ".p25.cs_25007.commanderid"
+slot11.number = 1
+slot11.index = 0
+slot11.label = 2
+slot11.has_default_value = false
+slot11.default_value = 0
+slot11.type = 13
+slot11.cpp_type = 3
+CS_25007.name = "cs_25007"
+CS_25007.full_name = ".p25.cs_25007"
+CS_25007.nested_types = {}
+CS_25007.enum_types = {}
+CS_25007.fields = {
+	slot11
+}
+CS_25007.is_extendable = false
+CS_25007.extensions = {}
+slot12.name = "result"
+slot12.full_name = ".p25.sc_25008.result"
+slot12.number = 1
+slot12.index = 0
+slot12.label = 2
+slot12.has_default_value = false
+slot12.default_value = 0
+slot12.type = 13
+slot12.cpp_type = 3
+SC_25008.name = "sc_25008"
+SC_25008.full_name = ".p25.sc_25008"
+SC_25008.nested_types = {}
+SC_25008.enum_types = {}
+SC_25008.fields = {
+	slot12
+}
+SC_25008.is_extendable = false
+SC_25008.extensions = {}
+slot13.name = "commanderid"
+slot13.full_name = ".p25.cs_25009.commanderid"
+slot13.number = 1
+slot13.index = 0
+slot13.label = 2
+slot13.has_default_value = false
+slot13.default_value = 0
+slot13.type = 13
+slot13.cpp_type = 3
+slot14.name = "commanderids"
+slot14.full_name = ".p25.cs_25009.commanderids"
+slot14.number = 2
+slot14.index = 1
+slot14.label = 3
+slot14.has_default_value = false
+slot14.default_value = {}
+slot14.type = 13
+slot14.cpp_type = 3
+CS_25009.name = "cs_25009"
+CS_25009.full_name = ".p25.cs_25009"
+CS_25009.nested_types = {}
+CS_25009.enum_types = {}
+CS_25009.fields = {
+	slot13,
+	slot14
+}
+CS_25009.is_extendable = false
+CS_25009.extensions = {}
+slot15.name = "result"
+slot15.full_name = ".p25.sc_25010.result"
+slot15.number = 1
+slot15.index = 0
+slot15.label = 2
+slot15.has_default_value = false
+slot15.default_value = 0
+slot15.type = 13
+slot15.cpp_type = 3
+slot16.name = "exp"
+slot16.full_name = ".p25.sc_25010.exp"
+slot16.number = 2
+slot16.index = 1
+slot16.label = 2
+slot16.has_default_value = false
+slot16.default_value = 0
+slot16.type = 13
+slot16.cpp_type = 3
+SC_25010.name = "sc_25010"
+SC_25010.full_name = ".p25.sc_25010"
+SC_25010.nested_types = {}
+SC_25010.enum_types = {}
+SC_25010.fields = {
+	slot15,
+	slot16
+}
+SC_25010.is_extendable = false
+SC_25010.extensions = {}
+slot17.name = "commanderid"
+slot17.full_name = ".p25.cs_25011.commanderid"
+slot17.number = 1
+slot17.index = 0
+slot17.label = 2
+slot17.has_default_value = false
+slot17.default_value = 0
+slot17.type = 13
+slot17.cpp_type = 3
+slot18.name = "commanderids"
+slot18.full_name = ".p25.cs_25011.commanderids"
+slot18.number = 2
+slot18.index = 1
+slot18.label = 3
+slot18.has_default_value = false
+slot18.default_value = {}
+slot18.type = 13
+slot18.cpp_type = 3
+CS_25011.name = "cs_25011"
+CS_25011.full_name = ".p25.cs_25011"
+CS_25011.nested_types = {}
+CS_25011.enum_types = {}
+CS_25011.fields = {
+	slot17,
+	slot18
+}
+CS_25011.is_extendable = false
+CS_25011.extensions = {}
+slot19.name = "result"
+slot19.full_name = ".p25.sc_25012.result"
+slot19.number = 1
+slot19.index = 0
+slot19.label = 2
+slot19.has_default_value = false
+slot19.default_value = 0
+slot19.type = 13
+slot19.cpp_type = 3
+slot20.name = "exp"
+slot20.full_name = ".p25.sc_25012.exp"
+slot20.number = 2
+slot20.index = 1
+slot20.label = 2
+slot20.has_default_value = false
+slot20.default_value = 0
+slot20.type = 13
+slot20.cpp_type = 3
+SC_25012.name = "sc_25012"
+SC_25012.full_name = ".p25.sc_25012"
+SC_25012.nested_types = {}
+SC_25012.enum_types = {}
+SC_25012.fields = {
+	slot19,
+	slot20
+}
+SC_25012.is_extendable = false
+SC_25012.extensions = {}
+slot21.name = "commanderid"
+slot21.full_name = ".p25.cs_25013.commanderid"
+slot21.number = 1
+slot21.index = 0
+slot21.label = 2
+slot21.has_default_value = false
+slot21.default_value = 0
+slot21.type = 13
+slot21.cpp_type = 3
+slot22.name = "exchangeid"
+slot22.full_name = ".p25.cs_25013.exchangeid"
+slot22.number = 2
+slot22.index = 1
+slot22.label = 2
+slot22.has_default_value = false
+slot22.default_value = 0
+slot22.type = 13
+slot22.cpp_type = 3
+CS_25013.name = "cs_25013"
+CS_25013.full_name = ".p25.cs_25013"
+CS_25013.nested_types = {}
+CS_25013.enum_types = {}
+CS_25013.fields = {
+	slot21,
+	slot22
+}
+CS_25013.is_extendable = false
+CS_25013.extensions = {}
+slot23.name = "result"
+slot23.full_name = ".p25.sc_25014.result"
+slot23.number = 1
+slot23.index = 0
+slot23.label = 2
+slot23.has_default_value = false
+slot23.default_value = 0
+slot23.type = 13
+slot23.cpp_type = 3
+SC_25014.name = "sc_25014"
+SC_25014.full_name = ".p25.sc_25014"
+SC_25014.nested_types = {}
+SC_25014.enum_types = {}
+SC_25014.fields = {
+	slot23
+}
+SC_25014.is_extendable = false
+SC_25014.extensions = {}
+slot24.name = "type"
+slot24.full_name = ".p25.cs_25015.type"
+slot24.number = 1
+slot24.index = 0
+slot24.label = 2
+slot24.has_default_value = false
+slot24.default_value = 0
+slot24.type = 13
+slot24.cpp_type = 3
+CS_25015.name = "cs_25015"
+CS_25015.full_name = ".p25.cs_25015"
+CS_25015.nested_types = {}
+CS_25015.enum_types = {}
+CS_25015.fields = {
+	slot24
+}
+CS_25015.is_extendable = false
+CS_25015.extensions = {}
+slot25.name = "result"
+slot25.full_name = ".p25.sc_25016.result"
+slot25.number = 1
+slot25.index = 0
+slot25.label = 2
+slot25.has_default_value = false
+slot25.default_value = 0
+slot25.type = 13
+slot25.cpp_type = 3
+slot26.name = "commander"
+slot26.full_name = ".p25.sc_25016.commander"
+slot26.number = 2
+slot26.index = 1
+slot26.label = 2
+slot26.has_default_value = false
+slot26.default_value = nil
+slot26.message_type = COMMANDERINFO
+slot26.type = 11
+slot26.cpp_type = 10
+slot27.name = "refresh_time"
+slot27.full_name = ".p25.sc_25016.refresh_time"
+slot27.number = 3
+slot27.index = 2
+slot27.label = 2
+slot27.has_default_value = false
+slot27.default_value = 0
+slot27.type = 13
+slot27.cpp_type = 3
+SC_25016.name = "sc_25016"
+SC_25016.full_name = ".p25.sc_25016"
+SC_25016.nested_types = {}
+SC_25016.enum_types = {}
+SC_25016.fields = {
+	slot25,
+	slot26,
+	slot27
+}
+SC_25016.is_extendable = false
+SC_25016.extensions = {}
+slot28.name = "id"
+slot28.full_name = ".p25.commanderinfo.id"
+slot28.number = 1
+slot28.index = 0
+slot28.label = 2
+slot28.has_default_value = false
+slot28.default_value = 0
+slot28.type = 13
+slot28.cpp_type = 3
+slot29.name = "template_id"
+slot29.full_name = ".p25.commanderinfo.template_id"
+slot29.number = 2
+slot29.index = 1
+slot29.label = 2
+slot29.has_default_value = false
+slot29.default_value = 0
+slot29.type = 13
+slot29.cpp_type = 3
+slot30.name = "level"
+slot30.full_name = ".p25.commanderinfo.level"
+slot30.number = 3
+slot30.index = 2
+slot30.label = 2
+slot30.has_default_value = false
+slot30.default_value = 0
+slot30.type = 13
+slot30.cpp_type = 3
+slot31.name = "exp"
+slot31.full_name = ".p25.commanderinfo.exp"
+slot31.number = 4
+slot31.index = 3
+slot31.label = 2
+slot31.has_default_value = false
+slot31.default_value = 0
+slot31.type = 13
+slot31.cpp_type = 3
+slot32.name = "skill_id_list"
+slot32.full_name = ".p25.commanderinfo.skill_id_list"
+slot32.number = 5
+slot32.index = 4
+slot32.label = 3
+slot32.has_default_value = false
+slot32.default_value = {}
+slot32.message_type = SHIPSKILL
+slot32.type = 11
+slot32.cpp_type = 10
+slot33.name = "strength_list"
+slot33.full_name = ".p25.commanderinfo.strength_list"
+slot33.number = 6
+slot33.index = 5
+slot33.label = 3
+slot33.has_default_value = false
+slot33.default_value = {}
+slot33.message_type = STRENGTH_INFO
+slot33.type = 11
+slot33.cpp_type = 10
+slot34.name = "skin_id"
+slot34.full_name = ".p25.commanderinfo.skin_id"
+slot34.number = 7
+slot34.index = 6
+slot34.label = 2
+slot34.has_default_value = false
+slot34.default_value = 0
+slot34.type = 13
+slot34.cpp_type = 3
+slot35.name = "attr_additions"
+slot35.full_name = ".p25.commanderinfo.attr_additions"
+slot35.number = 8
+slot35.index = 7
+slot35.label = 3
+slot35.has_default_value = false
+slot35.default_value = {}
+slot35.type = 13
+slot35.cpp_type = 3
+slot36.name = "shipId"
+slot36.full_name = ".p25.commanderinfo.shipId"
+slot36.number = 9
+slot36.index = 8
+slot36.label = 2
+slot36.has_default_value = false
+slot36.default_value = 0
+slot36.type = 13
+slot36.cpp_type = 3
+COMMANDERINFO.name = "commanderinfo"
+COMMANDERINFO.full_name = ".p25.commanderinfo"
+COMMANDERINFO.nested_types = {}
+COMMANDERINFO.enum_types = {}
+COMMANDERINFO.fields = {
+	slot28,
+	slot29,
+	slot30,
+	slot31,
+	slot32,
+	slot33,
+	slot34,
+	slot35,
+	slot36
+}
+COMMANDERINFO.is_extendable = false
+COMMANDERINFO.extensions = {}
+slot37.name = "skill_id"
+slot37.full_name = ".p25.shipskill.skill_id"
+slot37.number = 1
+slot37.index = 0
+slot37.label = 2
+slot37.has_default_value = false
+slot37.default_value = 0
+slot37.type = 13
+slot37.cpp_type = 3
+slot38.name = "skill_lv"
+slot38.full_name = ".p25.shipskill.skill_lv"
+slot38.number = 2
+slot38.index = 1
+slot38.label = 2
+slot38.has_default_value = false
+slot38.default_value = 0
+slot38.type = 13
+slot38.cpp_type = 3
+slot39.name = "lock"
+slot39.full_name = ".p25.shipskill.lock"
+slot39.number = 3
+slot39.index = 2
+slot39.label = 2
+slot39.has_default_value = false
+slot39.default_value = 0
+slot39.type = 13
+slot39.cpp_type = 3
+SHIPSKILL.name = "shipskill"
+SHIPSKILL.full_name = ".p25.shipskill"
+SHIPSKILL.nested_types = {}
+SHIPSKILL.enum_types = {}
+SHIPSKILL.fields = {
+	slot37,
+	slot38,
+	slot39
+}
+SHIPSKILL.is_extendable = false
+SHIPSKILL.extensions = {}
+slot40.name = "id"
+slot40.full_name = ".p25.strength_info.id"
+slot40.number = 1
+slot40.index = 0
+slot40.label = 2
+slot40.has_default_value = false
+slot40.default_value = 0
+slot40.type = 13
+slot40.cpp_type = 3
+slot41.name = "exp"
+slot41.full_name = ".p25.strength_info.exp"
+slot41.number = 2
+slot41.index = 1
+slot41.label = 2
+slot41.has_default_value = false
+slot41.default_value = 0
+slot41.type = 13
+slot41.cpp_type = 3
+STRENGTH_INFO.name = "strength_info"
+STRENGTH_INFO.full_name = ".p25.strength_info"
+STRENGTH_INFO.nested_types = {}
+STRENGTH_INFO.enum_types = {}
+STRENGTH_INFO.fields = {
+	slot40,
+	slot41
+}
+STRENGTH_INFO.is_extendable = false
+STRENGTH_INFO.extensions = {}
+commanderinfo = slot0.Message(COMMANDERINFO)
+cs_25003 = slot0.Message(CS_25003)
+cs_25005 = slot0.Message(CS_25005)
+cs_25007 = slot0.Message(CS_25007)
+cs_25009 = slot0.Message(CS_25009)
+cs_25011 = slot0.Message(CS_25011)
+cs_25013 = slot0.Message(CS_25013)
+cs_25015 = slot0.Message(CS_25015)
+sc_25001 = slot0.Message(SC_25001)
+sc_25002 = slot0.Message(SC_25002)
+sc_25004 = slot0.Message(SC_25004)
+sc_25006 = slot0.Message(SC_25006)
+sc_25008 = slot0.Message(SC_25008)
+sc_25010 = slot0.Message(SC_25010)
+sc_25012 = slot0.Message(SC_25012)
+sc_25014 = slot0.Message(SC_25014)
+sc_25016 = slot0.Message(SC_25016)
+shipskill = slot0.Message(SHIPSKILL)
+strength_info = slot0.Message(STRENGTH_INFO)
+
+return

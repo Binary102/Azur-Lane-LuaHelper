@@ -1,0 +1,94 @@
+ys = ys or {}
+slot1 = ys.Battle.BattleConfig
+slot2 = ys.Battle.BattleVariable
+ys.Battle.BattleSkillUnit = class("BattleSkillUnit")
+ys.Battle.BattleSkillUnit.__name = "BattleSkillUnit"
+
+ys.Battle.BattleSkillUnit.Ctor = function (slot0, slot1, slot2)
+	slot0.EventDispatcher.AttachEventDispatcher(slot0)
+
+	slot0._id = slot1
+	slot0._level = slot2
+	slot0._tempData = slot0.Battle.BattleDataFunction.GetSkillTemplate(slot1, slot2)
+	slot0._cd = slot0._tempData.cd
+	slot0._effectList = {}
+	slot0._lastEffectTarget = {}
+
+	for slot6, slot7 in ipairs(slot0._tempData.effect_list) do
+		slot0._effectList[slot6] = slot0.Battle[slot7.type].New(slot7, slot2)
+	end
+
+	slot0._dataProxy = slot0.Battle.BattleDataProxy:GetInstance()
+end
+
+ys.Battle.BattleSkillUnit.GenerateSpell = function (slot0, slot1, slot2, slot3)
+	slot0.Battle.BattleSkillUnit.New(slot0, slot1)._attachData = slot3
+
+	return slot0.Battle.BattleSkillUnit.New(slot0, slot1)
+end
+
+ys.Battle.BattleSkillUnit.GeneratePointingSpell = function (slot0, slot1, slot2)
+	for slot7, slot8 in ipairs(slot0.Battle.BattleSkillUnit.New(slot0, skilllv)._effectList) do
+		slot8._targetChoise = "TargetSameToLastEffect"
+	end
+
+	return slot3
+end
+
+ys.Battle.BattleSkillUnit.GetSkillEffectList = function (slot0)
+	return slot0._effectList
+end
+
+ys.Battle.BattleSkillUnit.Cast = function (slot0, slot1)
+	slot3 = slot0.Battle.BattleState:GetInstance().GetUIMediator(slot2)
+
+	if slot0._tempData.focus_duration then
+		slot3:ShowSkillPainting(slot1, slot0._tempData)
+	end
+
+	if slot0._tempData.painting == 1 then
+		slot3:ShowSkillFloat(slot1, slot0._tempData)
+	end
+
+	if slot0._tempData.castCV then
+		slot1:DispatchVoice(slot0._tempData.castCV)
+	end
+
+	slot4 = slot0._attachData
+
+	for slot8, slot9 in ipairs(slot0._effectList) do
+		slot0._lastEffectTarget = slot9:GetTarget(slot1, slot0)
+
+		slot9:Effect(slot1, slot9.GetTarget(slot1, slot0), slot4)
+	end
+
+	if slot0._tempData.aniEffect and slot5 ~= "" then
+		slot1:DispatchEvent(slot0.Event.New(slot0.Battle.BattleUnitEvent.ADD_EFFECT, {
+			effect = slot5.effect,
+			time = slot5.time,
+			offset = slot5.offset,
+			posFun = slot5.posFun
+		}))
+	end
+
+	slot0._dataProxy:DispatchEvent(slot0.Event.New(slot0.Battle.BattleEvent.CAST_SKILL, {
+		skillID = slot0._id,
+		caster = slot1
+	}))
+end
+
+ys.Battle.BattleSkillUnit.SetTarget = function (slot0, slot1)
+	slot0._lastEffectTarget = slot1
+end
+
+ys.Battle.BattleSkillUnit.Clear = function (slot0)
+	for slot4, slot5 in ipairs(slot0._effectList) do
+		slot5:Clear()
+	end
+end
+
+ys.Battle.BattleSkillUnit.Dispose = function (slot0)
+	slot0.EventDispatcher.DetachEventDispatcher(slot0)
+end
+
+return

@@ -1,0 +1,66 @@
+class("AcceptActivityTaskCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	print("accpet activity task...................")
+
+	slot2 = getProxy(TaskProxy)
+	slot3 = getProxy(ActivityProxy)
+
+	_.each(slot4, function (slot0)
+		if not slot0:isEnd() and slot0:getConfig("config_id") == 1 then
+			if slot0:getActivityTask(slot0) and not slot0:getTaskById(slot1) and not slot0:getFinishTaskById(slot1) then
+				slot1:sendNotification(GAME.ACTIVITY_OPERATION, {
+					cmd = 1,
+					activity_id = slot0.id,
+					arg1 = slot1
+				})
+			end
+		elseif not slot0:isEnd() and slot0:getConfig("config_id") == 3 then
+			slot2 = pg.TimeMgr.GetInstance()
+			slot3 = math.clamp(slot2:DiffDay(slot0.data1, slot2:GetServerTime()) + 1, 1, #slot0:getConfig("config_data"))
+
+			if slot0.data3 == 0 or (slot4 < slot3 and _.all(_.flatten({
+				slot1[slot4]
+			}), function (slot0)
+				return slot0:getFinishTaskById(slot0) ~= nil
+			end)) then
+				pg.m02:sendNotification(GAME.ACTIVITY_OPERATION, {
+					cmd = 1,
+					activity_id = slot0.id
+				})
+			end
+		end
+	end)
+	_.each(slot3:getActivitiesByType(ActivityConst.ACTIVITY_TYPE_TASK_RES), function (slot0)
+		slot2 = pg.TimeMgr.GetInstance()
+		slot3 = math.clamp(slot2:DiffDay(slot0.data1, slot2:GetServerTime()) + 1, 1, #slot0:getConfig("config_data"))
+
+		if slot0.data3 == 0 then
+			pg.m02:sendNotification(GAME.ACTIVITY_OPERATION, {
+				cmd = 1,
+				activity_id = slot0.id
+			})
+		else
+			for slot8 = slot4 + 1, slot3, 1 do
+				slot9 = nil
+
+				for slot13 = slot8 - 1, 1, -1 do
+					if #slot1[slot13] > 0 then
+						slot9 = slot13
+
+						break
+					end
+				end
+
+				if _.all(slot1[slot9], function (slot0)
+					return slot0:getFinishTaskById(slot0) ~= nil
+				end) and #slot1[slot8] ~= 0 then
+					pg.m02:sendNotification(GAME.ACTIVITY_OPERATION, {
+						cmd = 1,
+						activity_id = slot0.id
+					})
+				end
+			end
+		end
+	end)
+end
+
+return class("AcceptActivityTaskCommand", pm.SimpleCommand)

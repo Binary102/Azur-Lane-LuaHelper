@@ -1,0 +1,9 @@
+class("GetPlayerPowerRankCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	pg.ConnectionMgr.GetInstance():Send(18203, {
+		type = slot1:getBody().type or 1
+	}, 18204, function (slot0)
+		getProxy(MilitaryExerciseProxy):setPlayerPowerRank(slot0, slot0.point, slot0.rank)
+	end)
+end
+
+return class("GetPlayerPowerRankCommand", pm.SimpleCommand)

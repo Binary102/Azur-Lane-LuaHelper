@@ -1,0 +1,27 @@
+slot0 = class("CommanderConst")
+slot0.SELECT_MATIRIAL_MAX_COUNT = 12
+slot0.SELECT_TYPE_DESTORY = 1
+slot0.SELECT_TYPE_UPGRADE = 2
+slot0.SELECT_TYPE_EXCHANGE = 3
+slot0.EXCHANGE_GOLD = 500
+slot0.COMMANDPOST_CAPACITY = 1000
+slot0.BUILD_COMMANDER_TIME = 28800
+slot0.ATTRS = {
+	AttributeType.Durability,
+	AttributeType.Cannon,
+	AttributeType.Torpedo,
+	AttributeType.AntiAircraft,
+	AttributeType.Air,
+	AttributeType.Reload,
+	AttributeType.Armor,
+	AttributeType.Hit,
+	AttributeType.Speed,
+	AttributeType.Luck,
+	AttributeType.Dodge
+}
+
+slot0.index2AttrName = function (slot0)
+	return slot0.ATTRS[slot0]
+end
+
+return slot0

@@ -1,0 +1,567 @@
+pg = pg or {}
+pg.emoji_template = {
+	{
+		achieve = 0,
+		id = 1,
+		pic = "1",
+		desc = "<color=#A9F548>[不可以！]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 2,
+		pic = "2",
+		desc = "<color=#A9F548>[开玩笑的]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 3,
+		pic = "3",
+		desc = "<color=#A9F548>[胆小鬼]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 4,
+		pic = "4",
+		desc = "<color=#A9F548>[给我跪下]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 5,
+		pic = "5",
+		desc = "<color=#A9F548>[通宵]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 6,
+		pic = "6",
+		desc = "<color=#A9F548>[要来吗？]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 7,
+		pic = "7",
+		desc = "<color=#A9F548>[咕嘿嘿…]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 8,
+		pic = "8",
+		desc = "<color=#A9F548>[I’LL BE BACK]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 9,
+		pic = "9",
+		desc = "<color=#A9F548>[怎么办呢~]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 10,
+		pic = "10",
+		desc = "<color=#A9F548>[笨蛋]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 11,
+		pic = "11",
+		desc = "<color=#A9F548>[萌]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 12,
+		pic = "12",
+		desc = "<color=#A9F548>[早安]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 13,
+		pic = "13",
+		desc = "<color=#A9F548>[OK]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 14,
+		pic = "14",
+		desc = "<color=#A9F548>[拉紧]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 15,
+		pic = "15",
+		desc = "<color=#A9F548>[变态！]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 16,
+		pic = "16",
+		desc = "<color=#A9F548>[优雅]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 17,
+		pic = "17",
+		desc = "<color=#A9F548>[女仆看见了]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 18,
+		pic = "18",
+		desc = "<color=#A9F548>[迷上我了吗？]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 19,
+		pic = "19",
+		desc = "<color=#A9F548>[差劲]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 20,
+		pic = "20",
+		desc = "<color=#A9F548>[晚安]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 21,
+		pic = "21",
+		desc = "<color=#A9F548>[发现猎物]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 22,
+		pic = "22",
+		desc = "<color=#A9F548>[限界突破]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 23,
+		pic = "23",
+		desc = "<color=#A9F548>[揍你哦]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 24,
+		pic = "24",
+		desc = "<color=#A9F548>[请多指教]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 25,
+		pic = "25",
+		desc = "<color=#A9F548>[！？]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 26,
+		pic = "26",
+		desc = "<color=#A9F548>[谢谢茄子]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 27,
+		pic = "27",
+		desc = "<color=#A9F548>[紧急事件]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 28,
+		pic = "28",
+		desc = "<color=#A9F548>[殿下~！]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 29,
+		pic = "29",
+		desc = "<color=#A9F548>[真走运！]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 30,
+		pic = "30",
+		desc = "<color=#A9F548>[吃的！]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 31,
+		pic = "31",
+		desc = "<color=#A9F548>[说啥呢]</color>",
+		type = {
+			1
+		}
+	},
+	{
+		achieve = 0,
+		id = 32,
+		pic = "32",
+		desc = "<color=#A9F548>[就是这样]</color>",
+		type = {
+			1
+		}
+	},
+	[41] = {
+		achieve = 0,
+		id = 41,
+		pic = "akk",
+		desc = "<color=#A9F548>[惊]</color>",
+		type = {
+			2
+		}
+	},
+	[42] = {
+		achieve = 0,
+		id = 42,
+		pic = "beifa",
+		desc = "<color=#A9F548>[吓]</color>",
+		type = {
+			2
+		}
+	},
+	[43] = {
+		achieve = 0,
+		id = 43,
+		pic = "biaoqiang",
+		desc = "<color=#A9F548>[耶]</color>",
+		type = {
+			2
+		}
+	},
+	[44] = {
+		achieve = 0,
+		id = 44,
+		pic = "buli",
+		desc = "<color=#A9F548>[啦啦]</color>",
+		type = {
+			2
+		}
+	},
+	[45] = {
+		achieve = 0,
+		id = 45,
+		pic = "dujiaoshou",
+		desc = "<color=#A9F548>[爱心]</color>",
+		type = {
+			2
+		}
+	},
+	[46] = {
+		achieve = 0,
+		id = 46,
+		pic = "fangzhou",
+		desc = "<color=#A9F548>[鼻血]</color>",
+		type = {
+			2
+		}
+	},
+	[47] = {
+		achieve = 0,
+		id = 47,
+		pic = "gaoxiong",
+		desc = "<color=#A9F548>[不]</color>",
+		type = {
+			2
+		}
+	},
+	[48] = {
+		achieve = 0,
+		id = 48,
+		pic = "haiwangxing",
+		desc = "<color=#A9F548>[点头]</color>",
+		type = {
+			2
+		}
+	},
+	[49] = {
+		achieve = 0,
+		id = 49,
+		pic = "haman",
+		desc = "<color=#A9F548>[生气]</color>",
+		type = {
+			2
+		}
+	},
+	[50] = {
+		achieve = 0,
+		id = 50,
+		pic = "kedie",
+		desc = "<color=#A9F548>[墨镜]</color>",
+		type = {
+			2
+		}
+	},
+	[51] = {
+		achieve = 0,
+		id = 51,
+		pic = "lafei",
+		desc = "<color=#A9F548>[冒泡]</color>",
+		type = {
+			2
+		}
+	},
+	[52] = {
+		achieve = 0,
+		id = 52,
+		pic = "lingbo",
+		desc = "<color=#A9F548>[窘迫]</color>",
+		type = {
+			2
+		}
+	},
+	[54] = {
+		achieve = 0,
+		id = 54,
+		pic = "mingshi",
+		desc = "<color=#A9F548>[流汗]</color>",
+		type = {
+			2
+		}
+	},
+	[55] = {
+		achieve = 0,
+		id = 55,
+		pic = "muyue",
+		desc = "<color=#A9F548>[发呆]</color>",
+		type = {
+			2
+		}
+	},
+	[56] = {
+		achieve = 0,
+		id = 56,
+		pic = "naerxun",
+		desc = "<color=#A9F548>[嘎喔]</color>",
+		type = {
+			2
+		}
+	},
+	[57] = {
+		achieve = 0,
+		id = 57,
+		pic = "neet",
+		desc = "<color=#A9F548>[躺]</color>",
+		type = {
+			2
+		}
+	},
+	[58] = {
+		achieve = 0,
+		id = 58,
+		pic = "ninghai",
+		desc = "<color=#A9F548>[疑惑]</color>",
+		type = {
+			2
+		}
+	},
+	[59] = {
+		achieve = 0,
+		id = 59,
+		pic = "qiye",
+		desc = "<color=#A9F548>[…]</color>",
+		type = {
+			2
+		}
+	},
+	[60] = {
+		achieve = 0,
+		id = 60,
+		pic = "ruihe",
+		desc = "<color=#A9F548>[拍手]</color>",
+		type = {
+			2
+		}
+	},
+	[61] = {
+		achieve = 0,
+		id = 61,
+		pic = "ruyue",
+		desc = "<color=#A9F548>[害怕]</color>",
+		type = {
+			2
+		}
+	},
+	[62] = {
+		achieve = 0,
+		id = 62,
+		pic = "shancheng",
+		desc = "<color=#A9F548>[晕]</color>",
+		type = {
+			2
+		}
+	},
+	[63] = {
+		achieve = 0,
+		id = 63,
+		pic = "xiefei",
+		desc = "<color=#A9F548>[鄙视]</color>",
+		type = {
+			2
+		}
+	},
+	[64] = {
+		achieve = 0,
+		id = 64,
+		pic = "xixue",
+		desc = "<color=#A9F548>[鬼脸]</color>",
+		type = {
+			2
+		}
+	},
+	[65] = {
+		achieve = 0,
+		id = 65,
+		pic = "z23",
+		desc = "<color=#A9F548>[发脾气]</color>",
+		type = {
+			2
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+		17,
+		18,
+		19,
+		20,
+		21,
+		22,
+		23,
+		24,
+		25,
+		26,
+		27,
+		28,
+		29,
+		30,
+		31,
+		32,
+		41,
+		42,
+		43,
+		44,
+		45,
+		46,
+		47,
+		48,
+		49,
+		50,
+		51,
+		52,
+		54,
+		55,
+		56,
+		57,
+		58,
+		59,
+		60,
+		61,
+		62,
+		63,
+		64,
+		65
+	}
+}
+
+return

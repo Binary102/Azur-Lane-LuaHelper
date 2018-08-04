@@ -1,0 +1,40 @@
+class("FetchEscortCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	pg.ConnectionMgr.GetInstance():Send(13301, {
+		type = 0
+	}, 13302, function (slot0)
+		slot1 = {}
+
+		if slot0.drop_list and #slot0.drop_list > 0 then
+			for slot5, slot6 in ipairs(slot0.drop_list) do
+				table.insert(slot1, {
+					type = slot6.type,
+					id = slot6.id,
+					count = slot6.number
+				})
+			end
+		end
+
+		slot2 = {}
+
+		_.each(pg.escort_map_template.all, function (slot0)
+			slot0[EscortInfo.New(slot0).id] = EscortInfo.New(slot0)
+		end)
+
+		if slot0.escort_info then
+			_.each(slot0.escort_info, function (slot0)
+				slot0[slot0.line_id]:update(slot0)
+			end)
+		end
+
+		getProxy(ChapterProxy).escortMaps = _.values(slot2)
+
+		_.sort(getProxy(ChapterProxy).escortMaps, function (slot0, slot1)
+			return slot0.id < slot1.id
+		end)
+		slot0:sendNotification(GAME.ESCORT_FETCH_DONE, {
+			awards = slot1
+		})
+	end)
+end
+
+return class("FetchEscortCommand", pm.SimpleCommand)

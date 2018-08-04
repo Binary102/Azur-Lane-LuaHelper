@@ -1,0 +1,211 @@
+return {
+	uiEffect = "",
+	name = "Z系先驱",
+	cd = 0,
+	picture = "0",
+	desc = "Z系先驱",
+	painting = 1,
+	id = 10380,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillAddBuff",
+			target_choise = "TargetAllHelp",
+			arg_list = {
+				buff_id = 10381,
+				effectFilter = {
+					{
+						"TargetID",
+						"=",
+						401011
+					},
+					{
+						"TargetID",
+						"=",
+						401012
+					},
+					{
+						"TargetID",
+						"=",
+						401013
+					},
+					{
+						"TargetID",
+						"=",
+						401014
+					},
+					{
+						"TargetID",
+						"=",
+						401181
+					},
+					{
+						"TargetID",
+						"=",
+						401182
+					},
+					{
+						"TargetID",
+						"=",
+						401183
+					},
+					{
+						"TargetID",
+						"=",
+						401184
+					},
+					{
+						"TargetID",
+						"=",
+						401191
+					},
+					{
+						"TargetID",
+						"=",
+						401192
+					},
+					{
+						"TargetID",
+						"=",
+						401193
+					},
+					{
+						"TargetID",
+						"=",
+						401194
+					},
+					{
+						"TargetID",
+						"=",
+						401201
+					},
+					{
+						"TargetID",
+						"=",
+						401202
+					},
+					{
+						"TargetID",
+						"=",
+						401203
+					},
+					{
+						"TargetID",
+						"=",
+						401204
+					},
+					{
+						"TargetID",
+						"=",
+						401211
+					},
+					{
+						"TargetID",
+						"=",
+						401212
+					},
+					{
+						"TargetID",
+						"=",
+						401213
+					},
+					{
+						"TargetID",
+						"=",
+						401214
+					},
+					{
+						"TargetID",
+						"=",
+						401231
+					},
+					{
+						"TargetID",
+						"=",
+						401232
+					},
+					{
+						"TargetID",
+						"=",
+						401233
+					},
+					{
+						"TargetID",
+						"=",
+						401234
+					},
+					{
+						"TargetID",
+						"=",
+						401251
+					},
+					{
+						"TargetID",
+						"=",
+						401252
+					},
+					{
+						"TargetID",
+						"=",
+						401253
+					},
+					{
+						"TargetID",
+						"=",
+						401254
+					},
+					{
+						"TargetID",
+						"=",
+						401351
+					},
+					{
+						"TargetID",
+						"=",
+						401352
+					},
+					{
+						"TargetID",
+						"=",
+						401353
+					},
+					{
+						"TargetID",
+						"=",
+						401354
+					},
+					{
+						"TargetID",
+						"=",
+						401461
+					},
+					{
+						"TargetID",
+						"=",
+						401462
+					},
+					{
+						"TargetID",
+						"=",
+						401463
+					},
+					{
+						"TargetID",
+						"=",
+						401464
+					}
+				}
+			}
+		}
+	}
+}

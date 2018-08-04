@@ -1,0 +1,30 @@
+slot0 = class("GetCommanderMediator", import("..base.ContextMediator"))
+slot0.ON_POST = "GetCommanderMediator:ON_POST"
+slot0.ON_OPEN_BOX = "GetCommanderMediator:ON_OPEN_BOX"
+
+slot0.register = function (slot0)
+	slot0:bind(slot0.ON_POST, function (slot0)
+		slot0:sendNotification(GAME.GO_SCENE, SCENE.COMMANDPOST)
+	end)
+	slot0:bind(slot0.ON_OPEN_BOX, function (slot0)
+		slot0:sendNotification(GAME.COMMANDER_ON_OPEN_BOX)
+	end)
+	slot0.viewComponent:setRefreshTime(getProxy(CommanderProxy).getRefreshTime(slot1))
+end
+
+slot0.listNotificationInterests = function (slot0)
+	return {
+		CommanderProxy.COMMANDER_BOX_TIME_UPDATED
+	}
+end
+
+slot0.handleNotification = function (slot0, slot1)
+	slot3 = slot1:getBody()
+
+	if slot1:getName() == CommanderProxy.COMMANDER_BOX_TIME_UPDATED then
+		slot0.viewComponent:setRefreshTime(slot3)
+		slot0.viewComponent:addTimer()
+	end
+end
+
+return slot0

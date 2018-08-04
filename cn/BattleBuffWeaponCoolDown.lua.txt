@@ -1,0 +1,51 @@
+ys = ys or {}
+ys.Battle.BattleBuffWeaponCoolDown = class("BattleBuffWeaponCoolDown", ys.Battle.BattleBuffEffect)
+ys.Battle.BattleBuffWeaponCoolDown.__name = "BattleBuffWeaponCoolDown"
+
+ys.Battle.BattleBuffWeaponCoolDown.Ctor = function (slot0, slot1)
+	slot0.super.Ctor(slot0, slot1)
+end
+
+ys.Battle.BattleBuffWeaponCoolDown.SetArgs = function (slot0, slot1, slot2)
+	slot0._weaponType = slot0._tempData.arg_list.weapon
+end
+
+ys.Battle.BattleBuffWeaponCoolDown.onTrigger = function (slot0, slot1, slot2, slot3)
+	slot0.super.onTrigger(slot0, slot1, slot2, attach)
+
+	if trigger == "onBulletCreate" then
+		slot0:onBulletCreate(slot1, slot2, slot3)
+	else
+		for slot8, slot9 in ipairs(slot4) do
+			slot9:QuickCoolDown()
+		end
+	end
+end
+
+ys.Battle.BattleBuffWeaponCoolDown.onBulletCreate = function (slot0, slot1, slot2, slot3)
+	if not slot0:equipIndexRequire(slot3.equipIndex) then
+		return
+	end
+
+	slot6 = slot0._weaponType
+
+	slot3._bullet:SetBuffFun(slot0._tempData.arg_list.bulletTrigger, function (slot0, slot1)
+		if slot0 == "ChargeWeapon" then
+			for slot6, slot7 in ipairs(slot2) do
+				slot7:QuickCoolDown()
+			end
+		end
+	end)
+end
+
+ys.Battle.BattleBuffWeaponCoolDown._GetWeapon = function (slot0, slot1)
+	slot2 = nil
+
+	if slot0._weaponType == "ChargeWeapon" then
+		slot2 = slot1:GetChargeList()
+	end
+
+	return slot2
+end
+
+return

@@ -1,0 +1,99 @@
+slot0 = class("CommanderPlayPanel", import("..base.BasePanel"))
+
+slot0.init = function (slot0)
+	slot0.comfirmBtn = slot0:findTF("bg/comfirm_btn")
+	slot0.clearBtn = slot0:findTF("bg/clear_btn")
+	slot0.addShipTF = slot0:findTF("bg/add_ship_panel")
+	slot0.shipContainer = slot0:findTF("ships", slot0.addShipTF)
+end
+
+slot0.enter = function (slot0, slot1, slot2)
+	slot0.commanderVOs = slot2
+	slot0.commanderVO = slot1
+
+	if not slot0.isInit then
+		slot0.isInit = true
+
+		onButton(slot0, slot0.clearBtn, function ()
+			slot0:clearAllShip()
+		end, SFX_PANEL)
+		onButton(slot0, slot0.comfirmBtn, function ()
+			if #(slot0.parent.contextData.materialIds or {}) == 0 then
+				return
+			end
+
+			slot0:emit(CommanderInfoMediator.ON_DESTROY)
+		end)
+	end
+
+	slot0:update(slot1, slot2)
+end
+
+slot0.update = function (slot0, slot1, slot2)
+	slot0.commanderVOs = slot2
+	slot0.commanderVO = slot1
+
+	slot0:initSelectedShips()
+end
+
+slot0.clearAllShip = function (slot0)
+	for slot4 = 1, CommanderConst.SELECT_MATIRIAL_MAX_COUNT, 1 do
+		slot5 = slot0.shipContainer:GetChild(slot4 - 1)
+
+		setActive(slot5:Find("add"), true)
+		setActive(slot5:Find("icon_bg"), false)
+		onButton(slot0, slot5:Find("add"), function ()
+			slot0:emit(CommanderInfoMediator.ON_SELECT_MATERIAL_SHIPS, CommanderConst.SELECT_TYPE_DESTORY)
+		end, SFX_PANEL)
+	end
+
+	slot0.parent.contextData.materialIds = nil
+end
+
+slot0.initSelectedShips = function (slot0)
+	slot2 = table.getCount(slot0.parent.contextData.materialIds or {})
+
+	for slot6 = 1, CommanderConst.SELECT_MATIRIAL_MAX_COUNT, 1 do
+		slot7 = slot0.shipContainer:GetChild(slot6 - 1)
+
+		if slot6 <= slot2 then
+			slot0:updateCommander(slot7, slot1[slot6])
+		else
+			onButton(slot0, slot7:Find("add"), function ()
+				slot0:emit(CommanderInfoMediator.ON_SELECT_MATERIAL_SHIPS, CommanderConst.SELECT_TYPE_DESTORY)
+			end, SFX_PANEL)
+		end
+
+		setActive(slot7:Find("add"), slot2 < slot6)
+		setActive(slot7:Find("icon_bg"), slot6 <= slot2)
+	end
+end
+
+slot0.updateCommander = function (slot0, slot1, slot2)
+	onButton(slot0, slot1, function ()
+		slot1 = slot0.parent.contextData.materialIds or {}
+
+		for slot3, slot4 in slot0(slot1) do
+			if slot1 == slot4 then
+				setActive(slot5, true)
+				setActive(slot2:Find("icon_bg"), false)
+				onButton(slot0, slot5, function ()
+					slot0:emit(ShipModMediator.ON_SELECT_MATERIAL_SHIPS, CommanderConst.SELECT_TYPE_DESTORY)
+				end, SFX_PANEL)
+				table.remove(slot0.parent.contextData.materialIds, slot3)
+
+				break
+			end
+		end
+	end, SFX_PANEL)
+	updateCommander(slot1, slot3, {
+		initStar = true
+	})
+	setText(slot1:Find("icon_bg/lv/Text"), slot0.commanderVOs[slot2].level)
+end
+
+slot0.exit = function (slot0)
+	return
+end
+
+return slot0
