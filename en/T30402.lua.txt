@@ -1,0 +1,390 @@
+return {
+	fadeOut = 1,
+	mode = 2,
+	id = "T30402",
+	once = true,
+	fadeType = 1,
+	scripts = {
+		{
+			side = 2,
+			mode = 2,
+			nameColor = "#ff0000",
+			dir = -1,
+			blackBg = true,
+			bgm = "story-5",
+			actor = 307041,
+			actorName = "{namecode:94}",
+			say = "This is my last chance to execute a final strike! This is what I've been training for my whole life!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			mode = 2,
+			side = 0,
+			say = " Aaahh!",
+			bgspeed = 2,
+			blackBg = true,
+			soundeffect = "event:/battle/boom2",
+			actor = 107051,
+			nameColor = "#a9f548",
+			withoutPainting = true,
+			flash = {
+				wait = 0.2,
+				delay = 0.3,
+				dur = 0.5,
+				number = 1,
+				alpha = {
+					0,
+					1
+				}
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			mode = 2,
+			actorShadow = true,
+			nameColor = "#a9f548",
+			hideOther = true,
+			dir = -1,
+			blackBg = true,
+			side = 0,
+			say = "Sister!",
+			actor = 107061,
+			actorName = "Enterprise & Hornet",
+			withoutPainting = true,
+			subActors = {
+				{
+					actor = 107071,
+					pos = {
+						x = -550
+					}
+				}
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			actorName = "{namecode:94}",
+			actor = 307041,
+			dir = -1,
+			blackBg = true,
+			mode = 2,
+			hideOther = true,
+			nameColor = "#ff0000",
+			say = "At least... for the Master... I could help... a little...",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			fadeOut = 2,
+			side = 2,
+			actorName = "{namecode:94}",
+			mode = 2,
+			dir = -1,
+			blackBg = true,
+			actor = 307041,
+			nameColor = "#ff0000",
+			say = "Mine life hath no regrets!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			mode = 3,
+			side = 0,
+			bgName = "bg_story_10",
+			actor = 107051,
+			say = "Why does everyone look so down? We've just claimed a glorious victory!",
+			blackBg = true,
+			nameColor = "#a9f548",
+			withoutPainting = true,
+			effects = {
+				{
+					active = true,
+					name = "UIhuohua"
+				}
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "Soon, your names will resound throughout the world! You will be praised by future generations as legendary warships!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "Soon, the war will end, humanity will begin to understand each other, and they will being to explore this ocean hand-in-hand once more.",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "I was born to fulfill their ideals. This has all been worthy of our devotion.",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107061,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "No, I can't agree...",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "It's about time for us to part...",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "My greatest pride is to have been able to see you grow from children into the unstoppable forces that you are now!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			mode = 3,
+			side = 0,
+			bgName = "bg_story_11",
+			actor = 107051,
+			bgspeed = 2,
+			blackBg = true,
+			say = "Take him. The 'God of Death' is now your responsibility.",
+			nameColor = "#a9f548",
+			withoutPainting = true,
+			effects = {
+				{
+					active = true,
+					name = "UIhuohua"
+				}
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "Take him with you, and pass on the will of freedom!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 107051,
+			mode = 3,
+			nameColor = "#a9f548",
+			side = 0,
+			say = "You can do it, sister... I believe in you!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			mode = 3,
+			blankScreen = 1.5,
+			fadein = 1.5,
+			blackBg = true,
+			bgFade = true,
+			effects = {
+				{
+					active = false,
+					name = "UIhuohua"
+				}
+			}
+		},
+		{
+			side = 2,
+			hideOther = true,
+			mode = 2,
+			dir = -1,
+			blackBg = true,
+			say = "Another horde of souls has departed the world once more....",
+			fadein = 1.5,
+			actor = 307041,
+			actorName = "？？？",
+			nameColor = "#ff0000",
+			withoutPainting = true,
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 1,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			mode = 2,
+			say = "Can you see them? The dazzling lights?",
+			dir = -1,
+			blackBg = true,
+			nameColor = "#ff0000",
+			actor = 307041,
+			actorName = "？？？",
+			withoutPainting = true,
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 1,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			mode = 2,
+			say = "It's hard to see evolution take its path firsthand...",
+			dir = -1,
+			blackBg = true,
+			nameColor = "#ff0000",
+			actor = 307041,
+			actorName = "？？？",
+			withoutPainting = true,
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			nameColor = "#ff0000",
+			say = "Onto the next step of the plan...",
+			dir = -1,
+			blackBg = true,
+			mode = 2,
+			actor = 307041,
+			actorName = "？？？",
+			withoutPainting = true,
+			shake = {
+				speed = 1,
+				number = 999
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			sequenceSpd = 1,
+			mode = 1,
+			sequence = {
+				{
+					" ",
+					1
+				}
+			}
+		}
+	}
+}

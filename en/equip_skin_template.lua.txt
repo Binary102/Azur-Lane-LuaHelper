@@ -1,0 +1,735 @@
+pg = pg or {}
+pg.equip_skin_template = {
+	[50] = {
+		rarity = 4,
+		bullet_name = "Torpedo_shudi",
+		name = "リコーダー魚雷",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "吹かなくても爆発。",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 50,
+		icon = "91021",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[51] = {
+		rarity = 4,
+		bullet_name = "Torpedo_xiangpi",
+		name = "消しゴム魚雷",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "あの時の黒歴史も消したい。",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 51,
+		icon = "91022",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[52] = {
+		rarity = 4,
+		bullet_name = "Torpedo_pencil",
+		name = "エンピツ魚雷",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「妙技！鉛筆占い！…この問題はCにするわよ！」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 52,
+		icon = "91023",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[53] = {
+		rarity = 4,
+		bullet_name = "school_bullet_fenbi",
+		name = "チョーク弾",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「授業はちゃんと聞きなさい！」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 53,
+		icon = "91014",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[54] = {
+		rarity = 4,
+		bullet_name = "school_bullet_huaban",
+		name = "花びら弾",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「知ってる？サクラの花びらが落ちる時速は――」",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 54,
+		icon = "91015",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[55] = {
+		rarity = 4,
+		bullet_name = "school_liangjiaoqipaodan",
+		name = "分度器砲弾",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "射角45度、撃てー！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 55,
+		icon = "91016",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[56] = {
+		rarity = 4,
+		bullet_name = "school_heibancapaodan",
+		name = "黒板消し砲弾",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "自由落下させるトップアタック仕掛けも可能。",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 56,
+		icon = "91017",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[57] = {
+		rarity = 4,
+		bullet_name = "school_biandangpaodan",
+		name = "ベントウ砲弾",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "美味しい弁当の中には隠し味",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 57,
+		icon = "91018",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[58] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "紙飛行機（攻撃）",
+		type = 10,
+		derivate_torpedo = "Torpedo_pencil",
+		ship_config_id = 100011,
+		desc = "海水に当たらなければどうということはない。",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 58,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[59] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "紙飛行機（戦闘）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "海水に当たらなければどうということはない。",
+		derivate_bullet = "",
+		derivate_boom = "school_heibancapaodan",
+		id = 59,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[60] = {
+		rarity = 4,
+		bullet_name = "plane_zhifeiji",
+		name = "紙飛行機（爆撃）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "海水に当たらなければどうということはない。",
+		derivate_bullet = "",
+		derivate_boom = "school_heibancapaodan",
+		id = 60,
+		icon = "91032",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[61] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "桜色飛行機（攻撃）",
+		type = 10,
+		derivate_torpedo = "Torpedo_shudi",
+		ship_config_id = 100011,
+		desc = "桜色の紙飛行機。",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 61,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[62] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "桜色飛行機（戦闘）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "桜色の紙飛行機。",
+		derivate_bullet = "",
+		derivate_boom = "school_biandangpaodan",
+		id = 62,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[63] = {
+		rarity = 4,
+		bullet_name = "plane_sakura",
+		name = "桜色飛行機（爆撃）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "桜色の紙飛行機。",
+		derivate_bullet = "",
+		derivate_boom = "school_biandangpaodan",
+		id = 63,
+		icon = "91031",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[64] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "飛行教科書（攻撃）",
+		type = 10,
+		derivate_torpedo = "Torpedo_xiangpi",
+		ship_config_id = 100011,
+		desc = "ガリ勉生活におさらば！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 64,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[65] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "飛行教科書（戦闘）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "ガリ勉生活におさらば！",
+		derivate_bullet = "",
+		derivate_boom = "school_liangjiaoqipaodan",
+		id = 65,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[66] = {
+		rarity = 4,
+		bullet_name = "plane_book",
+		name = "飛行教科書（爆撃）",
+		type = 10,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "ガリ勉生活におさらば！",
+		derivate_bullet = "",
+		derivate_boom = "school_liangjiaoqipaodan",
+		id = 66,
+		icon = "91033",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1001] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_shizi",
+		name = "十字キー砲弾（P）",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "ねっぷねぷにしてやんよ！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1001,
+		icon = "90640",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1002] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_xianggu",
+		name = "しいたけ砲弾（N）",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "しいたけじゃないです！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1002,
+		icon = "90641",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1003] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_anniu",
+		name = "ボタン砲弾",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "コメンド入力！必殺技を喰らえー！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1003,
+		icon = "90642",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1004] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_guangpan",
+		name = "ディスク砲弾",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "「敵意」ハタオサレナケレバ…",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1004,
+		icon = "90643",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1005] = {
+		rarity = 4,
+		bullet_name = "Nep_bullet_shilaimu",
+		name = "スライヌ砲弾",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "RPGでよく見かけるモンスター…わん？",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1005,
+		icon = "90610",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[1006] = {
+		rarity = 4,
+		bullet_name = "Nep_torpedo_dianchi",
+		name = "バッテリー魚雷",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "最近はみな充電式なんだよねー",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1006,
+		icon = "90620",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[1007] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "爆撃機（GH）",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "かの女神をモチーフに設計した艦載機",
+		derivate_bullet = "",
+		derivate_boom = "Nep_bullet_green2",
+		id = 1007,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1008] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "戦闘機（GH）",
+		type = 7,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "かの女神をモチーフに設計した艦載機",
+		derivate_bullet = "",
+		derivate_boom = "Nep_bullet_green2",
+		id = 1008,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[1009] = {
+		rarity = 4,
+		bullet_name = "Nep_green",
+		name = "攻撃機（GH）",
+		type = 8,
+		derivate_torpedo = "Nep_torpedo_dianchi",
+		ship_config_id = 100011,
+		desc = "かの女神をモチーフに設計した艦載機",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1009,
+		icon = "90630",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	[1010] = {
+		rarity = 4,
+		bullet_name = "pixel_bullet_small",
+		name = "ドット砲弾（小）",
+		type = 1,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "かんぽう　しゃげき！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1010,
+		icon = "90740",
+		ship_skin_id = 0,
+		equip_type = {
+			1,
+			2,
+			3
+		},
+		weapon_ids = {
+			101,
+			101
+		}
+	},
+	[1011] = {
+		rarity = 4,
+		bullet_name = "pixel_bullet_large",
+		name = "ドット砲弾（大）",
+		type = 4,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "こうか　は　ばつぐん　だ！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1011,
+		icon = "90710",
+		ship_skin_id = 0,
+		equip_type = {
+			4,
+			11
+		},
+		weapon_ids = {
+			24000,
+			24000,
+			24000
+		}
+	},
+	[1012] = {
+		rarity = 4,
+		bullet_name = "Torpedo_pixel",
+		name = "ドット魚雷",
+		type = 5,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "かいしん　の　いちげき！",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1012,
+		icon = "90720",
+		ship_skin_id = 0,
+		equip_type = {
+			5
+		},
+		weapon_ids = {
+			107,
+			107
+		}
+	},
+	[1013] = {
+		rarity = 4,
+		bullet_name = "pixel_hongzhaji",
+		name = "ドット爆撃機",
+		type = 9,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "あるジャンルでは後部機銃がやたらに強調されるヤツ",
+		derivate_bullet = "",
+		derivate_boom = "pixel_bomb",
+		id = 1013,
+		icon = "90730",
+		ship_skin_id = 0,
+		equip_type = {
+			9
+		},
+		weapon_ids = {
+			61501,
+			54014
+		}
+	},
+	[1014] = {
+		rarity = 4,
+		bullet_name = "pixel_zhandouji",
+		name = "ドット戦闘機",
+		type = 7,
+		derivate_torpedo = "",
+		ship_config_id = 100011,
+		desc = "あるジャンルでは画面を横切るだけのヤツ",
+		derivate_bullet = "",
+		derivate_boom = "pixel_bomb",
+		id = 1014,
+		icon = "90730",
+		ship_skin_id = 0,
+		equip_type = {
+			7
+		},
+		weapon_ids = {
+			61505,
+			54010
+		}
+	},
+	[1015] = {
+		rarity = 4,
+		bullet_name = "pixel_yuleiji",
+		name = "ドット攻撃機",
+		type = 8,
+		derivate_torpedo = "Torpedo_pixel",
+		ship_config_id = 100011,
+		desc = "あるジャンルでは存在感がほぼないヤツ",
+		derivate_bullet = "",
+		derivate_boom = "",
+		id = 1015,
+		icon = "90731",
+		ship_skin_id = 0,
+		equip_type = {
+			8
+		},
+		weapon_ids = {
+			61503,
+			61504
+		}
+	},
+	all = {
+		50,
+		51,
+		52,
+		53,
+		54,
+		55,
+		56,
+		57,
+		58,
+		59,
+		60,
+		61,
+		62,
+		63,
+		64,
+		65,
+		66,
+		1001,
+		1002,
+		1003,
+		1004,
+		1005,
+		1006,
+		1007,
+		1008,
+		1009,
+		1010,
+		1011,
+		1012,
+		1013,
+		1014,
+		1015
+	}
+}
+
+return

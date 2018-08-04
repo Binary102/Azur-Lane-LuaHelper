@@ -1,0 +1,15 @@
+pg = pg or {}
+pg.activity_banner = {
+	{
+		param = "0",
+		time = "always",
+		type = 3,
+		id = 1,
+		pic = "temp1"
+	},
+	all = {
+		1
+	}
+}
+
+return

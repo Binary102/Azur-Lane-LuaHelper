@@ -1,0 +1,72 @@
+class("RenameShipCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot4 = slot1:getBody().name
+
+	if not getProxy(BayProxy):getShipById(slot1.getBody().shipId) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("ship_error_noShip", slot3))
+
+		return
+	end
+
+	if HXSet.hxLan(slot6:getName()) == slot4 then
+		slot0:sendNotification(GAME.RENAME_SHIP_DONE, {
+			ship = slot6
+		})
+
+		return
+	end
+
+	if slot4 == "" then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("login_createNewPlayer_error_nameNull"))
+
+		return
+	end
+
+	if wordVer(slot4) > 0 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("playerinfo_mask_word"))
+
+		return
+	end
+
+	slot12, slot9 = filterSpecChars(slot4)
+
+	if string.len(slot4) ~= string.len(slot8) then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("err_name_existOtherChar"))
+
+		return
+	end
+
+	if 40 - slot9 * 2 < string.len(slot4) - slot9 * 3 then
+		pg.TipsMgr:GetInstance():ShowTips(errorTip("ship_renameShip", 2011))
+
+		return
+	end
+
+	function slot12()
+		pg.ConnectionMgr.GetInstance():Send(12034, {
+			ship_id = slot0,
+			name = slot1
+		}, 12035, function (slot0)
+			if slot0.result == 0 then
+				slot0.name = slot0
+				slot0.renameTime = pg.TimeMgr.GetInstance():GetServerTime()
+
+				pg.TimeMgr.GetInstance().GetServerTime():updateShip(slot0)
+				slot3:sendNotification(BayProxy.SHIP_UPDATED, slot0)
+				slot3:sendNotification(GAME.RENAME_SHIP_DONE, {
+					ship = slot0
+				})
+			else
+				pg.TipsMgr:GetInstance():ShowTips(errorTip("ship_renameShip", slot0.result))
+			end
+		end)
+	end
+
+	pg.MsgboxMgr.GetInstance():ShowMsgBox({
+		content = i18n("word_rename_time_warning", HXSet.hxLan(slot6:getName()), slot4),
+		onYes = function ()
+			slot0()
+		end
+	})
+end
+
+return class("RenameShipCommand", pm.SimpleCommand)

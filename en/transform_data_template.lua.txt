@@ -1,0 +1,2031 @@
+pg = pg or {}
+pg.transform_data_template = {
+	[2701] = {
+		use_gold = 300,
+		name = "Hull Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 1,
+		star_limit = 2,
+		id = 2701,
+		icon = "hp_1",
+		skill_id = 0,
+		descrip = "HP +60",
+		condition_id = {},
+		effect = {
+			{
+				durability = 60
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[2702] = {
+		use_gold = 400,
+		name = "Reload Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 5,
+		star_limit = 2,
+		id = 2702,
+		icon = "rl_1",
+		skill_id = 0,
+		descrip = "Reload +5",
+		condition_id = {
+			2701
+		},
+		effect = {
+			{
+				reload = 5
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[2703] = {
+		use_gold = 600,
+		name = "Anti-Air Gun Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 20,
+		star_limit = 3,
+		id = 2703,
+		icon = "aaup_1",
+		skill_id = 0,
+		descrip = "Anti-Air Gun Efficiency +5%",
+		condition_id = {
+			2701
+		},
+		effect = {
+			{
+				equipment_proficiency_3 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[2704] = {
+		use_gold = 800,
+		name = "Anti-Air Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 25,
+		star_limit = 3,
+		id = 2704,
+		icon = "aa_1",
+		skill_id = 0,
+		descrip = "Anti-Air +15",
+		condition_id = {
+			2703
+		},
+		effect = {
+			{
+				antiaircraft = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[2705] = {
+		use_gold = 1000,
+		name = "Main Gun Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 35,
+		star_limit = 4,
+		id = 2705,
+		icon = "mgup_1",
+		skill_id = 0,
+		descrip = "Main Gun Efficiency +5%",
+		condition_id = {
+			2703
+		},
+		effect = {
+			{
+				equipment_proficiency_1 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[2706] = {
+		use_gold = 1200,
+		name = "Reload Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 40,
+		star_limit = 4,
+		id = 2706,
+		icon = "rl_2",
+		skill_id = 0,
+		descrip = "Reload +5/Reload +10",
+		condition_id = {
+			2702,
+			2705
+		},
+		effect = {
+			{
+				reload = 5
+			},
+			{
+				reload = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					2
+				}
+			},
+			{
+				{
+					18001,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			10
+		}
+	},
+	[2707] = {
+		use_gold = 1500,
+		name = "Hull Improvement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 50,
+		star_limit = 4,
+		id = 2707,
+		icon = "hp_2",
+		skill_id = 0,
+		descrip = "HP +60/HP +90",
+		condition_id = {
+			2705
+		},
+		effect = {
+			{
+				durability = 60
+			},
+			{
+				durability = 90
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					1
+				}
+			},
+			{
+				{
+					18002,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			15
+		}
+	},
+	[2708] = {
+		use_gold = 1800,
+		name = "Tactical Learning",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 55,
+		star_limit = 4,
+		id = 2708,
+		icon = "skill_blue",
+		skill_id = 4091,
+		descrip = "Learn skill: Anti-Air Mode",
+		condition_id = {
+			2707
+		},
+		effect = {
+			{
+				skill_id = 4091
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					3
+				}
+			}
+		},
+		gear_score = {
+			25
+		}
+	},
+	[2709] = {
+		use_gold = 2000,
+		name = "Motor Enhancement",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 70,
+		star_limit = 5,
+		id = 2709,
+		icon = "sp_1",
+		skill_id = 0,
+		descrip = "Speed +3",
+		condition_id = {
+			2707
+		},
+		effect = {
+			{
+				speed = 3
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					3
+				}
+			}
+		},
+		gear_score = {
+			30
+		}
+	},
+	[2710] = {
+		use_gold = 2500,
+		name = "Anti-Air Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 75,
+		star_limit = 5,
+		id = 2710,
+		icon = "aa_2",
+		skill_id = 0,
+		descrip = "Anti-Air +15/Anti-Air +25",
+		condition_id = {
+			2704,
+			2709
+		},
+		effect = {
+			{
+				antiaircraft = 15
+			},
+			{
+				antiaircraft = 25
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					2
+				}
+			},
+			{
+				{
+					18002,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[2711] = {
+		use_gold = 3000,
+		name = "Modernization",
+		max_level = 1,
+		skin_id = 101259,
+		use_ship = 1,
+		level_limit = 85,
+		star_limit = 5,
+		id = 2711,
+		icon = "mt_blue",
+		skill_id = 0,
+		descrip = "Firepower +15, Anti-Air +35",
+		condition_id = {
+			2708,
+			2709,
+			2710
+		},
+		effect = {
+			{
+				cannon = 15,
+				antiaircraft = 35
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18003,
+					1
+				}
+			}
+		},
+		gear_score = {
+			50
+		}
+	},
+	[7101] = {
+		use_gold = 200,
+		name = "Hull Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 1,
+		star_limit = 1,
+		id = 7101,
+		icon = "hp_1",
+		skill_id = 0,
+		descrip = "HP +60",
+		condition_id = {},
+		effect = {
+			{
+				durability = 60
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					1
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[7102] = {
+		use_gold = 300,
+		name = "Reload Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 5,
+		star_limit = 1,
+		id = 7102,
+		icon = "rl_1",
+		skill_id = 0,
+		descrip = "Reload +5",
+		condition_id = {
+			7101
+		},
+		effect = {
+			{
+				reload = 5
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[7103] = {
+		use_gold = 400,
+		name = "Air Elite Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 20,
+		star_limit = 2,
+		id = 7103,
+		icon = "bfup_1",
+		skill_id = 0,
+		descrip = "Dive Bomber Efficiency +5%",
+		condition_id = {
+			7101
+		},
+		effect = {
+			{
+				equipment_proficiency_2 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[7104] = {
+		use_gold = 500,
+		name = "Aviation Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 25,
+		star_limit = 2,
+		id = 7104,
+		icon = "air_1",
+		skill_id = 0,
+		descrip = "Aviation +10",
+		condition_id = {
+			7103
+		},
+		effect = {
+			{
+				air = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[7105] = {
+		use_gold = 600,
+		name = "Bombing Elite Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 35,
+		star_limit = 3,
+		id = 7105,
+		icon = "aaup_1",
+		skill_id = 0,
+		descrip = "Anti-Air Gun Efficiency +5%",
+		condition_id = {
+			7103
+		},
+		effect = {
+			{
+				equipment_proficiency_3 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[7106] = {
+		use_gold = 800,
+		name = "Anti-Air Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 40,
+		star_limit = 3,
+		id = 7106,
+		icon = "aa_1",
+		skill_id = 0,
+		descrip = "Anti-Air +15",
+		condition_id = {
+			7105
+		},
+		effect = {
+			{
+				antiaircraft = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[7107] = {
+		use_gold = 1000,
+		name = "Hull Improvement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 50,
+		star_limit = 3,
+		id = 7107,
+		icon = "hp_2",
+		skill_id = 0,
+		descrip = "HP +60/HP +90",
+		condition_id = {
+			7105
+		},
+		effect = {
+			{
+				durability = 60
+			},
+			{
+				durability = 90
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					1
+				}
+			},
+			{
+				{
+					18032,
+					1
+				}
+			}
+		},
+		gear_score = {
+			10,
+			15
+		}
+	},
+	[7108] = {
+		use_gold = 1200,
+		name = "Tactical Learning",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 55,
+		star_limit = 3,
+		id = 7108,
+		icon = "skill_yellow",
+		skill_id = 1045,
+		descrip = "Learn skill: Anti-Air Command: Main Fleet",
+		condition_id = {
+			7107
+		},
+		effect = {
+			{
+				skill_id = 1045
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					3
+				}
+			}
+		},
+		gear_score = {
+			25
+		}
+	},
+	[7109] = {
+		use_gold = 1400,
+		name = "Air Elite Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 70,
+		star_limit = 4,
+		id = 7109,
+		icon = "bfup_2",
+		skill_id = 0,
+		descrip = "Dive Bomber Weapon Efficiency +5%/Dive Bomber Weapon Efficiency +5%",
+		condition_id = {
+			7107,
+			7108
+		},
+		effect = {
+			{
+				equipment_proficiency_2 = 0.05
+			},
+			{
+				equipment_proficiency_2 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					1
+				}
+			},
+			{
+				{
+					18032,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[7110] = {
+		use_gold = 1600,
+		name = "Aviation Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 75,
+		star_limit = 4,
+		id = 7110,
+		icon = "air_2",
+		skill_id = 0,
+		descrip = "Aviation +10/Aviation +15",
+		condition_id = {
+			7104,
+			7109
+		},
+		effect = {
+			{
+				air = 10
+			},
+			{
+				air = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					2
+				}
+			},
+			{
+				{
+					18032,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[7111] = {
+		use_gold = 2000,
+		name = "Modernization",
+		max_level = 1,
+		skin_id = 106029,
+		use_ship = 1,
+		level_limit = 80,
+		star_limit = 4,
+		id = 7111,
+		icon = "mt_blue",
+		skill_id = 0,
+		descrip = "Anti-Air +20, Aviation +25",
+		condition_id = {
+			7109,
+			7110
+		},
+		effect = {
+			{
+				air = 25,
+				antiaircraft = 20
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					6
+				}
+			}
+		},
+		gear_score = {
+			50
+		}
+	},
+	[7201] = {
+		use_gold = 200,
+		name = "Hull Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 1,
+		star_limit = 1,
+		id = 7201,
+		icon = "hp_1",
+		skill_id = 0,
+		descrip = "HP +70",
+		condition_id = {},
+		effect = {
+			{
+				durability = 70
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					1
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[7202] = {
+		use_gold = 300,
+		name = "Reload Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 5,
+		star_limit = 1,
+		id = 7202,
+		icon = "rl_1",
+		skill_id = 0,
+		descrip = "Reload +5",
+		condition_id = {
+			7201
+		},
+		effect = {
+			{
+				reload = 5
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[7203] = {
+		use_gold = 400,
+		name = "Air Elite Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 20,
+		star_limit = 2,
+		id = 7203,
+		icon = "ffup_1",
+		skill_id = 0,
+		descrip = "Fighter Weapon Efficiency +4%",
+		condition_id = {
+			7201
+		},
+		effect = {
+			{
+				equipment_proficiency_2 = 0.04,
+				equipment_proficiency_1 = 0.04
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[7204] = {
+		use_gold = 500,
+		name = "Anti-Air Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 25,
+		star_limit = 2,
+		id = 7204,
+		icon = "air_1",
+		skill_id = 0,
+		descrip = "Aviation +10",
+		condition_id = {
+			7203
+		},
+		effect = {
+			{
+				air = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					2
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[7205] = {
+		use_gold = 600,
+		name = "Bombing Elite Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 35,
+		star_limit = 3,
+		id = 7205,
+		icon = "bfup_1",
+		skill_id = 0,
+		descrip = "Dive Bomber Weapon Efficiency +5%",
+		condition_id = {
+			7203
+		},
+		effect = {
+			{
+				equipment_proficiency_3 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[7206] = {
+		use_gold = 800,
+		name = "Aviation Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 40,
+		star_limit = 3,
+		id = 7206,
+		icon = "aa_1",
+		skill_id = 0,
+		descrip = "Anti-Air +15",
+		condition_id = {
+			7205
+		},
+		effect = {
+			{
+				antiaircraft = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18031,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[7207] = {
+		use_gold = 1000,
+		name = "Hull Improvement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 50,
+		star_limit = 3,
+		id = 7207,
+		icon = "hp_2",
+		skill_id = 0,
+		descrip = "HP +70/HP +100",
+		condition_id = {
+			7205
+		},
+		effect = {
+			{
+				durability = 70
+			},
+			{
+				durability = 100
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					1
+				}
+			},
+			{
+				{
+					18032,
+					1
+				}
+			}
+		},
+		gear_score = {
+			10,
+			15
+		}
+	},
+	[7208] = {
+		use_gold = 1200,
+		name = "Reload Enhancement Ⅱ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 55,
+		star_limit = 3,
+		id = 7208,
+		icon = "skill_yellow",
+		skill_id = 1037,
+		descrip = "Learn skill: Air Support",
+		condition_id = {
+			7207
+		},
+		effect = {
+			{
+				skill_id = 1037
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					3
+				}
+			}
+		},
+		gear_score = {
+			25
+		}
+	},
+	[7209] = {
+		use_gold = 1400,
+		name = "Air Elite Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 70,
+		star_limit = 4,
+		id = 7209,
+		icon = "ffup_2",
+		skill_id = 0,
+		descrip = "Fighter Weapon Efficiency +4%/Fighter Weapon Efficiency +7%",
+		condition_id = {
+			7207,
+			7208
+		},
+		effect = {
+			{
+				equipment_proficiency_2 = 0.04,
+				equipment_proficiency_1 = 0.04
+			},
+			{
+				equipment_proficiency_2 = 0.07,
+				equipment_proficiency_1 = 0.07
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					1
+				}
+			},
+			{
+				{
+					18032,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[7210] = {
+		use_gold = 1600,
+		name = "Aviation Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 75,
+		star_limit = 4,
+		id = 7210,
+		icon = "air_2",
+		skill_id = 0,
+		descrip = "Aviation +10/Aviation +15",
+		condition_id = {
+			7204,
+			7209
+		},
+		effect = {
+			{
+				air = 10
+			},
+			{
+				air = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					2
+				}
+			},
+			{
+				{
+					18032,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[7211] = {
+		use_gold = 2000,
+		name = "Modernization",
+		max_level = 1,
+		skin_id = 107019,
+		use_ship = 1,
+		level_limit = 80,
+		star_limit = 4,
+		id = 7211,
+		icon = "mt_blue",
+		skill_id = 0,
+		descrip = "Anti-Air +20, Aviation +25",
+		condition_id = {
+			7209,
+			7210
+		},
+		effect = {
+			{
+				air = 25,
+				antiaircraft = 20
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18032,
+					6
+				}
+			}
+		},
+		gear_score = {
+			50
+		}
+	},
+	[9201] = {
+		use_gold = 300,
+		name = "Hull Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 1,
+		star_limit = 2,
+		id = 9201,
+		icon = "hp_1",
+		skill_id = 0,
+		descrip = "HP +45",
+		condition_id = {},
+		effect = {
+			{
+				durability = 45
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[9202] = {
+		use_gold = 400,
+		name = "Evasion Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 5,
+		star_limit = 2,
+		id = 9202,
+		icon = "dd_1",
+		skill_id = 0,
+		descrip = "Evasion +5",
+		condition_id = {
+			9201
+		},
+		effect = {
+			{
+				dodge = 5
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[9203] = {
+		use_gold = 600,
+		name = "Main Gun Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 20,
+		star_limit = 3,
+		id = 9203,
+		icon = "mgup_1",
+		skill_id = 0,
+		descrip = "Main Gun Efficiency +5%",
+		condition_id = {
+			9201
+		},
+		effect = {
+			{
+				equipment_proficiency_1 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[9204] = {
+		use_gold = 800,
+		name = "Firepower Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 25,
+		star_limit = 3,
+		id = 9204,
+		icon = "cn_1",
+		skill_id = 0,
+		descrip = "Firepower +10",
+		condition_id = {
+			9203
+		},
+		effect = {
+			{
+				cannon = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[9205] = {
+		use_gold = 1000,
+		name = "Torpedo Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 35,
+		star_limit = 4,
+		id = 9205,
+		icon = "aaup_1",
+		skill_id = 0,
+		descrip = "Anti-Air Gun Efficiency +5%",
+		condition_id = {
+			9203
+		},
+		effect = {
+			{
+				equipment_proficiency_3 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[9206] = {
+		use_gold = 1200,
+		name = "Torpedo Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 40,
+		star_limit = 4,
+		id = 9206,
+		icon = "aa_1",
+		skill_id = 0,
+		descrip = "Anti-Air +15",
+		condition_id = {
+			9205
+		},
+		effect = {
+			{
+				antiaircraft = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18001,
+					4
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[9207] = {
+		use_gold = 1500,
+		name = "Motor Enhancement",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 50,
+		star_limit = 4,
+		id = 9207,
+		icon = "hp_2",
+		skill_id = 0,
+		descrip = "HP +45/HP +75",
+		condition_id = {
+			9205
+		},
+		effect = {
+			{
+				durability = 45
+			},
+			{
+				durability = 75
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					1
+				}
+			},
+			{
+				{
+					18002,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			15
+		}
+	},
+	[9208] = {
+		use_gold = 1800,
+		name = "Evasion Enhancement Ⅱ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 55,
+		star_limit = 4,
+		id = 9208,
+		icon = "skill_blue",
+		skill_id = 1061,
+		descrip = "Learn skill: Flank Defense",
+		condition_id = {
+			9207
+		},
+		effect = {
+			{
+				skill_id = 1061
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					3
+				}
+			}
+		},
+		gear_score = {
+			25
+		}
+	},
+	[9209] = {
+		use_gold = 2000,
+		name = "Hull Improvement Ⅱ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 70,
+		star_limit = 5,
+		id = 9209,
+		icon = "sp_1",
+		skill_id = 0,
+		descrip = "Speed +3",
+		condition_id = {
+			9207
+		},
+		effect = {
+			{
+				speed = 3
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					3
+				}
+			}
+		},
+		gear_score = {
+			30
+		}
+	},
+	[9210] = {
+		use_gold = 2500,
+		name = "Torpedo Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 75,
+		star_limit = 5,
+		id = 9210,
+		icon = "dd_2",
+		skill_id = 0,
+		descrip = "Evasion +5/Evasion +10",
+		condition_id = {
+			9202,
+			9209
+		},
+		effect = {
+			{
+				dodge = 5
+			},
+			{
+				dodge = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18002,
+					2
+				}
+			},
+			{
+				{
+					18002,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[9211] = {
+		use_gold = 3000,
+		name = "Modernization",
+		max_level = 1,
+		skin_id = 201129,
+		use_ship = 1,
+		level_limit = 85,
+		star_limit = 5,
+		id = 9211,
+		icon = "mt_yellow",
+		skill_id = 0,
+		descrip = "Firepower +25, Evasion +20",
+		condition_id = {
+			9208,
+			9209,
+			9210
+		},
+		effect = {
+			{
+				cannon = 25,
+				dodge = 20
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18003,
+					1
+				}
+			}
+		},
+		gear_score = {
+			50
+		}
+	},
+	[12201] = {
+		use_gold = 300,
+		name = "Hull Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 1,
+		star_limit = 2,
+		id = 12201,
+		icon = "hp_1",
+		skill_id = 0,
+		descrip = "HP +80",
+		condition_id = {},
+		effect = {
+			{
+				durability = 80
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[12202] = {
+		use_gold = 400,
+		name = "Hit Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 5,
+		star_limit = 2,
+		id = 12202,
+		icon = "rl_1",
+		skill_id = 0,
+		descrip = "Reload +5",
+		condition_id = {
+			12201
+		},
+		effect = {
+			{
+				reload = 5
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10
+		}
+	},
+	[12203] = {
+		use_gold = 600,
+		name = "Main Gun Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 20,
+		star_limit = 3,
+		id = 12203,
+		icon = "mgup_1",
+		skill_id = 0,
+		descrip = "Main Gun Efficiency +5%",
+		condition_id = {
+			12201
+		},
+		effect = {
+			{
+				equipment_proficiency_1 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[12204] = {
+		use_gold = 800,
+		name = "Firepower Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 25,
+		star_limit = 3,
+		id = 12204,
+		icon = "cn_1",
+		skill_id = 0,
+		descrip = "Firepower +10",
+		condition_id = {
+			12203
+		},
+		effect = {
+			{
+				cannon = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					3
+				}
+			}
+		},
+		gear_score = {
+			15
+		}
+	},
+	[12205] = {
+		use_gold = 1000,
+		name = "Anti-Air Gun Improvement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 35,
+		star_limit = 4,
+		id = 12205,
+		icon = "tpup_1",
+		skill_id = 0,
+		descrip = "Torpedo Efficiency +5%",
+		condition_id = {
+			12203
+		},
+		effect = {
+			{
+				equipment_proficiency_2 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					3
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[12206] = {
+		use_gold = 1200,
+		name = "Anti-Air Enhancement Ⅰ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 40,
+		star_limit = 4,
+		id = 12206,
+		icon = "tp_1",
+		skill_id = 0,
+		descrip = "Torpedo +10",
+		condition_id = {
+			12205
+		},
+		effect = {
+			{
+				torpedo = 10
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18011,
+					4
+				}
+			}
+		},
+		gear_score = {
+			20
+		}
+	},
+	[12207] = {
+		use_gold = 1500,
+		name = "Hull Improvement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 50,
+		star_limit = 4,
+		id = 12207,
+		icon = "hp_2",
+		skill_id = 0,
+		descrip = "HP +80/HP +120",
+		condition_id = {
+			12205
+		},
+		effect = {
+			{
+				durability = 80
+			},
+			{
+				durability = 120
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18012,
+					1
+				}
+			},
+			{
+				{
+					18012,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			15
+		}
+	},
+	[12208] = {
+		use_gold = 1800,
+		name = "Hit Enhancement Ⅱ",
+		max_level = 1,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 55,
+		star_limit = 4,
+		id = 12208,
+		icon = "skill_red",
+		skill_id = 2011,
+		descrip = "Learn skill: Full Firepower",
+		condition_id = {
+			12207
+		},
+		effect = {
+			{
+				skill_id = 2011
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18012,
+					3
+				}
+			}
+		},
+		gear_score = {
+			25
+		}
+	},
+	[12209] = {
+		use_gold = 2000,
+		name = "Anti-Air Gun Improvement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 70,
+		star_limit = 5,
+		id = 12209,
+		icon = "mgup_2",
+		skill_id = 0,
+		descrip = "Main Gun Efficiency +5%/Main Gun Efficiency +5%",
+		condition_id = {
+			12207
+		},
+		effect = {
+			{
+				equipment_proficiency_1 = 0.05
+			},
+			{
+				equipment_proficiency_1 = 0.05
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18012,
+					2
+				}
+			},
+			{
+				{
+					18012,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[12210] = {
+		use_gold = 2500,
+		name = "Reload Enhancement Ⅱ",
+		max_level = 2,
+		skin_id = 0,
+		use_ship = 0,
+		level_limit = 75,
+		star_limit = 5,
+		id = 12210,
+		icon = "cn_2",
+		skill_id = 0,
+		descrip = "Firepower +5/Firepower +15",
+		condition_id = {
+			12204,
+			12209
+		},
+		effect = {
+			{
+				cannon = 5
+			},
+			{
+				cannon = 15
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18012,
+					2
+				}
+			},
+			{
+				{
+					18012,
+					2
+				}
+			}
+		},
+		gear_score = {
+			10,
+			20
+		}
+	},
+	[12211] = {
+		use_gold = 3000,
+		name = "Modernization",
+		max_level = 1,
+		skin_id = 203049,
+		use_ship = 1,
+		level_limit = 85,
+		star_limit = 5,
+		id = 12211,
+		icon = "mt_red",
+		skill_id = 0,
+		descrip = "Firepower +25, Torpedo +20",
+		condition_id = {
+			12208,
+			12209,
+			12210
+		},
+		effect = {
+			{
+				cannon = 25,
+				torpedo = 20
+			}
+		},
+		ship_id = {},
+		use_item = {
+			{
+				{
+					18013,
+					1
+				}
+			}
+		},
+		gear_score = {
+			50
+		}
+	},
+	all = {
+		2701,
+		2702,
+		2703,
+		2704,
+		2705,
+		2706,
+		2707,
+		2708,
+		2709,
+		2710,
+		2711,
+		7101,
+		7102,
+		7103,
+		7104,
+		7105,
+		7106,
+		7107,
+		7108,
+		7109,
+		7110,
+		7111,
+		7201,
+		7202,
+		7203,
+		7204,
+		7205,
+		7206,
+		7207,
+		7208,
+		7209,
+		7210,
+		7211,
+		9201,
+		9202,
+		9203,
+		9204,
+		9205,
+		9206,
+		9207,
+		9208,
+		9209,
+		9210,
+		9211,
+		12201,
+		12202,
+		12203,
+		12204,
+		12205,
+		12206,
+		12207,
+		12208,
+		12209,
+		12210,
+		12211
+	}
+}
+
+return

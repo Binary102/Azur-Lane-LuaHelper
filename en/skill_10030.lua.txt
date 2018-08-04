@@ -1,0 +1,211 @@
+return {
+	uiEffect = "",
+	name = "姐姐气质",
+	cd = 0,
+	picture = "0",
+	desc = "姐姐气质",
+	painting = 1,
+	id = 10030,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillAddBuff",
+			target_choise = "TargetAllHelp",
+			arg_list = {
+				buff_id = 10031,
+				effectFilter = {
+					{
+						"TargetID",
+						"=",
+						101091
+					},
+					{
+						"TargetID",
+						"=",
+						101092
+					},
+					{
+						"TargetID",
+						"=",
+						101093
+					},
+					{
+						"TargetID",
+						"=",
+						101094
+					},
+					{
+						"TargetID",
+						"=",
+						101111
+					},
+					{
+						"TargetID",
+						"=",
+						101112
+					},
+					{
+						"TargetID",
+						"=",
+						101113
+					},
+					{
+						"TargetID",
+						"=",
+						101114
+					},
+					{
+						"TargetID",
+						"=",
+						101121
+					},
+					{
+						"TargetID",
+						"=",
+						101122
+					},
+					{
+						"TargetID",
+						"=",
+						101123
+					},
+					{
+						"TargetID",
+						"=",
+						101124
+					},
+					{
+						"TargetID",
+						"=",
+						101131
+					},
+					{
+						"TargetID",
+						"=",
+						101132
+					},
+					{
+						"TargetID",
+						"=",
+						101133
+					},
+					{
+						"TargetID",
+						"=",
+						101134
+					},
+					{
+						"TargetID",
+						"=",
+						101141
+					},
+					{
+						"TargetID",
+						"=",
+						101142
+					},
+					{
+						"TargetID",
+						"=",
+						101143
+					},
+					{
+						"TargetID",
+						"=",
+						101144
+					},
+					{
+						"TargetID",
+						"=",
+						101151
+					},
+					{
+						"TargetID",
+						"=",
+						101152
+					},
+					{
+						"TargetID",
+						"=",
+						101153
+					},
+					{
+						"TargetID",
+						"=",
+						101154
+					},
+					{
+						"TargetID",
+						"=",
+						101291
+					},
+					{
+						"TargetID",
+						"=",
+						101292
+					},
+					{
+						"TargetID",
+						"=",
+						101293
+					},
+					{
+						"TargetID",
+						"=",
+						101294
+					},
+					{
+						"TargetID",
+						"=",
+						101301
+					},
+					{
+						"TargetID",
+						"=",
+						101302
+					},
+					{
+						"TargetID",
+						"=",
+						101303
+					},
+					{
+						"TargetID",
+						"=",
+						101304
+					},
+					{
+						"TargetID",
+						"=",
+						101311
+					},
+					{
+						"TargetID",
+						"=",
+						101312
+					},
+					{
+						"TargetID",
+						"=",
+						101313
+					},
+					{
+						"TargetID",
+						"=",
+						101314
+					}
+				}
+			}
+		}
+	}
+}

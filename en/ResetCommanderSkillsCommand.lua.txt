@@ -1,0 +1,35 @@
+class("ResetCommanderSkillsCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	if not slot1:getBody().commanderId then
+		return
+	end
+
+	if not getProxy(CommanderProxy):getCommanderById(slot3) then
+		return
+	end
+
+	if getProxy(PlayerProxy).getData(slot7).gold < slot5:getResetSkillConsume() then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("common_no_resource"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25007, {
+		shipid = shipId,
+		commanderid = slot3
+	}, 25008, function (slot0)
+		if slot0.result == 0 then
+			slot0:resetSkills()
+			slot0.resetSkills:updateCommander(slot0)
+			slot0.resetSkills:consume({
+				gold = 
+			})
+			slot4:updatePlayer(slot4)
+			slot5:sendNotification(GAME.COMANDER_RESET_SKILLS_DONE)
+			pg.TipsMgr:GetInstance():ShowTips(i18n("commander_reset_skills_successed"))
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("ResetCommanderSkillsCommand", pm.SimpleCommand)

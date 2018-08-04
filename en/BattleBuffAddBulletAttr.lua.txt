@@ -1,0 +1,51 @@
+ys = ys or {}
+ys.Battle.BattleBuffAddBulletAttr = class("BattleBuffAddBulletAttr", ys.Battle.BattleBuffEffect)
+ys.Battle.BattleBuffAddBulletAttr.__name = "BattleBuffAddBulletAttr"
+
+ys.Battle.BattleBuffAddBulletAttr.Ctor = function (slot0, slot1)
+	slot0.super.Ctor(slot0, slot1)
+end
+
+ys.Battle.BattleBuffAddBulletAttr.SetArgs = function (slot0, slot1, slot2)
+	slot0._attr = slot0._tempData.arg_list.attr
+	slot0._number = slot0._tempData.arg_list.number
+	slot0._rate = slot0._tempData.arg_list.rate or 10000
+	slot0._bulletID = slot0._tempData.arg_list.bulletID
+	slot0._weaponIndexList = slot0._tempData.arg_list.index
+	slot0._numberBase = slot0._number
+end
+
+ys.Battle.BattleBuffAddBulletAttr.onStack = function (slot0, slot1, slot2)
+	slot0._number = slot0._numberBase * slot2._stack
+end
+
+ys.Battle.BattleBuffAddBulletAttr.onBulletCreate = function (slot0, slot1, slot2, slot3)
+	if not slot0:equipIndexRequire(slot3.equipIndex) then
+		return
+	end
+
+	if slot0.Battle.BattleFormulas.IsHappen(slot0._rate) then
+		slot5 = slot3._bullet.GetWeapon(slot4):GetEquipmentIndex()
+		slot6 = false
+
+		if not slot0._weaponIndexList then
+			slot6 = true
+		elseif #slot0._weaponIndexList == 0 and slot5 == nil then
+			slot6 = true
+		elseif table.contains(slot0._weaponIndexList, slot5) then
+			slot6 = true
+		end
+
+		if slot6 then
+			if slot0._bulletID then
+				if slot4:GetTemplate().id == slot0._bulletID then
+					slot0.Battle.BattleAttr.Increase(slot4, slot0._attr, slot0._number)
+				end
+			else
+				slot0.Battle.BattleAttr.Increase(slot4, slot0._attr, slot0._number)
+			end
+		end
+	end
+end
+
+return

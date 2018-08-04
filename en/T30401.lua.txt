@@ -1,0 +1,87 @@
+return {
+	id = "T30401",
+	mode = 2,
+	once = true,
+	scripts = {
+		{
+			side = 2,
+			actorName = "{namecode:94}",
+			dir = -1,
+			actor = 307041,
+			nameColor = "#ff0000",
+			say = "…",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			actorName = "{namecode:94}",
+			dir = -1,
+			actor = 307041,
+			nameColor = "#ff0000",
+			say = "Is it true? This long war with Soryu is now...",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			actorName = "{namecode:94}",
+			dir = -1,
+			actor = 307041,
+			nameColor = "#ff0000",
+			say = "I can't return empty handed! All aircraft, launch now!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			actorName = "{namecode:94}",
+			dir = -1,
+			actor = 307041,
+			nameColor = "#ff0000",
+			say = "I'll show you the true power of the Second Carrier Division! This is our final counterattack!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		}
+	}
+}

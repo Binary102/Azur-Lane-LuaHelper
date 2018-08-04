@@ -1,0 +1,108 @@
+slot0 = class("ColoringProxy", import(".NetProxy"))
+
+slot0.register = function (slot0)
+	slot0.colorGroups = {}
+	slot0.colorItems = {}
+
+	slot0:on(26001, function (slot0)
+		slot1 = {}
+
+		_.each(slot0.award_list, function (slot0)
+			slot0[slot0.id] = _.map(slot0.award_list, function (slot0)
+				return {
+					type = slot0.type,
+					id = slot0.id,
+					count = slot0.number
+				}
+			end)
+		end)
+
+		slot0.colorGroups = {}
+
+		_.each(pg.activity_coloring_template.all, function (slot0)
+			slot1 = ColorGroup.New(slot0)
+
+			if slot0 == slot0.id then
+				_.each(slot0.cell_list, function (slot0)
+					slot0:setFill(slot0.row, slot0.column, slot0.color)
+				end)
+			end
+
+			slot1:setDrops(slot1[slot0] or {})
+
+			if #(slot1[slot0] or ) > 0 then
+				slot1:setState(ColorGroup.StateAchieved)
+			elseif slot0 < slot0.id or slot1:isAllFill() then
+				slot1:setState(ColorGroup.StateFinish)
+			end
+
+			table.insert(slot2.colorGroups, slot1)
+		end)
+
+		slot2 = 0
+
+		for slot6 = #slot0.colorGroups, 1, -1 do
+			if slot0.colorGroups[slot6]:getState() == ColorGroup.StateFinish or slot7 == ColorGroup.StateAchieved then
+				slot2 = slot6
+
+				break
+			end
+		end
+
+		for slot6 = slot2 - 1, 1, -1 do
+			if not slot0.colorGroups[slot6]:getState() then
+				slot7:setState(ColorGroup.StateFinish)
+			end
+		end
+
+		slot0.colorGroups[slot2 + 1]:setState(ColorGroup.StateColoring)
+
+		for slot6 = slot2 + 2, #slot0.colorGroups, 1 do
+			if not slot0.colorGroups[slot6]:getState() then
+				slot7:setState(ColorGroup.StateLock)
+			end
+		end
+
+		slot0.colorItems = {}
+
+		for slot6, slot7 in ipairs(slot0.color_list) do
+			slot0.colorItems[slot7.id] = slot7.number
+		end
+	end)
+end
+
+slot0.getColorItems = function (slot0)
+	return slot0.colorItems
+end
+
+slot0.getColorGroups = function (slot0)
+	return slot0.colorGroups
+end
+
+slot0.getColorGroup = function (slot0, slot1)
+	return _.detect(slot0.colorGroups, function (slot0)
+		return slot0.id == slot0
+	end)
+end
+
+slot0.checkState = function (slot0)
+	slot1 = false
+
+	for slot5, slot6 in ipairs(slot0.colorGroups) do
+		if slot6:getState() == ColorGroup.StateColoring and slot6:isAllFill() then
+			slot6:setState(ColorGroup.StateFinish)
+
+			if slot0.colorGroups[slot5 + 1] and slot7:getState() == ColorGroup.StateLock then
+				slot7:setState(ColorGroup.StateColoring)
+			end
+
+			slot1 = true
+
+			break
+		end
+	end
+
+	return slot1
+end
+
+return slot0

@@ -1,0 +1,23 @@
+class("GetCommanderCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	slot2 = slot1:getBody()
+
+	if not getProxy(CommanderProxy):getRefreshTime() or pg.TimeMgr.GetInstance():GetServerTime() < slot4 then
+		pg.TipsMgr:GetInstance():ShowTips(i18n("commander_build_time_no_arrived"))
+
+		return
+	end
+
+	pg.ConnectionMgr.GetInstance():Send(25015, {
+		type = 0
+	}, 25016, function (slot0)
+		if slot0.result == 0 then
+			slot0:addCommander(slot1)
+			slot0:updateRefreshTime(slot0.refresh_time)
+			slot1:sendNotification(GAME.COMMANDER_ON_OPEN_BOX_DONE)
+		else
+			print(slot0.result)
+		end
+	end)
+end
+
+return class("GetCommanderCommand", pm.SimpleCommand)

@@ -1,0 +1,4946 @@
+pg = pg or {}
+pg.ship_data_group = {
+	{
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 1,
+		group_type = 10000,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Weekly Mission",
+				{
+					""
+				},
+				0
+			}
+		}
+	},
+	{
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 2,
+		group_type = 10001,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Weekly Mission",
+				{
+					""
+				},
+				0
+			}
+		}
+	},
+	[5] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 5,
+		group_type = 10103,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 103
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[6] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 6,
+		group_type = 10104,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 103
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[7] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 7,
+		group_type = 10105,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[8] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 8,
+		group_type = 10106,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 101
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[9] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 9,
+		group_type = 10107,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 101
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[10] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 10,
+		group_type = 10108,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Unlocked in collection",
+				{
+					"COLLECTSHIP",
+					{
+						shipGroupId = 10108
+					}
+				},
+				0
+			}
+		}
+	},
+	[11] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 11,
+		group_type = 10109,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 203
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[13] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 13,
+		group_type = 10111,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 302
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[14] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 14,
+		group_type = 10112,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 203
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[15] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 15,
+		group_type = 10113,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 102
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[16] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 16,
+		group_type = 10114,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 102
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[17] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 17,
+		group_type = 10115,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 102
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[19] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 19,
+		group_type = 10117,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[26] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 26,
+		group_type = 10124,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[27] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 101259,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 27,
+		group_type = 10125,
+		trans_type = 1,
+		trans_radar_chart = {
+			"B",
+			"C",
+			"E",
+			"B",
+			"B",
+			"C"
+		},
+		trans_skill = {
+			4091
+		},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[28] = {
+		nationality = 1,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 28,
+		group_type = 10126,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Munition shop exchange",
+				{
+					"SHOP",
+					{
+						warp = "supplies"
+					}
+				},
+				0
+			}
+		}
+	},
+	[29] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 29,
+		group_type = 10201,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[30] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 30,
+		group_type = 10202,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[31] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 31,
+		group_type = 10203,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[32] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 32,
+		group_type = 10204,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[33] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 33,
+		group_type = 10205,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 501
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[34] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 34,
+		group_type = 10206,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 502
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[35] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 35,
+		group_type = 10207,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 502
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[36] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 36,
+		group_type = 10208,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[37] = {
+		nationality = 1,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 37,
+		group_type = 10209,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 503
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[39] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 39,
+		group_type = 10301,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[41] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 41,
+		group_type = 10303,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[42] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 42,
+		group_type = 10304,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[43] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 43,
+		group_type = 10305,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[44] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 44,
+		group_type = 10306,
+		trans_type = 3,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[45] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 45,
+		group_type = 10307,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 303
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[49] = {
+		nationality = 1,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 49,
+		group_type = 10311,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Unlocked in collection",
+				{
+					"COLLECTSHIP",
+					{
+						shipGroupId = 10311
+					}
+				},
+				0
+			}
+		}
+	},
+	[52] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 52,
+		group_type = 10501,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[53] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 53,
+		group_type = 10502,
+		trans_type = 5,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[54] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 54,
+		group_type = 10503,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[55] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 55,
+		group_type = 10504,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[58] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 58,
+		group_type = 10507,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[59] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 59,
+		group_type = 10508,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[65] = {
+		nationality = 1,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 65,
+		group_type = 10514,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Munition shop exchange",
+				{
+					"SHOP",
+					{
+						warp = "supplies"
+					}
+				},
+				0
+			}
+		}
+	},
+	[70] = {
+		nationality = 1,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 70,
+		group_type = 10601,
+		trans_type = 6,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[71] = {
+		nationality = 1,
+		type = 6,
+		trans_skin = 106029,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 71,
+		group_type = 10602,
+		trans_type = 6,
+		trans_radar_chart = {
+			"E",
+			"E",
+			"B",
+			"D",
+			"A",
+			"B"
+		},
+		trans_skill = {
+			1045
+		},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[72] = {
+		nationality = 1,
+		type = 6,
+		trans_skin = 107019,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 72,
+		group_type = 10701,
+		trans_type = 6,
+		trans_radar_chart = {
+			"E",
+			"E",
+			"B",
+			"D",
+			"A",
+			"B"
+		},
+		trans_skill = {
+			1037
+		},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[73] = {
+		nationality = 1,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 73,
+		group_type = 10702,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[74] = {
+		nationality = 1,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 74,
+		group_type = 10703,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[75] = {
+		nationality = 1,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 75,
+		group_type = 10704,
+		trans_type = 6,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[76] = {
+		nationality = 1,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 76,
+		group_type = 10705,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage7-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 702
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[77] = {
+		nationality = 1,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 77,
+		group_type = 10706,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[78] = {
+		nationality = 1,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 78,
+		group_type = 10707,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 503
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[80] = {
+		nationality = 1,
+		type = 12,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 80,
+		group_type = 11201,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage7-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 703
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[81] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 81,
+		group_type = 20101,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 501
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[86] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 86,
+		group_type = 20106,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[87] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 87,
+		group_type = 20107,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[88] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 88,
+		group_type = 20108,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 101
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[89] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 89,
+		group_type = 20109,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 101
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[90] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 90,
+		group_type = 20110,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 101
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[91] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 91,
+		group_type = 20111,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 102
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[92] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 201129,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 92,
+		group_type = 20112,
+		trans_type = 1,
+		trans_radar_chart = {
+			"C",
+			"B",
+			"E",
+			"A",
+			"C",
+			"D"
+		},
+		trans_skill = {
+			1061
+		},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 303
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[94] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 94,
+		group_type = 20114,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 502
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[101] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 101,
+		group_type = 20121,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[102] = {
+		nationality = 2,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 102,
+		group_type = 20122,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[104] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 104,
+		group_type = 20201,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[105] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 105,
+		group_type = 20202,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[106] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 106,
+		group_type = 20203,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[114] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 114,
+		group_type = 20211,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction, Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[115] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 115,
+		group_type = 20212,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction, Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[116] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 116,
+		group_type = 20213,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 302
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[117] = {
+		nationality = 2,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 117,
+		group_type = 20214,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage3-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 302
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[119] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 119,
+		group_type = 20301,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[120] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 120,
+		group_type = 20302,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 502
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[121] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 121,
+		group_type = 20303,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[122] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 203049,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 122,
+		group_type = 20304,
+		trans_type = 3,
+		trans_radar_chart = {
+			"A",
+			"B",
+			"E",
+			"C",
+			"C",
+			"B"
+		},
+		trans_skill = {
+			2011
+		},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[123] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 123,
+		group_type = 20305,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 203
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[124] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 124,
+		group_type = 20306,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Unlocked in collection",
+				{
+					"COLLECTSHIP",
+					{
+						shipGroupId = 20306
+					}
+				},
+				0
+			}
+		}
+	},
+	[125] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 125,
+		group_type = 20307,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage8-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 801
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[126] = {
+		nationality = 2,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 126,
+		group_type = 20308,
+		trans_type = 3,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage8-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 801
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[127] = {
+		nationality = 2,
+		type = 4,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 127,
+		group_type = 20401,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[128] = {
+		nationality = 2,
+		type = 4,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 128,
+		group_type = 20402,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage1-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 104
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[129] = {
+		nationality = 2,
+		type = 4,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 129,
+		group_type = 20403,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[130] = {
+		nationality = 2,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 130,
+		group_type = 20501,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 502
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[131] = {
+		nationality = 2,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 131,
+		group_type = 20502,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[132] = {
+		nationality = 2,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 132,
+		group_type = 20503,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 203
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[133] = {
+		nationality = 2,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 133,
+		group_type = 20504,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 204
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[140] = {
+		nationality = 2,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 140,
+		group_type = 20601,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage2-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 201
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[142] = {
+		nationality = 2,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 142,
+		group_type = 20603,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 404
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[144] = {
+		nationality = 2,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 144,
+		group_type = 20702,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage6-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 603
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[145] = {
+		nationality = 2,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 145,
+		group_type = 20703,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "special",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[149] = {
+		nationality = 2,
+		type = 13,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 149,
+		group_type = 21301,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 403
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[150] = {
+		nationality = 2,
+		type = 13,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 150,
+		group_type = 21302,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage4-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 403
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction, Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[155] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 155,
+		group_type = 30105,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Unlocked in collection",
+				{
+					"COLLECTSHIP",
+					{
+						shipGroupId = 30105
+					}
+				},
+				0
+			}
+		}
+	},
+	[163] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 163,
+		group_type = 30113,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage4-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 403
+					}
+				},
+				0
+			}
+		}
+	},
+	[164] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 164,
+		group_type = 30114,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage6-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 604
+					}
+				},
+				0
+			}
+		}
+	},
+	[165] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 165,
+		group_type = 30115,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage4-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 402
+					}
+				},
+				0
+			}
+		}
+	},
+	[167] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 167,
+		group_type = 30117,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 303
+					}
+				},
+				0
+			}
+		}
+	},
+	[168] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 168,
+		group_type = 30118,
+		trans_type = 1,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage4-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 401
+					}
+				},
+				0
+			}
+		}
+	},
+	[182] = {
+		nationality = 3,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 182,
+		group_type = 30204,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[183] = {
+		nationality = 3,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 183,
+		group_type = 30205,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage7-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 703
+					}
+				},
+				0
+			}
+		}
+	},
+	[190] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 190,
+		group_type = 30301,
+		trans_type = 3,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 303
+					}
+				},
+				0
+			}
+		}
+	},
+	[191] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 191,
+		group_type = 30302,
+		trans_type = 3,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 303
+					}
+				},
+				0
+			}
+		}
+	},
+	[192] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 192,
+		group_type = 30303,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[193] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 193,
+		group_type = 30304,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Heavy Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[196] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 196,
+		group_type = 30307,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage5-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 501
+					}
+				},
+				0
+			}
+		}
+	},
+	[200] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 200,
+		group_type = 30311,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[201] = {
+		nationality = 3,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 201,
+		group_type = 30312,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[208] = {
+		nationality = 3,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 208,
+		group_type = 30501,
+		trans_type = 10,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage6-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 603
+					}
+				},
+				0
+			}
+		}
+	},
+	[209] = {
+		nationality = 3,
+		type = 5,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 209,
+		group_type = 30502,
+		trans_type = 10,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage6-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 603
+					}
+				},
+				0
+			}
+		}
+	},
+	[220] = {
+		nationality = 3,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 220,
+		group_type = 30603,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage7-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 704
+					}
+				},
+				0
+			}
+		}
+	},
+	[222] = {
+		nationality = 3,
+		type = 6,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 222,
+		group_type = 30605,
+		trans_type = 6,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage2-2",
+				{
+					"LEVEL",
+					{
+						chapterid = 202
+					}
+				},
+				0
+			}
+		}
+	},
+	[224] = {
+		nationality = 3,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 224,
+		group_type = 30701,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 304
+					}
+				},
+				0
+			}
+		}
+	},
+	[225] = {
+		nationality = 3,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 225,
+		group_type = 30702,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-4",
+				{
+					"LEVEL",
+					{
+						chapterid = 304
+					}
+				},
+				0
+			}
+		}
+	},
+	[226] = {
+		nationality = 3,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 226,
+		group_type = 30703,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			}
+		}
+	},
+	[227] = {
+		nationality = 3,
+		type = 7,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 227,
+		group_type = 30704,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage3-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 301
+					}
+				},
+				0
+			}
+		}
+	},
+	[233] = {
+		nationality = 4,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 233,
+		group_type = 40101,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 501
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[236] = {
+		nationality = 4,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 236,
+		group_type = 40123,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Explore Stage10-1",
+				{
+					"LEVEL",
+					{
+						chapterid = 1001
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[238] = {
+		nationality = 4,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 238,
+		group_type = 40201,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 503
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[239] = {
+		nationality = 4,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 239,
+		group_type = 40202,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 503
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[240] = {
+		nationality = 4,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 240,
+		group_type = 40203,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Explore Stage5-3",
+				{
+					"LEVEL",
+					{
+						chapterid = 503
+					}
+				},
+				0
+			},
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[241] = {
+		nationality = 4,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 241,
+		group_type = 40204,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Unlocked in collection",
+				{
+					"COLLECTSHIP",
+					{
+						shipGroupId = 40204
+					}
+				},
+				0
+			}
+		}
+	},
+	[244] = {
+		nationality = 4,
+		type = 3,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 244,
+		group_type = 40303,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Honor Metal exhange",
+				{
+					"GETBOAT",
+					{
+						page = 3
+					}
+				},
+				0
+			},
+			{
+				"Heavy Ship Construction, Special Ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "heavy",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[258] = {
+		nationality = 5,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 258,
+		group_type = 50202,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[259] = {
+		nationality = 5,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 259,
+		group_type = 50203,
+		trans_type = 2,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[262] = {
+		nationality = 7,
+		type = 2,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 262,
+		group_type = 70201,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"Event: Rebirth - Dawnlight",
+				{
+					""
+				},
+				0
+			}
+		}
+	},
+	[271] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 271,
+		group_type = 30132,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	[272] = {
+		nationality = 3,
+		type = 1,
+		trans_skin = 0,
+		handbook_type = 0,
+		redirect_id = 101,
+		code = 272,
+		group_type = 30133,
+		trans_type = 0,
+		trans_radar_chart = {},
+		trans_skill = {},
+		description = {
+			{
+				"light ship Construction",
+				{
+					"GETBOAT",
+					{
+						projectName = "light",
+						page = 1
+					}
+				},
+				0
+			}
+		}
+	},
+	all = {
+		1,
+		2,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		13,
+		14,
+		15,
+		16,
+		17,
+		19,
+		26,
+		27,
+		28,
+		29,
+		30,
+		31,
+		32,
+		33,
+		34,
+		35,
+		36,
+		37,
+		39,
+		41,
+		42,
+		43,
+		44,
+		45,
+		49,
+		52,
+		53,
+		54,
+		55,
+		58,
+		59,
+		65,
+		70,
+		71,
+		72,
+		73,
+		74,
+		75,
+		76,
+		77,
+		78,
+		80,
+		81,
+		86,
+		87,
+		88,
+		89,
+		90,
+		91,
+		92,
+		94,
+		101,
+		102,
+		104,
+		105,
+		106,
+		114,
+		115,
+		116,
+		117,
+		119,
+		120,
+		121,
+		122,
+		123,
+		124,
+		125,
+		126,
+		127,
+		128,
+		129,
+		130,
+		131,
+		132,
+		133,
+		140,
+		142,
+		144,
+		145,
+		149,
+		150,
+		155,
+		163,
+		164,
+		165,
+		167,
+		168,
+		182,
+		183,
+		190,
+		191,
+		192,
+		193,
+		196,
+		200,
+		201,
+		208,
+		209,
+		220,
+		222,
+		224,
+		225,
+		226,
+		227,
+		233,
+		236,
+		238,
+		239,
+		240,
+		241,
+		244,
+		258,
+		259,
+		262,
+		271,
+		272
+	}
+}
+
+return

@@ -1,0 +1,117 @@
+return {
+	fadeOut = 1.5,
+	mode = 3,
+	noWaitFade = true,
+	once = true,
+	id = "T30103",
+	fadeType = 2,
+	scripts = {
+		{
+			side = 2,
+			mode = 2,
+			actorName = "{namecode:92}",
+			actor = 307021,
+			nameColor = "#ff0000",
+			say = "To think our plan would deviate so much from our calculations... Regrettable indeed.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 2,
+			mode = 2,
+			actorName = "{namecode:92}",
+			actor = 307021,
+			nameColor = "#ff0000",
+			say = " ... Akagi...",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			bgName = "bg_story_8",
+			bgspeed = 2,
+			blackBg = true,
+			say = "As if the gods were helping...",
+			typewriter = {
+				speed = 0.02,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			say = "A round of perfect bombs were delivered. History and time itself would be fixed at this one moment.",
+			typewriter = {
+				speed = 0.02,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			say = "No one could have guessed that this one moment would become the crossroads at which the world changed.",
+			typewriter = {
+				speed = 0.02,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			say = "Was it true strength? A stroke of luck? Coincidence? Fate?",
+			typewriter = {
+				speed = 0.02,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			say = "At this moment...",
+			typewriter = {
+				speed = 0.02,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			blackBg = true,
+			bgName = "bg_story_9",
+			say = "The five minutes of fate.",
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+pg = pg or {}
+pg.memory_group = {
+	{
+		title = "Prologue",
+		type = 1,
+		id = 1,
+		icon = "title_main",
+		memories = {
+			1,
+			2,
+			3,
+			4,
+			5,
+			6
+		}
+	},
+	{
+		title = "Tora! Tora! Tora!",
+		type = 1,
+		id = 2,
+		icon = "title_main",
+		memories = {
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16
+		}
+	},
+	{
+		title = "Battle of Coral Sea",
+		type = 1,
+		id = 3,
+		icon = "title_main",
+		memories = {
+			17,
+			18,
+			19
+		}
+	},
+	{
+		title = "Midway Showdown",
+		type = 1,
+		id = 4,
+		icon = "title_main",
+		memories = {
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4
+	}
+}
+
+return

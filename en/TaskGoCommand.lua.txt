@@ -1,0 +1,139 @@
+class("TaskGoCommand", pm.SimpleCommand).execute = function (slot0, slot1)
+	if getProxy(TaskProxy):getTaskById(slot1:getBody().taskVO.id) == nil then
+		return
+	end
+
+	slot7 = slot3:getConfigTable().sub_type
+
+	if slot3.getConfigTable().scene and #slot6.scene > 0 and SCENE[slot6.scene[1]] then
+		slot0:sendNotification(GAME.GO_SCENE, slot8, slot6.scene[2])
+
+		return
+	end
+
+	if slot7 >= 1000 then
+		slot7 = slot7 - 1000
+	end
+
+	slot8 = math.modf(slot7 / 10)
+	slot9 = math.fmod(slot7, 10)
+	slot12 = {
+		chapterId = getProxy(ChapterProxy).getActiveChapter(slot10) and slot11.id,
+		mapIdx = slot11 and slot11:getConfig("map")
+	}
+
+	if slot8 == 0 then
+		slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL, slot12)
+	elseif slot8 == 1 then
+		slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL, slot12)
+	elseif slot8 == 2 then
+		slot13 = slot6.target_id_for_client
+
+		if slot9 == 6 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.DAILYLEVEL)
+		elseif slot9 == 7 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.MILITARYEXERCISE)
+		elseif slot9 == 8 then
+			if slot10:getShamChapter() and slot14.active then
+				slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL, {
+					chapterVO = slot14
+				})
+			else
+				slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL)
+			end
+		elseif slot9 == 9 and type(slot13) == "string" then
+			slot0:sendNotification(GAME.BEGIN_STAGE, {
+				system = SYSTEM_PERFORM,
+				stageId = tonumber(slot13)
+			})
+		elseif slot9 > 7 or (type(slot13) == "string" and tonumber(slot13) == 0) then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL, slot12)
+		else
+			if type(slot13) == "table" then
+				slot14 = slot10:getMaps()
+
+				if _.all(slot13, function (slot0)
+					return slot0[Chapter.New({
+						id = slot0
+					}).getConfig(slot1, "map")]:getChapter(slot0) and not slot3:isUnlock()
+				end) then
+					pg.TipsMgr.GetInstance():ShowTips(i18n("battle_levelScene_lock_1"))
+
+					return
+				end
+			end
+
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.LEVEL, slot12)
+		end
+	elseif slot8 == 3 then
+		slot13 = {
+			inChapter = true,
+			inPvp = true,
+			inFleet = true,
+			inClass = true,
+			inTactics = true,
+			inBackyard = true,
+			inSham = true,
+			inEvent = true,
+			inAdmiral = true
+		}
+
+		if slot9 == 0 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.GETBOAT)
+		elseif slot9 == 1 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.DOCKYARD, {
+				blockLock = true,
+				selectedMax = 10,
+				skipSelect = true,
+				mode = DockyardScene.MODE_DESTROY,
+				onShip = Ship.canDestroyShip,
+				flags = slot13,
+				leftTopInfo = i18n("word_destroy")
+			})
+		else
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.DOCKYARD, {
+				showTagNoBlock = true,
+				mode = DockyardScene.MODE_OVERVIEW,
+				flags = slot13
+			})
+		end
+	elseif slot8 == 4 then
+		if slot9 == 2 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.EQUIPSCENE, {
+				warp = EquipmentScene.WARP_TO_DESIGN
+			})
+		else
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.EQUIPSCENE, {
+				warp = EquipmentScene.WARP_TO_WEAPON
+			})
+		end
+	elseif slot8 == 5 then
+		if slot9 == 0 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.EQUIPSCENE, {
+				warp = EquipmentScene.WARP_TO_MATERIAL
+			})
+		end
+	elseif slot8 == 6 then
+		slot0:sendNotification(GAME.GO_SCENE, SCENE.BACKYARD)
+	elseif slot8 == 7 then
+		slot13 = nil
+
+		if slot9 == 1 then
+			slot13 = NavalAcademyScene.WARP_TO_TACTIC
+		end
+
+		slot0:sendNotification(GAME.GO_SCENE, SCENE.NAVALACADEMYSCENE, {
+			warp = slot13
+		})
+	elseif slot8 == 8 then
+		if slot9 == 0 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.EVENT)
+		elseif slot9 == 1 then
+			slot0:sendNotification(GAME.GO_SCENE, SCENE.NAVALACADEMYSCENE)
+		end
+	elseif slot8 == 9 and slot9 == 2 then
+		slot0:sendNotification(TaskMediator.TASK_FILTER, "weekly")
+	end
+end
+
+return class("TaskGoCommand", pm.SimpleCommand)

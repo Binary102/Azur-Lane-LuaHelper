@@ -1,0 +1,111 @@
+pg = pg or {}
+pg.drop_data_restore = {
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 1,
+		resource_num = 880,
+		target_id = 307012
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 2,
+		resource_num = 880,
+		target_id = 307022
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 3,
+		resource_num = 680,
+		target_id = 307031
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 4,
+		resource_num = 780,
+		target_id = 303122
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 5,
+		resource_num = 780,
+		target_id = 312011
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 6,
+		resource_num = 780,
+		target_id = 301141
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 7,
+		resource_num = 680,
+		target_id = 101172
+	},
+	{
+		target_type = 7,
+		resource_type = 14,
+		id = 8,
+		resource_num = 880,
+		target_id = 403032
+	},
+	{
+		target_type = 7,
+		resource_type = 1,
+		id = 9,
+		resource_num = 2000,
+		target_id = 305021
+	},
+	{
+		target_type = 7,
+		resource_type = 1,
+		id = 10,
+		resource_num = 2000,
+		target_id = 201101
+	},
+	{
+		target_type = 7,
+		resource_type = 1,
+		id = 11,
+		resource_num = 2000,
+		target_id = 306031
+	},
+	{
+		target_type = 7,
+		resource_type = 1,
+		id = 12,
+		resource_num = 2000,
+		target_id = 106011
+	},
+	{
+		target_type = 7,
+		resource_type = 1,
+		id = 13,
+		resource_num = 2000,
+		target_id = 401231
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13
+	}
+}
+
+return

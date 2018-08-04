@@ -1,0 +1,131 @@
+return {
+	uiEffect = "",
+	name = "特型领舰",
+	cd = 0,
+	picture = "0",
+	desc = "特型领舰",
+	painting = 1,
+	id = 10960,
+	castCV = "skill",
+	aniEffect = {
+		effect = "jineng",
+		offset = {
+			0,
+			-2,
+			0
+		}
+	},
+	effect_list = {
+		{
+			targetAniEffect = "",
+			casterAniEffect = "",
+			type = "BattleSkillAddBuff",
+			target_choise = "TargetAllHelp",
+			arg_list = {
+				buff_id = 10961,
+				effectFilter = {
+					{
+						"TargetID",
+						"=",
+						301011
+					},
+					{
+						"TargetID",
+						"=",
+						301012
+					},
+					{
+						"TargetID",
+						"=",
+						301013
+					},
+					{
+						"TargetID",
+						"=",
+						301014
+					},
+					{
+						"TargetID",
+						"=",
+						301051
+					},
+					{
+						"TargetID",
+						"=",
+						301052
+					},
+					{
+						"TargetID",
+						"=",
+						301053
+					},
+					{
+						"TargetID",
+						"=",
+						301054
+					},
+					{
+						"TargetID",
+						"=",
+						301091
+					},
+					{
+						"TargetID",
+						"=",
+						301092
+					},
+					{
+						"TargetID",
+						"=",
+						301093
+					},
+					{
+						"TargetID",
+						"=",
+						301094
+					},
+					{
+						"TargetID",
+						"=",
+						301111
+					},
+					{
+						"TargetID",
+						"=",
+						301112
+					},
+					{
+						"TargetID",
+						"=",
+						301113
+					},
+					{
+						"TargetID",
+						"=",
+						301114
+					},
+					{
+						"TargetID",
+						"=",
+						301121
+					},
+					{
+						"TargetID",
+						"=",
+						301122
+					},
+					{
+						"TargetID",
+						"=",
+						301123
+					},
+					{
+						"TargetID",
+						"=",
+						301124
+					}
+				}
+			}
+		}
+	}
+}

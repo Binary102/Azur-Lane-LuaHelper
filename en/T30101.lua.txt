@@ -1,0 +1,86 @@
+return {
+	fadeOut = 1.5,
+	mode = 3,
+	noWaitFade = true,
+	once = true,
+	id = "T30101",
+	fadeType = 2,
+	fadein = 1.5,
+	scripts = {
+		{
+			actor = 307011,
+			side = 0,
+			bgName = "bg_story_5",
+			bgspeed = 2,
+			dir = -1,
+			blackBg = true,
+			nameColor = "#ff0000",
+			bgm = "story-4",
+			actorName = "{namecode:91}",
+			say = "How many waves of torpedoes has it been now? They just don't learn. Can something so bulky even be a match against a Type Z?",
+			withoutPainting = true,
+			effects = {
+				{
+					active = true,
+					name = "UIhuohua"
+				}
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 307011,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			side = 0,
+			say = "Looks like the enemies on AF are still resisting. Futile. Prepare the next round of attacks!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 307021,
+			actorName = "{namecode:92}",
+			nameColor = "#ff0000",
+			side = 1,
+			say = "We still need to keep an eye on the enemy carriers' movements. Keep a sufficient number of fighters on hand!",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 307011,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			side = 0,
+			say = "Hmph! Tone's reconnaissance force didn't see any aircraft carriers. Perhaps they were scared silent by the size of our fleet?",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		},
+		{
+			actor = 307011,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			side = 0,
+			say = "After all, she's watching us do battle from the back, hehehe...",
+			blackBg = true,
+			withoutPainting = true,
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+slot0 = class("CommanderSkillInfoMediator", import("..base.ContextMediator"))
+slot0.ON_UPGRADE = "CommanderSkillInfoMediator:ON_UPGRADE"
+
+slot0.register = function (slot0)
+	slot0:bind(slot0.ON_UPGRADE, function (slot0)
+		slot0:sendNotification(GAME.COMANDER_UPGRADE_SKILL, {
+			skillId = slot0.contextData.skillId,
+			commanderId = slot0.contextData.commanderId
+		})
+	end)
+	slot0.viewComponent:setCommander(getProxy(CommanderProxy).getCommanderById(slot1, slot0.contextData.commanderId))
+end
+
+slot0.listNotificationInterests = function (slot0)
+	return {
+		GAME.COMANDER_UPGRADE_SKILL_DONE
+	}
+end
+
+slot0.handleNotification = function (slot0, slot1)
+	slot3 = slot1:getBody()
+
+	if slot1:getName() == GAME.COMANDER_UPGRADE_SKILL_DONE then
+		slot0.viewComponent:emit(BaseUI.ON_CLOSE)
+	end
+end
+
+return slot0

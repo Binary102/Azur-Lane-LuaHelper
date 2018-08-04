@@ -1,0 +1,192 @@
+return {
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.05,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.06,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.07,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.08,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.09,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.1,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.11,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.12,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.13,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	{
+		effect_list = {
+			{
+				type = "BattleBuffAddAttrConvert",
+				trigger = {
+					"onAttach",
+					"onRemove"
+				},
+				arg_list = {
+					convertRate = 0.15,
+					convertAttr = "antiAirPower",
+					attr = "cannonPower"
+				}
+			}
+		}
+	},
+	name = "铁翼陨灭",
+	init_effect = "jinengchufared",
+	time = 8,
+	picture = "",
+	desc = "自身炮击上升",
+	stack = 1,
+	id = 10641,
+	icon = 10641,
+	last_effect = "",
+	blink = {
+		1,
+		0,
+		0,
+		0.3,
+		0.3
+	},
+	effect_list = {
+		{
+			type = "BattleBuffAddAttrConvert",
+			trigger = {
+				"onAttach",
+				"onRemove"
+			},
+			arg_list = {
+				convertRate = 0.05,
+				convertAttr = "antiAirPower",
+				attr = "cannonPower"
+			}
+		}
+	}
+}

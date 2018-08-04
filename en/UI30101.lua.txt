@@ -1,0 +1,221 @@
+return {
+	id = "UI30101",
+	mode = 2,
+	once = true,
+	scripts = {
+		{
+			actor = 107061,
+			side = 2,
+			dir = -1,
+			nameColor = "#a9f548",
+			say = "\"AF may be short on fresh water. Did the attacking forces bring enough?\" It seems like we've caught ourselves a big fish.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			side = 1,
+			say = "No matter how cunning a fox is, it may still expose its tail at the most crucial moment! Hahaha!",
+			dir = -1,
+			actor = 107071,
+			nameColor = "#a9f548",
+			paintingFadeOut = {
+				time = 0.5,
+				side = 0
+			},
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107051,
+			side = 1,
+			nameColor = "#a9f548",
+			say = "We should move quickly now that we know that 'AF' refers to Midway Island.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107061,
+			side = 0,
+			dir = -1,
+			nameColor = "#a9f548",
+			say = "But sister, what about your wounds from before...?",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107051,
+			side = 1,
+			nameColor = "#a9f548",
+			say = "The harbor crew worked quickly. I'm back to my original condition! They're so reliable.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107051,
+			side = 1,
+			nameColor = "#a9f548",
+			say = "I won't be able to save you from Ms. Vestal if you get into another accident, Enterprise!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107061,
+			side = 0,
+			dir = -1,
+			nameColor = "#a9f548",
+			say = "*Huhu...*",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107051,
+			side = 1,
+			nameColor = "#a9f548",
+			say = "It's a rare chance for us three sisters to get some action together. Let's show everyone the strength of the Yorktown class!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actorShadow = true,
+			side = 0,
+			actorName = "Enterprise & Hornet",
+			actor = 107061,
+			dir = -1,
+			hideOther = true,
+			nameColor = "#a9f548",
+			say = "For the Eagles! For freedom!",
+			subActors = {
+				{
+					actor = 107071,
+					pos = {
+						x = -550
+					}
+				}
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 107051,
+			side = 2,
+			nameColor = "#a9f548",
+			say = "16th and 17th Fleet of the Eagles, full steam ahead!",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			mode = 1,
+			sequenceSpd = 2,
+			bgFade = true,
+			effects = {
+				{
+					active = false,
+					name = "UIhuohua"
+				}
+			},
+			sequence = {
+				{
+					[[
+          Chapter 3 - <size=23>Five Minutes of Fate</size> 
+
+
+
+]],
+					2
+				}
+			}
+		}
+	}
+}

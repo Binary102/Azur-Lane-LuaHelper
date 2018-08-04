@@ -1,0 +1,432 @@
+pg = pg or {}
+pg.expedition_data_by_map = {
+	{
+		map = 1,
+		name = "Tora! Tora! Tora!",
+		bgm = "level",
+		type = 1,
+		on_activity = 0,
+		title = "1",
+		drop_by_map_display = "",
+		enter_story = "",
+		level_limit = 1,
+		uifx = "",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_1",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 201,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		}
+	},
+	{
+		map = 2,
+		name = "Battle of Coral Sea",
+		bgm = "level",
+		type = 1,
+		on_activity = 0,
+		title = "2",
+		drop_by_map_display = "",
+		enter_story = "UI20101",
+		level_limit = 5,
+		uifx = "",
+		guide_id = "900",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_2",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 202,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		}
+	},
+	{
+		map = 3,
+		name = "Midway Showdown",
+		bgm = "level",
+		type = 1,
+		on_activity = 0,
+		title = "3",
+		enter_story = "UI30101",
+		level_limit = 10,
+		uifx = "",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_3",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 203,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		},
+		drop_by_map_display = {
+			{
+				{
+					2,
+					53000
+				}
+			}
+		}
+	},
+	{
+		map = 4,
+		name = "Solomon's Nightmare Pt. 1",
+		bgm = "level",
+		type = 1,
+		on_activity = 0,
+		title = "4",
+		enter_story = "",
+		level_limit = 15,
+		uifx = "",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "yellow",
+		bg = "map_4",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 204,
+		clouds_pos = {
+			{
+				76,
+				263
+			},
+			{
+				881,
+				44
+			},
+			{
+				23,
+				-143
+			},
+			{
+				473,
+				163
+			},
+			{
+				514,
+				-245
+			},
+			{
+				830,
+				-109
+			}
+		},
+		drop_by_map_display = {
+			{
+				{
+					2,
+					53010
+				}
+			},
+			{
+				{
+					2,
+					53011
+				}
+			}
+		}
+	},
+	{
+		map = 5,
+		name = "Solomon's Nightmare Pt. 2",
+		bgm = "level",
+		type = 1,
+		on_activity = 0,
+		title = "5",
+		enter_story = "",
+		level_limit = 20,
+		uifx = "",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_5",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 0,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		},
+		drop_by_map_display = {
+			{
+				{
+					2,
+					53020
+				}
+			},
+			{
+				{
+					2,
+					53021
+				}
+			},
+			{
+				{
+					2,
+					53022
+				}
+			}
+		}
+	},
+	[201] = {
+		map = 201,
+		name = "Tora! Tora! Tora!",
+		bgm = "level",
+		type = 2,
+		on_activity = 0,
+		title = "1",
+		drop_by_map_display = "",
+		enter_story = "",
+		level_limit = 1,
+		uifx = "UIhuohua2",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_201",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 1,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		}
+	},
+	[202] = {
+		map = 202,
+		name = "Battle of Coral Sea",
+		bgm = "level",
+		type = 2,
+		on_activity = 0,
+		title = "2",
+		drop_by_map_display = "",
+		enter_story = "",
+		level_limit = 5,
+		uifx = "UIhuohua2",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_202",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 2,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		}
+	},
+	[203] = {
+		map = 203,
+		name = "Midway Showdown",
+		bgm = "level",
+		type = 2,
+		on_activity = 0,
+		title = "3",
+		drop_by_map_display = "",
+		enter_story = "",
+		level_limit = 10,
+		uifx = "UIhuohua2",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "white",
+		bg = "map_203",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 3,
+		clouds_pos = {
+			{
+				332,
+				271
+			},
+			{
+				896,
+				110
+			},
+			{
+				-280,
+				0
+			},
+			{
+				990,
+				-90
+			},
+			{
+				0,
+				-465
+			}
+		}
+	},
+	[204] = {
+		map = 204,
+		name = "Solomon's Nightmare Pt. 1",
+		bgm = "level",
+		type = 2,
+		on_activity = 0,
+		title = "4",
+		drop_by_map_display = "",
+		enter_story = "",
+		level_limit = 15,
+		uifx = "UIhuohua2",
+		guide_id = "",
+		ani_name = "",
+		cloud_suffix = "yellow",
+		bg = "map_204",
+		destory_icon_suffix = "blue",
+		animtor = 0,
+		bind_map = 4,
+		clouds_pos = {
+			{
+				76,
+				263
+			},
+			{
+				881,
+				44
+			},
+			{
+				23,
+				-143
+			},
+			{
+				473,
+				163
+			},
+			{
+				514,
+				-245
+			},
+			{
+				830,
+				-109
+			}
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		201,
+		202,
+		203,
+		204
+	}
+}
+
+return

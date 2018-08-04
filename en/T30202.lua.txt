@@ -1,0 +1,102 @@
+return {
+	id = "T30202",
+	mode = 2,
+	once = true,
+	scripts = {
+		{
+			actor = 307011,
+			side = 2,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			say = "Every action is a gamble in this vast ocean.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 307011,
+			side = 2,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			say = "You win this round.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 307011,
+			side = 2,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			say = "Who knew such a rotten group could employ such advanced tactics... I should have known it would be you, Commander, my love.",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 307011,
+			side = 2,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			say = "Ahah! It's a pity that I've already chosen another Master. Otherwise I'd love to sit and tease you from time to time~",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		},
+		{
+			actor = 307011,
+			side = 2,
+			actorName = "{namecode:91}",
+			nameColor = "#ff0000",
+			say = "Perhaps my fate is unavoidable...",
+			shake = {
+				speed = 1,
+				number = 3
+			},
+			typewriter = {
+				speed = 0.05,
+				speedUp = 0.01
+			},
+			painting = {
+				alpha = 0.3,
+				time = 1
+			}
+		}
+	}
+}

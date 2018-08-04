@@ -1,0 +1,7 @@
+return {
+	id = 15,
+	furnitures_1 = {},
+	furnitures_2 = {},
+	furnitures_3 = {},
+	furnitures_4 = {}
+}

@@ -1,0 +1,160 @@
+pg = pg or {}
+pg.activity_template = {
+	{
+		mark = 20170614,
+		bg = "",
+		time = "stop",
+		type = 1,
+		config_id = 4,
+		is_show = 1,
+		config_client = "",
+		id = 1,
+		config_data = {}
+	},
+	{
+		mark = 2016091500,
+		bg = "",
+		time = "stop",
+		type = 2,
+		config_id = 2,
+		is_show = 1,
+		config_client = "",
+		id = 2,
+		config_data = {}
+	},
+	{
+		mark = 20170406,
+		bg = "8days",
+		time = "always",
+		type = 3,
+		config_id = 1,
+		is_show = 1,
+		config_client = "",
+		id = 3,
+		config_data = {}
+	},
+	{
+		mark = 20170406,
+		bg = "",
+		time = "always",
+		type = 4,
+		config_id = 1,
+		is_show = 1,
+		config_client = "",
+		id = 4,
+		config_data = {}
+	},
+	{
+		mark = 20170406,
+		bg = "",
+		time = "stop",
+		type = 5,
+		config_id = 1,
+		is_show = 0,
+		config_client = "",
+		id = 5,
+		config_data = {}
+	},
+	{
+		mark = 20170601,
+		bg = "",
+		time = "always",
+		type = 6,
+		config_id = 6,
+		is_show = 1,
+		config_client = "",
+		id = 6,
+		config_data = {}
+	},
+	{
+		mark = 2016091501,
+		bg = "",
+		type = 7,
+		config_id = 0,
+		is_show = 0,
+		config_client = "",
+		id = 7,
+		config_data = {},
+		time = {
+			timer,
+			{
+				{
+					2017,
+					3,
+					20
+				},
+				{
+					0,
+					0,
+					0
+				}
+			},
+			{
+				{
+					2017,
+					4,
+					2
+				},
+				{
+					23,
+					59,
+					59
+				}
+			},
+			1,
+			1
+		}
+	},
+	[30001] = {
+		mark = 20180816,
+		bg = "",
+		type = 13,
+		config_id = 0,
+		is_show = 0,
+		config_client = "",
+		id = 30001,
+		config_data = {
+			40001,
+			40002
+		},
+		time = {
+			timer,
+			{
+				{
+					2018,
+					8,
+					16
+				},
+				{
+					0,
+					0,
+					0
+				}
+			},
+			{
+				{
+					2018,
+					8,
+					30
+				},
+				{
+					23,
+					59,
+					59
+				}
+			}
+		}
+	},
+	all = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		30001
+	}
+}
+
+return
